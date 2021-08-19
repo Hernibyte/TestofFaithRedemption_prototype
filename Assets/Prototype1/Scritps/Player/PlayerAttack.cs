@@ -9,6 +9,7 @@ namespace Proto1
         [SerializeField] LayerMask enemyLayer;
         [HideInInspector] public float horizontalAttack;
         [HideInInspector] public float verticalAttack;
+        [SerializeField] Animator attack;
 
         void Start()
         {
@@ -34,6 +35,7 @@ namespace Proto1
                         hittable.Hit();
                     }
                 }
+                attack.SetTrigger("attack");
             }
         }
 

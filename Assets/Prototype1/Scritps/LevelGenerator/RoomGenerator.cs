@@ -24,6 +24,7 @@ namespace Proto1
                 {
                     GameObject room = Instantiate(rooms[random], new Vector3(x, y, 0f), Quaternion.identity, transform);
                     room.GetComponent<RoomBehaviour>().doors[openDoor] = false;
+                    room.GetComponent<RoomBehaviour>().SetRoomId(roomMaxCount);
                     roomMaxCount--;
                     break;
                 }

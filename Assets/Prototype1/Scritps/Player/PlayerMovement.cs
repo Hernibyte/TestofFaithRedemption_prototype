@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Proto1
 {
@@ -9,6 +7,8 @@ namespace Proto1
         [SerializeField] float speed;
         PlayerAttack playerAttack;
         Rigidbody2D rig;
+        RoomBehaviour actualRoom;
+        [SerializeField] int playerOnRoom;
 
         void Awake() 
         {
@@ -18,12 +18,26 @@ namespace Proto1
 
         void Start()
         {
-
+            playerOnRoom = 0;
         }
 
         void Update()
         {
             Movement();
+        }
+
+        public RoomBehaviour GetPlayerOnRoom()
+        {
+            return actualRoom;
+        }
+
+        void SetPlayerOnRoom(RoomBehaviour room)
+        {
+            if (room == null)
+                return;
+
+            actualRoom = room;
+            playerOnRoom = room.roomId;
         }
 
         void Movement()
@@ -55,6 +69,15 @@ namespace Proto1
             {
                 playerAttack.verticalAttack = -0.4f;
                 playerAttack.horizontalAttack = 0;
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if(collision.CompareTag("RoomSpace"))
+            {
+                actualRoom = collision.GetComponent<RoomBehaviour>();
+                SetPlayerOnRoom(actualRoom);
             }
         }
     }

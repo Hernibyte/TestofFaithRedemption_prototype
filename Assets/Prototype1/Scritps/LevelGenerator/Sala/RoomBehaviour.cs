@@ -8,14 +8,15 @@ namespace Proto1
     {
         RoomGenerator roomGenerator;
         public bool[] doors = { false, false, false, false };
-        const float xSize = 8;
-        const float ySize = 5;
+        const float xSize = 18;
+        const float ySize = 10;
         public string log;
 
         const int right = 0;
         const int left = 1;
         const int up = 2;
         const int down = 3;
+        public int roomId;
 
         void Awake()
         {
@@ -25,6 +26,11 @@ namespace Proto1
         void Start()
         {
             GenerateOtherRoom();
+        }
+
+        public void SetRoomId(int val)
+        {
+            roomId = val;
         }
 
         void GenerateOtherRoom()
