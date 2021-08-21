@@ -10,10 +10,10 @@ namespace Proto1
         [HideInInspector] public float horizontalAttack;
         [HideInInspector] public float verticalAttack;
         [SerializeField] Animator attack;
-
+        public float attackColdown;
         void Start()
         {
-            
+            attackColdown = 0;
         }
     
         void Update()
@@ -23,8 +23,9 @@ namespace Proto1
 
         void Attack()
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) && attackColdown == 0)
             {
+                attackColdown = 1.0f;
                 Vector2 attackPosition= new Vector2(transform.position.x + horizontalAttack, transform.position.y + verticalAttack);
                 Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, 0.4f, enemyLayer);
                 foreach (Collider2D collider in colliders)
@@ -37,6 +38,11 @@ namespace Proto1
                 }
                 attack.SetTrigger("attack");
             }
+
+            if (attackColdown > 0)
+                attackColdown -= Time.deltaTime;
+            else
+                attackColdown = 0;
         }
 
         private void OnDrawGizmos()

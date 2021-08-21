@@ -51,6 +51,9 @@ namespace Proto1
 
             rig.AddForce(position);
 
+            if (playerAttack.attackColdown > 0)
+                rig.velocity = Vector3.zero;
+
             if (playerAnimator != null)
             {
                 if(position != Vector2.zero)
