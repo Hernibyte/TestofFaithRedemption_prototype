@@ -5,6 +5,8 @@ namespace Proto1
     public class PlayerMovement : MonoBehaviour
     {
         [SerializeField] float speed;
+        [SerializeField] Animator playerAnimator;
+        [SerializeField] SpriteRenderer mySprite;
         PlayerAttack playerAttack;
         Rigidbody2D rig;
         RoomBehaviour actualRoom;
@@ -48,6 +50,24 @@ namespace Proto1
             Vector2 position = new Vector2(x * Time.deltaTime * speed, y * Time.deltaTime * speed);
 
             rig.AddForce(position);
+
+            if (playerAnimator != null)
+            {
+                if(position != Vector2.zero)
+                {
+                    if (position.x < 0)
+                        mySprite.flipX = true;
+                    else
+                        mySprite.flipX = false;
+
+
+                    playerAnimator.SetFloat("speed", position.magnitude);
+                }
+                else
+                {
+                    playerAnimator.SetFloat("speed", 0);
+                }
+            }
 
             if (x > 0)
             {
