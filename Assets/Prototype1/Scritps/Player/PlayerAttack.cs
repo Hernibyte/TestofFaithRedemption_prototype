@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Proto1
 {
-    public class PlayerAttack : MonoBehaviour
+    public class PlayerAttack : MonoBehaviour, IHittable
     {
         [SerializeField] LayerMask enemyLayer;
         [HideInInspector] public float horizontalAttack;
@@ -27,7 +27,7 @@ namespace Proto1
             {
                 attackColdown = 1.0f;
                 Vector2 attackPosition= new Vector2(transform.position.x + horizontalAttack, transform.position.y + verticalAttack);
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, 0.4f, enemyLayer);
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, 0.6f, enemyLayer);
                 foreach (Collider2D collider in colliders)
                 {
                     IHittable hittable = collider.GetComponent<IHittable>();
@@ -47,7 +47,11 @@ namespace Proto1
 
         private void OnDrawGizmos()
         {
-            Gizmos.DrawSphere(new Vector3(transform.position.x + horizontalAttack, transform.position.y + verticalAttack, 0f), 0.4f);
+            Gizmos.DrawWireSphere(new Vector3(transform.position.x + horizontalAttack, transform.position.y + verticalAttack, 0f), 0.6f);
+        }
+        public void Hit()
+        {
+            Destroy(gameObject);
         }
     }
 }
