@@ -96,10 +96,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.004074119, y: -0.004477985}
+  m_Offset: {x: 0.0038336292, y: 0.002718918}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1525069, y: 0.23408507}
+  m_Size: {x: 0.094616294, y: 0.14622626}
   m_EdgeRadius: 0
 --- !u!50 &6104354508160232845
 Rigidbody2D:
@@ -132,7 +132,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6226170014874994646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,11 +153,14 @@ MonoBehaviour:
   rig: {fileID: 6104354508160232845}
   enemySpeed: 10
   attackColdown: 0
-  attackDelay: 1
-  maxAttackDelay: 1
+  attackDelay: 0.5
+  maxAttackDelay: 0.5
   target: {fileID: 0}
   distanceToTarget: 8
   maxNearDistance: 0.8
+  enemyHP: 50
+  enemyDamage: 25
+  enemyKnockBackForce: 10
   enemyState: 1
 --- !u!95 &6723181152724773383
 Animator:

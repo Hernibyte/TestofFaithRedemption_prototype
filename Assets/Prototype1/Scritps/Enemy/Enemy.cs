@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Proto1
 {
@@ -19,17 +17,28 @@ namespace Proto1
         public float distanceToTarget;
         public float maxNearDistance;
 
+        [SerializeField] float enemyHP;
+        [SerializeField] int enemyDamage;
+        [SerializeField] float enemyKnockBackForce;
+
+        private float timeToRestore;
+        private float coldownAfterHit;
+
+
         [System.Serializable]
         public enum STATENEMY
         {
             Idle,
             Attacking,
-            Following
+            Following,
+            BeignDamaged
         }
         public STATENEMY enemyState;
 
         void Start()
         {
+            timeToRestore = 0;
+
             enemyState = STATENEMY.Idle;
             target = GameObject.FindGameObjectWithTag("Player");
         }
@@ -59,6 +68,13 @@ namespace Proto1
                 case STATENEMY.Following:
 
                     GoToTarget();
+
+                    break;
+
+                case STATENEMY.BeignDamaged:
+
+                    enemyAnimator.SetTrigger("hit");
+                    enemyState = STATENEMY.Following;
 
                     break;
             }
@@ -91,9 +107,8 @@ namespace Proto1
             else if(Vector2.Distance(transform.position, target.transform.position) <= maxNearDistance)
             {
                 enemyState = STATENEMY.Attacking;
+                rig.velocity = Vector2.zero;
             }
-
-            enemyAnimator.SetFloat("distanceTarget", Vector2.Distance(transform.position, target.transform.position));
         }
 
         void Attack()
@@ -115,6 +130,7 @@ namespace Proto1
             {
                 attackColdown = 1.0f;
                 enemyAnimator.SetTrigger("attack");
+
                 Vector2 attackPosition = new Vector2(transform.position.x, transform.position.y);
                 Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, 0.6f, playerLayer);
                 foreach (Collider2D collider in colliders)
@@ -122,7 +138,7 @@ namespace Proto1
                     IHittable hittable = collider.GetComponent<IHittable>();
                     if (hittable != null)
                     {
-                        hittable.Hit();
+                        hittable.Hit(enemyDamage, enemyKnockBackForce, transform.position);
                     }
                 }
             }
@@ -144,7 +160,31 @@ namespace Proto1
         {
             Gizmos.DrawWireSphere(new Vector3(transform.position.x, transform.position.y, 0f), 0.6f);
         }
-        public void Hit()
+        public void Hit(int amountDamage, float knockBackForce, Vector2 posAttacker)
+        {
+            if(enemyHP > 0)
+            {
+                enemyHP -= amountDamage;
+                attackDelay = 0;
+                enemyAnimator.SetFloat("prepareAttack", attackDelay);
+                attackColdown = 1;
+                enemyState = STATENEMY.BeignDamaged;
+
+                Vector2 direction = posAttacker - new Vector2(transform.position.x, transform.position.y);
+                rig.AddForceAtPosition(direction.normalized, transform.position, ForceMode2D.Impulse);
+
+                //if (transform.position.x > posAttacker.x)
+                //    rig.AddForce(Vector2.right * knockBackForce, ForceMode2D.Impulse);
+                //else
+                //    rig.AddForce(-Vector2.right * knockBackForce, ForceMode2D.Impulse);
+            }
+            else
+            {
+                enemyHP = 0;
+                Die();
+            }
+        }
+        public void Die()
         {
             Destroy(gameObject);
         }

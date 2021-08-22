@@ -9,7 +9,11 @@ namespace Proto1
         [SerializeField] LayerMask enemyLayer;
         [HideInInspector] public float horizontalAttack;
         [HideInInspector] public float verticalAttack;
-        [SerializeField] Animator attack;
+        public float playerHP;
+        public int playerDamage;
+        public float playerKnockBackForce;
+        [SerializeField] Animator playerAnimator;
+        [SerializeField] Rigidbody2D rig;
         public float attackColdown;
         void Start()
         {
@@ -33,10 +37,10 @@ namespace Proto1
                     IHittable hittable = collider.GetComponent<IHittable>();
                     if(hittable != null)
                     {
-                        hittable.Hit();
+                        hittable.Hit(playerDamage, playerKnockBackForce, transform.position);
                     }
                 }
-                attack.SetTrigger("attack");
+                playerAnimator.SetTrigger("attack");
             }
 
             if (attackColdown > 0)
@@ -49,7 +53,24 @@ namespace Proto1
         {
             Gizmos.DrawWireSphere(new Vector3(transform.position.x + horizontalAttack, transform.position.y + verticalAttack, 0f), 0.6f);
         }
-        public void Hit()
+        public void Hit(int damageAmount, float knockBackForce, Vector2 posAttacker)
+        {
+            if(playerHP > 0)
+            {
+                playerHP -= damageAmount;
+                playerAnimator.SetTrigger("hit");
+                if(transform.position.x > posAttacker.x)
+                    rig.AddForce(Vector2.right * knockBackForce, ForceMode2D.Impulse);
+                else
+                    rig.AddForce(-Vector2.right * knockBackForce, ForceMode2D.Impulse);
+            }
+            else
+            {
+                playerHP = 0;
+                Die();
+            }
+        }
+        public void Die()
         {
             Destroy(gameObject);
         }

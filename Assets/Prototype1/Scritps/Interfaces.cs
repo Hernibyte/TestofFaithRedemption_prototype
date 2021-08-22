@@ -6,6 +6,6 @@ namespace Proto1
 {
     interface IHittable
     {
-        void Hit();
+        void Hit(int amountDamage, float knockBackForce, Vector2 posAttacker);
     }
 }
