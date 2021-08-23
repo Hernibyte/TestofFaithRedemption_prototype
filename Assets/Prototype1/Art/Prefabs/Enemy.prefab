@@ -161,7 +161,7 @@ MonoBehaviour:
   enemyHP: 50
   enemyDamage: 25
   enemyKnockBackForce: 10
-  rangeAttack: 1
+  rangeAttack: 1.09
   enemyState: 1
 --- !u!95 &6723181152724773383
 Animator:

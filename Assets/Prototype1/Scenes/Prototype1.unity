@@ -236,10 +236,10 @@ MonoBehaviour:
     m_Bits: 512
   horizontalAttack: 0
   verticalAttack: 0
-  rangeAttack: 0.7
+  rangeAttack: 0.72
   playerHP: 150
-  playerDamage: 10
-  playerKnockBackForce: 5
+  playerDamage: 45
+  playerKnockBackForce: 10
   playerAnimator: {fileID: 1568593592}
   rig: {fileID: 194641017}
   attackColdown: 0
