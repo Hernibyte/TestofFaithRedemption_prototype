@@ -99,7 +99,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0038336292, y: 0.002718918}
+  m_Offset: {x: 0.0014020614, y: -0.001545772}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -110,7 +110,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.094616294, y: 0.14622626}
+  m_Size: {x: 0.14696655, y: 0.23759189}
   m_EdgeRadius: 0
 --- !u!50 &6104354508160232845
 Rigidbody2D:
@@ -151,16 +151,17 @@ MonoBehaviour:
   enemyAnimator: {fileID: 6723181152724773383}
   spriteEnemy: {fileID: 6226170014874994664}
   rig: {fileID: 6104354508160232845}
-  enemySpeed: 10
+  enemySpeed: 20
   attackColdown: 0
   attackDelay: 0.5
   maxAttackDelay: 0.5
   target: {fileID: 0}
   distanceToTarget: 8
-  maxNearDistance: 0.8
+  maxNearDistance: 1.4
   enemyHP: 50
   enemyDamage: 25
   enemyKnockBackForce: 10
+  rangeAttack: 1
   enemyState: 1
 --- !u!95 &6723181152724773383
 Animator:

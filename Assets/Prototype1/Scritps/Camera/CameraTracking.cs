@@ -5,7 +5,7 @@ namespace Proto1
     public class CameraTracking : MonoBehaviour
     {
         [SerializeField] PlayerMovement playerRef;
-        RoomBehaviour refRoom;
+        RoomID refRoom;
 
         private void Start()
         {

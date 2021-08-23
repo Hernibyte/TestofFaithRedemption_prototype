@@ -9,6 +9,7 @@ namespace Proto1
         [SerializeField] LayerMask enemyLayer;
         [HideInInspector] public float horizontalAttack;
         [HideInInspector] public float verticalAttack;
+        [SerializeField] public float rangeAttack;
         public float playerHP;
         public int playerDamage;
         public float playerKnockBackForce;
@@ -31,7 +32,7 @@ namespace Proto1
             {
                 attackColdown = 1.0f;
                 Vector2 attackPosition= new Vector2(transform.position.x + horizontalAttack, transform.position.y + verticalAttack);
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, 0.6f, enemyLayer);
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, rangeAttack, enemyLayer);
                 foreach (Collider2D collider in colliders)
                 {
                     IHittable hittable = collider.GetComponent<IHittable>();
@@ -51,7 +52,7 @@ namespace Proto1
 
         private void OnDrawGizmos()
         {
-            Gizmos.DrawWireSphere(new Vector3(transform.position.x + horizontalAttack, transform.position.y + verticalAttack, 0f), 0.6f);
+            Gizmos.DrawWireSphere(new Vector3(transform.position.x + horizontalAttack, transform.position.y + verticalAttack, 0f), rangeAttack);
         }
         public void Hit(int damageAmount, float knockBackForce, Vector2 posAttacker)
         {

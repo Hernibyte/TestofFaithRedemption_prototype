@@ -20,10 +20,10 @@ namespace Proto1
         [SerializeField] float enemyHP;
         [SerializeField] int enemyDamage;
         [SerializeField] float enemyKnockBackForce;
+        [SerializeField] float rangeAttack;
 
         private float timeToRestore;
         private float coldownAfterHit;
-
 
         [System.Serializable]
         public enum STATENEMY
@@ -38,7 +38,7 @@ namespace Proto1
         void Start()
         {
             timeToRestore = 0;
-
+            coldownAfterHit = 0.1f;
             enemyState = STATENEMY.Idle;
             target = GameObject.FindGameObjectWithTag("Player");
         }
@@ -74,8 +74,15 @@ namespace Proto1
                 case STATENEMY.BeignDamaged:
 
                     enemyAnimator.SetTrigger("hit");
-                    enemyState = STATENEMY.Following;
 
+                    if (timeToRestore < coldownAfterHit)
+                        timeToRestore += Time.deltaTime;
+                    else
+                    {
+                        timeToRestore = 0;
+                        rig.velocity = Vector2.zero;
+                        enemyState = STATENEMY.Following;
+                    }
                     break;
             }
         }
@@ -95,9 +102,7 @@ namespace Proto1
             {
                 enemyAnimator.SetInteger("following", (int)enemyState);
 
-                rig.MovePosition(Vector2.MoveTowards(transform.position, target.transform.position, enemySpeed * Time.deltaTime));
-
-                Debug.Log("VECTOR MOVE:" + Vector2.MoveTowards(transform.position, target.transform.position, enemySpeed * Time.deltaTime).ToString());
+                rig.MovePosition(Vector2.Lerp(transform.position, target.transform.position, (enemySpeed / 3) * Time.deltaTime));
 
                 if (transform.position.x > target.transform.position.x)
                     spriteEnemy.flipX = true;
@@ -107,7 +112,7 @@ namespace Proto1
             else if(Vector2.Distance(transform.position, target.transform.position) <= maxNearDistance)
             {
                 enemyState = STATENEMY.Attacking;
-                rig.velocity = Vector2.zero;
+                //rig.velocity = Vector2.zero;
             }
         }
 
@@ -132,7 +137,7 @@ namespace Proto1
                 enemyAnimator.SetTrigger("attack");
 
                 Vector2 attackPosition = new Vector2(transform.position.x, transform.position.y);
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, 0.6f, playerLayer);
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, rangeAttack, playerLayer);
                 foreach (Collider2D collider in colliders)
                 {
                     IHittable hittable = collider.GetComponent<IHittable>();
@@ -158,7 +163,7 @@ namespace Proto1
         }
         private void OnDrawGizmos()
         {
-            Gizmos.DrawWireSphere(new Vector3(transform.position.x, transform.position.y, 0f), 0.6f);
+            Gizmos.DrawWireSphere(new Vector3(transform.position.x, transform.position.y, 0f), rangeAttack);
         }
         public void Hit(int amountDamage, float knockBackForce, Vector2 posAttacker)
         {
@@ -170,13 +175,12 @@ namespace Proto1
                 attackColdown = 1;
                 enemyState = STATENEMY.BeignDamaged;
 
-                Vector2 direction = posAttacker - new Vector2(transform.position.x, transform.position.y);
-                rig.AddForceAtPosition(direction.normalized, transform.position, ForceMode2D.Impulse);
+                //directionWhereDamage = posAttacker - new Vector2(transform.position.x, transform.position.y);
 
-                //if (transform.position.x > posAttacker.x)
-                //    rig.AddForce(Vector2.right * knockBackForce, ForceMode2D.Impulse);
-                //else
-                //    rig.AddForce(-Vector2.right * knockBackForce, ForceMode2D.Impulse);
+                if (transform.position.x > posAttacker.x)
+                    rig.velocity = new Vector2(knockBackForce,0);
+                else
+                    rig.velocity = new Vector2(-knockBackForce,0);
             }
             else
             {

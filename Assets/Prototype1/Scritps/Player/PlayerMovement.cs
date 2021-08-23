@@ -9,7 +9,7 @@ namespace Proto1
         [SerializeField] SpriteRenderer mySprite;
         PlayerAttack playerAttack;
         Rigidbody2D rig;
-        RoomBehaviour actualRoom;
+        RoomID actualRoom;
         [SerializeField] int playerOnRoom;
 
         void Awake() 
@@ -28,12 +28,12 @@ namespace Proto1
             Movement();
         }
 
-        public RoomBehaviour GetPlayerOnRoom()
+        public RoomID GetPlayerOnRoom()
         {
             return actualRoom;
         }
 
-        void SetPlayerOnRoom(RoomBehaviour room)
+        void SetPlayerOnRoom(RoomID room)
         {
             if (room == null)
                 return;
@@ -95,11 +95,11 @@ namespace Proto1
             }
         }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+        private void OnTriggerStay2D(Collider2D collision)
         {
             if(collision.CompareTag("RoomSpace"))
             {
-                actualRoom = collision.GetComponent<RoomBehaviour>();
+                actualRoom = collision.GetComponent<RoomID>();
                 SetPlayerOnRoom(actualRoom);
             }
         }
