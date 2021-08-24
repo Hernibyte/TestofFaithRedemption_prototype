@@ -7,17 +7,18 @@ namespace Proto1
     {
         [SerializeField] public PlayerAttack player;
         [SerializeField] public Image healthBar;
+        [SerializeField] public Image damageEntry;
 
         public bool needUpdateData = false;
-        float delayToReduceHP;
-        float timer;
         float auxFillAmount;
+        int flagHealth;
         int amountHPGone;
+        float amountHPFillImage;
         
         void Start()
         {
-            delayToReduceHP = 1.5f;
-            timer = 0;
+            flagHealth = 0;
+            amountHPFillImage = 0;
             amountHPGone = 0;
             auxFillAmount = healthBar.fillAmount;
 
@@ -28,18 +29,7 @@ namespace Proto1
         {
             if(needUpdateData)
             {
-                if(timer < delayToReduceHP)
-                {
-                    timer += Time.deltaTime;
-
-                    UpdatePlayerHP();
-                }
-                else
-                {
-                    timer = 0;
-                    auxFillAmount = healthBar.fillAmount;
-                    needUpdateData = false;
-                }
+                UpdatePlayerHP();
             }
         }
         private void OnDisable()
@@ -51,14 +41,28 @@ namespace Proto1
         {
             needUpdateData = true;
             amountHPGone = amountDamageDealt;
+            flagHealth = 1;
         }
 
         void UpdatePlayerHP()
         {
-            float amountToRest = (amountHPGone * 1) / player.maxPlayerHP;
+            amountHPFillImage = (amountHPGone * 1) / player.maxPlayerHP;
 
-            if (healthBar.fillAmount >= (auxFillAmount - amountToRest))
-                healthBar.fillAmount -= Time.deltaTime;
+            if(flagHealth == 1)
+            {
+                healthBar.fillAmount -= amountHPFillImage;
+                flagHealth = 0;
+            }
+
+            if (damageEntry.fillAmount > (auxFillAmount - amountHPFillImage))
+                damageEntry.fillAmount -= Time.deltaTime;
+
+            if (damageEntry.fillAmount <= (auxFillAmount - amountHPFillImage))
+            {
+                damageEntry.fillAmount = (auxFillAmount - amountHPFillImage);
+                auxFillAmount = damageEntry.fillAmount;
+                needUpdateData = false;
+            }
         }
     }
 }

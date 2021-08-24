@@ -18,12 +18,16 @@ namespace Proto1
         public float maxNearDistance;
 
         [SerializeField] float enemyHP;
+        [SerializeField] public float enemyMaxHP;
         [SerializeField] int enemyDamage;
         [SerializeField] float enemyKnockBackForce;
         [SerializeField] float rangeAttack;
 
         private float timeToRestore;
         private float coldownAfterHit;
+
+        public delegate void UpdateEnemyUIData(int amountDamage);
+        public UpdateEnemyUIData updateUIData;
 
         [System.Serializable]
         public enum STATENEMY
@@ -39,6 +43,7 @@ namespace Proto1
         {
             timeToRestore = 0;
             coldownAfterHit = 0.1f;
+            enemyMaxHP = enemyHP;
             enemyState = STATENEMY.Idle;
             target = GameObject.FindGameObjectWithTag("Player");
         }
@@ -176,12 +181,16 @@ namespace Proto1
                     rig.velocity = new Vector2(knockBackForce,0);
                 else
                     rig.velocity = new Vector2(-knockBackForce,0);
+
+                updateUIData?.Invoke(amountDamage);
             }
             else
             {
                 enemyHP = 0;
-                Die();
             }
+
+            if(enemyHP == 0)
+                Die();
         }
         public void Die()
         {
