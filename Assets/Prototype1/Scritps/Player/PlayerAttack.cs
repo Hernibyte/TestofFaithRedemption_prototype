@@ -78,8 +78,11 @@ namespace Proto1
                 playerHP = 0;
             }
 
-            if(playerHP == 0)
+            if(playerHP <= 0)
+            {
+                playerHP = 0;
                 Die();
+            }
         }
         public void Die()
         {
