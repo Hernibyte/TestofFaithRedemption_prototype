@@ -95,8 +95,6 @@ namespace Proto1
                 return;
             }
 
-            //Debug.Log("Distancia:" + Vector2.Distance(transform.position, target.transform.position).ToString());
-
             if(Vector2.Distance(transform.position, target.transform.position) < distanceToTarget &&
                Vector2.Distance(transform.position, target.transform.position) > maxNearDistance)
             {
@@ -112,7 +110,6 @@ namespace Proto1
             else if(Vector2.Distance(transform.position, target.transform.position) <= maxNearDistance)
             {
                 enemyState = STATENEMY.Attacking;
-                //rig.velocity = Vector2.zero;
             }
         }
 
@@ -174,8 +171,6 @@ namespace Proto1
                 enemyAnimator.SetFloat("prepareAttack", attackDelay);
                 attackColdown = 1;
                 enemyState = STATENEMY.BeignDamaged;
-
-                //directionWhereDamage = posAttacker - new Vector2(transform.position.x, transform.position.y);
 
                 if (transform.position.x > posAttacker.x)
                     rig.velocity = new Vector2(knockBackForce,0);

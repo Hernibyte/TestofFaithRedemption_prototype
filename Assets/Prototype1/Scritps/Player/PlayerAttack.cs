@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Proto1
 {
@@ -11,14 +9,20 @@ namespace Proto1
         [HideInInspector] public float verticalAttack;
         [SerializeField] public float rangeAttack;
         public float playerHP;
+        public float maxPlayerHP;
         public int playerDamage;
         public float playerKnockBackForce;
         [SerializeField] Animator playerAnimator;
         [SerializeField] Rigidbody2D rig;
         public float attackColdown;
+
+        public delegate void UpdateUIData(int hitOnHP);
+        public UpdateUIData updateUI;
+
         void Start()
         {
             attackColdown = 0;
+            maxPlayerHP = playerHP;
         }
     
         void Update()
@@ -64,12 +68,16 @@ namespace Proto1
                     rig.AddForce(Vector2.right * knockBackForce, ForceMode2D.Impulse);
                 else
                     rig.AddForce(-Vector2.right * knockBackForce, ForceMode2D.Impulse);
+                
+                updateUI?.Invoke(damageAmount);
             }
             else
             {
                 playerHP = 0;
-                Die();
             }
+
+            if(playerHP == 0)
+                Die();
         }
         public void Die()
         {
