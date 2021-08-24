@@ -4,6 +4,7 @@ public class StatsMenu : MonoBehaviour
 {
     [SerializeField] Animation animations;
     [SerializeField] CanvasGroup canvasIcon;
+    [SerializeField] CanvasGroup canvasGStats;
 
     bool openStats;
     int flagToOpen;
@@ -16,6 +17,7 @@ public class StatsMenu : MonoBehaviour
         flagToOpen = 0;
         openStats = false;
         canvasIcon.alpha = 0;
+        canvasGStats.alpha = 0;
         animations.Play("StatsClose");
     }
 
@@ -47,6 +49,7 @@ public class StatsMenu : MonoBehaviour
         if(fadeIn)
         {
             canvasIcon.alpha += Time.deltaTime * 0.9f;
+            canvasGStats.alpha += Time.deltaTime / 1.2f;
 
             if (canvasIcon.alpha >= 1)
                 fadeIn = false;
@@ -54,6 +57,7 @@ public class StatsMenu : MonoBehaviour
         else if(fadeOut)
         {
             canvasIcon.alpha -= Time.deltaTime * 2;
+            canvasGStats.alpha -= Time.deltaTime * 2;
 
             if (canvasIcon.alpha <= 0)
                 fadeOut = false;

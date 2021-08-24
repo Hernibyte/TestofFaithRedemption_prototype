@@ -5,9 +5,11 @@ namespace Proto1
 {
     public class UI_Player : MonoBehaviour
     {
-        [SerializeField] public PlayerAttack player;
+        [SerializeField] public PlayerAttack playerBasicStats;
+        [SerializeField] public PlayerMovement playerMoveStats;
         [SerializeField] public Image healthBar;
         [SerializeField] public Image damageEntry;
+        [SerializeField] public Text playerStats;
 
         public bool needUpdateData = false;
         float auxFillAmount;
@@ -22,7 +24,7 @@ namespace Proto1
             amountHPGone = 0;
             auxFillAmount = healthBar.fillAmount;
 
-            player.updateUI += AskForUpdate;
+            playerBasicStats.updateUI += AskForUpdate;
         }
 
         void Update()
@@ -31,10 +33,12 @@ namespace Proto1
             {
                 UpdatePlayerHP();
             }
+
+            UpdatePlayerStats();
         }
         private void OnDisable()
         {
-            player.updateUI -= AskForUpdate;
+            playerBasicStats.updateUI -= AskForUpdate;
         }
 
         public void AskForUpdate(int amountDamageDealt)
@@ -46,7 +50,7 @@ namespace Proto1
 
         void UpdatePlayerHP()
         {
-            amountHPFillImage = (amountHPGone * 1) / player.maxPlayerHP;
+            amountHPFillImage = (amountHPGone * 1) / playerBasicStats.maxPlayerHP;
 
             if(flagHealth == 1)
             {
@@ -63,6 +67,19 @@ namespace Proto1
                 auxFillAmount = damageEntry.fillAmount;
                 needUpdateData = false;
             }
+        }
+
+        void UpdatePlayerStats()
+        {
+            if (playerBasicStats == null || playerMoveStats == null || playerStats == null)
+                return;
+
+            playerStats.text = "-STATS-" + "\n" + "\n"
+                + "HP: " + playerBasicStats.maxPlayerHP + "\n"
+                + "DEF: " + playerBasicStats.defensePlayer + "\n"
+                + "VEL: " + playerMoveStats.speed + "\n"
+                + "A.SPD: "+ playerBasicStats.attackSpeed + "\n"
+                + "DPS: " + playerBasicStats.playerDamage + "\n";
         }
     }
 }

@@ -10,11 +10,13 @@ namespace Proto1
         [SerializeField] public float rangeAttack;
         public float playerHP;
         public float maxPlayerHP;
+        public float defensePlayer;
         public int playerDamage;
         public float playerKnockBackForce;
         [SerializeField] Animator playerAnimator;
         [SerializeField] Rigidbody2D rig;
         public float attackColdown;
+        public float attackSpeed;
 
         public delegate void UpdateUIData(int hitOnHP);
         public UpdateUIData updateUI;
@@ -34,7 +36,7 @@ namespace Proto1
         {
             if (Input.GetKeyDown(KeyCode.Mouse0) && attackColdown == 0)
             {
-                attackColdown = 1.0f;
+                attackColdown = attackSpeed;
                 Vector2 attackPosition= new Vector2(transform.position.x + horizontalAttack, transform.position.y + verticalAttack);
                 Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, rangeAttack, enemyLayer);
                 foreach (Collider2D collider in colliders)

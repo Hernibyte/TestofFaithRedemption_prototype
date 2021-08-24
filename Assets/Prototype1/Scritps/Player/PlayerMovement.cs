@@ -4,7 +4,7 @@ namespace Proto1
 {
     public class PlayerMovement : MonoBehaviour
     {
-        [SerializeField] float speed;
+        [SerializeField] public float speed;
         [SerializeField] Animator playerAnimator;
         [SerializeField] SpriteRenderer mySprite;
         PlayerAttack playerAttack;
