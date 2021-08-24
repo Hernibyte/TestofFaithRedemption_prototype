@@ -105,7 +105,7 @@ namespace Proto1
             {
                 enemyAnimator.SetInteger("following", (int)enemyState);
 
-                rig.MovePosition(Vector2.Lerp(transform.position, target.transform.position, (enemySpeed / 3) * Time.deltaTime));
+                rig.MovePosition(Vector2.MoveTowards(transform.position, target.transform.position, (enemySpeed) * Time.deltaTime));
 
                 if (transform.position.x > target.transform.position.x)
                     spriteEnemy.flipX = true;
