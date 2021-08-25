@@ -14,24 +14,24 @@ public class DeckOfCards : MonoBehaviour
         slotCardTaked = new Slot();
         for (int i = 0; i < 7; i++)
         {
-            slots[i] = None;
+            slots[i] = new Slot();
         }
     }
 
     void FixedUpdate()
     {
-        if (slotCardTaked.card == null)
-            Debug.Log("nulo");
-        else
-            Debug.Log("no nulo");
+        //if (slotCardTaked.card == null)
+        //    Debug.Log("nulo");
+        //else
+        //    Debug.Log("no nulo");
 
-        Debug.Log(slotCardTaked.card);
+        //Debug.Log(slotCardTaked.card);
     }
 
     public void SetCardTaked(Slot card)
     {
         slotCardTaked = card;
-        Debug.Log(slotCardTaked);
+        //Debug.Log(slotCardTaked);
     }
 
     public void SetSlot(Card card)

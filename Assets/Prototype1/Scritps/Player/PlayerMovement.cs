@@ -12,6 +12,10 @@ namespace Proto1
         RoomID actualRoom;
         [SerializeField] int playerOnRoom;
 
+        bool startColdown;
+        float timeToDodge;
+        float coldownDodge;
+
         void Awake() 
         {
             rig = GetComponent<Rigidbody2D>();
@@ -20,6 +24,9 @@ namespace Proto1
 
         void Start()
         {
+            startColdown = false;
+            timeToDodge = 0;
+            coldownDodge = 10.5f;
             playerOnRoom = 0;
         }
 
@@ -42,6 +49,26 @@ namespace Proto1
             playerOnRoom = room.roomId;
         }
 
+        void DodgeInDirection(Vector2 direction)
+        {
+            if (timeToDodge >= coldownDodge)
+            {
+                timeToDodge -= Time.deltaTime;
+                Debug.Log("Estas en coldown");
+            }
+            else
+            {
+                timeToDodge = 0;
+                Debug.Log("Podes esquivar");
+
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    rig.AddForce(direction, ForceMode2D.Impulse);
+                    timeToDodge = coldownDodge;
+                }
+            }
+        }
+
         void Movement()
         {
             float x = Input.GetAxis("Horizontal");
@@ -50,6 +77,8 @@ namespace Proto1
             Vector2 position = new Vector2(x * Time.deltaTime * speed, y * Time.deltaTime * speed);
 
             rig.AddForce(position);
+
+            DodgeInDirection(position);
 
             if (playerAttack.attackColdown > 0)
                 rig.velocity = Vector3.zero;
