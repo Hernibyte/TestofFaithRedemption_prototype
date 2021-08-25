@@ -12,11 +12,14 @@ namespace Proto1
         RoomID actualRoom;
         [SerializeField] int playerOnRoom;
 
-        bool startColdown;
-        float timeToDodge;
-        float coldownDodge;
+        bool canDodge;
 
-        void Awake() 
+        [SerializeField] public GameObject dodgeTrails;
+        [SerializeField] public float dodgeRecovery;
+        [SerializeField][Range(1,4)] public float recoverDodge;
+
+
+        void Awake()
         {
             rig = GetComponent<Rigidbody2D>();
             playerAttack = GetComponent<PlayerAttack>();
@@ -24,14 +27,26 @@ namespace Proto1
 
         void Start()
         {
-            startColdown = false;
-            timeToDodge = 0;
-            coldownDodge = 10.5f;
+            canDodge = true;
             playerOnRoom = 0;
         }
 
         void Update()
         {
+            if (dodgeRecovery <= recoverDodge)
+                dodgeRecovery += Time.deltaTime;
+
+            if(dodgeRecovery > recoverDodge)
+            {
+                dodgeRecovery = recoverDodge;
+            }
+
+            if(dodgeRecovery == recoverDodge)
+            {
+                canDodge = true;
+                dodgeTrails.gameObject.SetActive(false);
+            }
+
             Movement();
         }
 
@@ -51,21 +66,17 @@ namespace Proto1
 
         void DodgeInDirection(Vector2 direction)
         {
-            if (timeToDodge >= coldownDodge)
-            {
-                timeToDodge -= Time.deltaTime;
-                Debug.Log("Estas en coldown");
-            }
-            else
-            {
-                timeToDodge = 0;
-                Debug.Log("Podes esquivar");
+            if (!canDodge)
+                return;
 
-                if (Input.GetKeyDown(KeyCode.Space))
-                {
-                    rig.AddForce(direction, ForceMode2D.Impulse);
-                    timeToDodge = coldownDodge;
-                }
+            if (Input.GetKeyDown(KeyCode.Space) && rig.velocity != Vector2.zero)
+            {
+                rig.AddForce(direction * 1.5f, ForceMode2D.Impulse);
+                playerAnimator.SetTrigger("dodge");
+                dodgeTrails.gameObject.SetActive(true);
+
+                dodgeRecovery = 0;
+                canDodge = false;
             }
         }
 
@@ -85,7 +96,7 @@ namespace Proto1
 
             if (playerAnimator != null)
             {
-                if(position != Vector2.zero)
+                if (position != Vector2.zero)
                 {
                     if (position.x < 0)
                         mySprite.flipX = true;
@@ -126,7 +137,7 @@ namespace Proto1
 
         private void OnTriggerStay2D(Collider2D collision)
         {
-            if(collision.CompareTag("RoomSpace"))
+            if (collision.CompareTag("RoomSpace"))
             {
                 actualRoom = collision.GetComponent<RoomID>();
                 SetPlayerOnRoom(actualRoom);
