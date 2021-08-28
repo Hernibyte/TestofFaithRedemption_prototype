@@ -4,10 +4,11 @@ namespace Proto1
 {
     public class PlayerAttack : MonoBehaviour, IHittable
     {
+
         [SerializeField] LayerMask enemyLayer;
         [HideInInspector] public float horizontalAttack;
         [HideInInspector] public float verticalAttack;
-        [SerializeField] public float rangeAttack;
+        [SerializeField] public float distanceMelee;
         public float playerHP;
         public float maxPlayerHP;
         public float defensePlayer;
@@ -17,6 +18,8 @@ namespace Proto1
         [SerializeField] Rigidbody2D rig;
         public float attackColdown;
         public float attackSpeed;
+
+        [SerializeField] RangeAttack rangeMode;
 
         public delegate void UpdateUIData(int hitOnHP);
         public UpdateUIData updateUI;
@@ -32,17 +35,17 @@ namespace Proto1
             Attack();
         }
 
-        void Attack()
+        void MeleeAttack()
         {
             if (Input.GetKeyDown(KeyCode.Mouse0) && attackColdown == 0)
             {
                 attackColdown = attackSpeed;
-                Vector2 attackPosition= new Vector2(transform.position.x + horizontalAttack, transform.position.y + verticalAttack);
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, rangeAttack, enemyLayer);
+                Vector2 attackPosition = new Vector2(transform.position.x + horizontalAttack, transform.position.y + verticalAttack);
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, distanceMelee, enemyLayer);
                 foreach (Collider2D collider in colliders)
                 {
                     IHittable hittable = collider.GetComponent<IHittable>();
-                    if(hittable != null)
+                    if (hittable != null)
                     {
                         hittable.Hit(playerDamage, playerKnockBackForce, transform.position);
                     }
@@ -56,9 +59,33 @@ namespace Proto1
                 attackColdown = 0;
         }
 
+        void RangeAttack()
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse1) && attackColdown == 0)
+            {
+                attackColdown = attackSpeed;
+
+                rangeMode.Shoot();
+
+                playerAnimator.SetTrigger("attack2");
+            }
+
+            if (attackColdown > 0)
+                attackColdown -= Time.deltaTime;
+            else
+                attackColdown = 0;
+        }
+
+        void Attack()
+        {
+            MeleeAttack();
+
+            RangeAttack();
+        }
+
         private void OnDrawGizmos()
         {
-            Gizmos.DrawWireSphere(new Vector3(transform.position.x + horizontalAttack, transform.position.y + verticalAttack, 0f), rangeAttack);
+            Gizmos.DrawWireSphere(new Vector3(transform.position.x + horizontalAttack, transform.position.y + verticalAttack, 0f), distanceMelee);
         }
         public void Hit(int damageAmount, float knockBackForce, Vector2 posAttacker)
         {

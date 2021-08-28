@@ -9,15 +9,19 @@ public class RoomLogic : MonoBehaviour
     //3 Se necesita una puerta derecha
     //4 Se necesita una puerta izquierda
 
-    private RoomPrefabs templates;
     [SerializeField] private int rand;
     [SerializeField] private bool spawned = false;
     [SerializeField] RoomID myId;
+    
+    RoomPrefabs templates;
+    GameObject roomCreated;
 
     void Start()
     {
+        roomCreated = null;
+        myId = new RoomID();
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomPrefabs>();
-        Invoke("Spawn", 0.4f);
+        Invoke("Spawn", 0.2f);
     }
 
     void Spawn()
@@ -27,27 +31,29 @@ public class RoomLogic : MonoBehaviour
             if (openSide == 1)
             {
                 rand = Random.Range(0, templates.bottomRooms.Length);
-                Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
+                roomCreated =Instantiate(templates.bottomRooms[rand], transform.position, templates.bottomRooms[rand].transform.rotation);
             }
             else if (openSide == 2)
             {
                 rand = Random.Range(0, templates.topRooms.Length);
-                Instantiate(templates.topRooms[rand], transform.position, templates.topRooms[rand].transform.rotation);
+                roomCreated = Instantiate(templates.topRooms[rand], transform.position, templates.topRooms[rand].transform.rotation);
             }
             else if (openSide == 3)
             {
                 rand = Random.Range(0, templates.leftRooms.Length);
-                Instantiate(templates.leftRooms[rand], transform.position, templates.leftRooms[rand].transform.rotation);
+                roomCreated = Instantiate(templates.leftRooms[rand], transform.position, templates.leftRooms[rand].transform.rotation);
             }
             else if (openSide == 4)
             {
                 rand = Random.Range(0, templates.rightRooms.Length);
-                Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
+                roomCreated = Instantiate(templates.rightRooms[rand], transform.position, templates.rightRooms[rand].transform.rotation);
             }
             templates.amountRooms++;
 
             if (myId != null)
-                myId.roomId = templates.amountRooms;
+                myId.SetID(templates.amountRooms);
+
+            templates.roomList.Add(roomCreated);
 
             spawned = true;
         }

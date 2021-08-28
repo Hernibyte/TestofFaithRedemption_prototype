@@ -12,4 +12,6 @@ public class RoomPrefabs : MonoBehaviour
     public GameObject closedRoom;
 
     [SerializeField] public int amountRooms;
+
+    [SerializeField] public List<GameObject> roomList;
 }

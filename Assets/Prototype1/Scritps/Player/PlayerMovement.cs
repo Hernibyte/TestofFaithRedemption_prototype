@@ -8,7 +8,7 @@ namespace Proto1
         [SerializeField] Animator playerAnimator;
         [SerializeField] SpriteRenderer mySprite;
         PlayerAttack playerAttack;
-        Rigidbody2D rig;
+        public Rigidbody2D rig;
         RoomID actualRoom;
         [SerializeField] int playerOnRoom;
 
@@ -17,7 +17,6 @@ namespace Proto1
         [SerializeField] public GameObject dodgeTrails;
         [SerializeField] public float dodgeRecovery;
         [SerializeField][Range(1,4)] public float recoverDodge;
-
 
         void Awake()
         {

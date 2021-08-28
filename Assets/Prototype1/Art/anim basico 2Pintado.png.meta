@@ -1,0 +1,719 @@
+fileFormatVersion: 2
+guid: c4dc072b80bbe93488d026825d404779
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6300969604519935553
+    second: anim basico 2Pintado_0
+  - first:
+      213: 1698621402198550127
+    second: anim basico 2Pintado_1
+  - first:
+      213: 4425625179691491317
+    second: anim basico 2Pintado_2
+  - first:
+      213: -5429023613827217037
+    second: anim basico 2Pintado_3
+  - first:
+      213: -2329109335626713307
+    second: anim basico 2Pintado_4
+  - first:
+      213: 3033396741238110295
+    second: anim basico 2Pintado_5
+  - first:
+      213: 6943307363916101471
+    second: anim basico 2Pintado_6
+  - first:
+      213: 2952823830247744344
+    second: anim basico 2Pintado_7
+  - first:
+      213: -6516666497865255195
+    second: anim basico 2Pintado_8
+  - first:
+      213: -2168745919200616259
+    second: anim basico 2Pintado_9
+  - first:
+      213: 6588560171404354585
+    second: anim basico 2Pintado_10
+  - first:
+      213: 9012968947556550210
+    second: anim basico 2Pintado_15
+  - first:
+      213: 8485741055984029987
+    second: anim basico 2Pintado_16
+  - first:
+      213: 8362168063794547337
+    second: anim basico 2Pintado_17
+  - first:
+      213: -826811399756032458
+    second: anim basico 2Pintado_23
+  - first:
+      213: 5996505196587290811
+    second: anim basico 2Pintado_24
+  - first:
+      213: 8221357639781939853
+    second: anim basico 2Pintado_25
+  - first:
+      213: 6375269024734324071
+    second: anim basico 2Pintado_26
+  - first:
+      213: -1453495704695242541
+    second: anim basico 2Pintado_30
+  - first:
+      213: -4362044542688143166
+    second: anim basico 2Pintado_31
+  - first:
+      213: 4581411717222271646
+    second: anim basico 2Pintado_32
+  - first:
+      213: 3005047077922372535
+    second: anim basico 2Pintado_33
+  - first:
+      213: -5682873547767959457
+    second: anim basico 2Pintado_40
+  - first:
+      213: 2342971925493176790
+    second: anim basico 2Pintado_41
+  - first:
+      213: 8512176808284840184
+    second: anim basico 2Pintado_42
+  - first:
+      213: -2694937128545139966
+    second: anim basico 2Pintado_43
+  - first:
+      213: 9024406502039441943
+    second: anim basico 2Pintado_44
+  - first:
+      213: -5250210067988181906
+    second: anim basico 2Pintado_46
+  - first:
+      213: 2356810884874404062
+    second: anim basico 2Pintado_47
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: anim basico 2Pintado_0
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 3350
+        width: 139
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14eb1f9a87a817750800000000000000
+      internalID: 6300969604519935553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_1
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 3350
+        width: 137
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66abe56a27b29710800000000000000
+      internalID: 1698621402198550127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_2
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 3350
+        width: 133
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ff198827aafa6d30800000000000000
+      internalID: 4425625179691491317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_3
+      rect:
+        serializedVersion: 2
+        x: 758
+        y: 3348
+        width: 137
+        height: 104
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3790f9499cb38a4b0800000000000000
+      internalID: -5429023613827217037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_4
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 3339
+        width: 137
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5277cee36675dafd0800000000000000
+      internalID: -2329109335626713307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_5
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 3312
+        width: 135
+        height: 97
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7583358b34ac81a20800000000000000
+      internalID: 3033396741238110295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_6
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 3334
+        width: 137
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f57b290a2459b5060800000000000000
+      internalID: 6943307363916101471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_7
+      rect:
+        serializedVersion: 2
+        x: 1431
+        y: 3360
+        width: 137
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 853a93ef0a98af820800000000000000
+      internalID: 2952823830247744344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_8
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 3353
+        width: 130
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e67d03d8562095a0800000000000000
+      internalID: -6516666497865255195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_9
+      rect:
+        serializedVersion: 2
+        x: 1774
+        y: 3355
+        width: 135
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db028f5b31117e1e0800000000000000
+      internalID: -2168745919200616259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_10
+      rect:
+        serializedVersion: 2
+        x: 1941
+        y: 3341
+        width: 134
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 914e7d571944f6b50800000000000000
+      internalID: 6588560171404354585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_15
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 2529
+        width: 423
+        height: 677
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2460cba418f741d70800000000000000
+      internalID: 9012968947556550210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_16
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 2531
+        width: 348
+        height: 673
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32150e1f78863c570800000000000000
+      internalID: 8485741055984029987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_17
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 2521
+        width: 422
+        height: 683
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98a0792ac836c0470800000000000000
+      internalID: 8362168063794547337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_23
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 1806
+        width: 423
+        height: 677
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6365c4d99639684f0800000000000000
+      internalID: -826811399756032458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_24
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 1806
+        width: 375
+        height: 677
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb09e5894bdd73350800000000000000
+      internalID: 5996505196587290811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_25
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 1796
+        width: 529
+        height: 687
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8a75aaf631281270800000000000000
+      internalID: 8221357639781939853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_26
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 1791
+        width: 443
+        height: 692
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76527de7661897850800000000000000
+      internalID: 6375269024734324071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_30
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1065
+        width: 424
+        height: 674
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d085178b5524dbe0800000000000000
+      internalID: -1453495704695242541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_31
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1054
+        width: 519
+        height: 685
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c854aa7997e673c0800000000000000
+      internalID: -4362044542688143166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_32
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 1054
+        width: 533
+        height: 685
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9a88d6fea1749f30800000000000000
+      internalID: 4581411717222271646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_33
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 1282
+        width: 244
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb73ec556214b920800000000000000
+      internalID: 3005047077922372535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_46
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 220
+        width: 423
+        height: 675
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c826d82c18327b0800000000000000
+      internalID: -5250210067988181906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: anim basico 2Pintado_47
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 208
+        width: 604
+        height: 829
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed086bb430315b020800000000000000
+      internalID: 2356810884874404062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
