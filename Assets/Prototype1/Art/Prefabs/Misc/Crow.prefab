@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 462512236689191309}
   - component: {fileID: 6553380412057108503}
   - component: {fileID: 6640233200167593174}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Crow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 3201760190373978476}
   - component: {fileID: 3201760190373978479}
   - component: {fileID: 3201760190373978478}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CrowSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

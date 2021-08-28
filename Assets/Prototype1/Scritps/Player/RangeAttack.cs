@@ -21,7 +21,6 @@ namespace Proto1
         private void Update()
         {
             mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
-            Debug.Log("Mouse Pos: " + mousePosition.ToString());
             rb.position = followPlayer.rig.position;
         }
         void FixedUpdate()

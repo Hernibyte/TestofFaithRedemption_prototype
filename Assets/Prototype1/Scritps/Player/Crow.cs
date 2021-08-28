@@ -6,15 +6,24 @@ namespace Proto1
     {
         [SerializeField] LayerMask enemyLayer;
         public Rigidbody2D rig;
+        bool alive = true;
 
-        private void OnTriggerEnter2D(Collider2D other)
+        private void Update()
         {
-            if (other.gameObject.layer == enemyLayer)
+            if(alive)
             {
-                Destroy(other.gameObject);
+                Collider2D[] hits = Physics2D.OverlapCircleAll(rig.position, 0.5f, enemyLayer);
+                foreach(Collider2D hit in hits)
+                {
+                    IHittable hitObj = hit.GetComponent<IHittable>();
+                    if(hitObj != null)
+                    {
+                        hitObj.Hit(10, 1, rig.position);
+                        alive = false;
+                        Destroy(gameObject);
+                    }
+                }
             }
-
-            //Destroy(gameObject);
         }
     }
 }

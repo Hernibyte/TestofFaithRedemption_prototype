@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8240067408543406178}
   - component: {fileID: 1016619130201598812}
   - component: {fileID: 5276345892122122799}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: DamageEntry
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 6440471946432942453}
   - component: {fileID: 7141264741154002038}
   - component: {fileID: 9189611935223722848}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 5092913862026565861}
   - component: {fileID: 6251713068359356383}
   - component: {fileID: 1075566042966034966}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: FillHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 4355160226022945687}
   - component: {fileID: 6271774660838994204}
   - component: {fileID: 1966472123274529359}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: HealthHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,6 +459,7 @@ MonoBehaviour:
   distanceToTarget: 8
   maxNearDistance: 1.4
   enemyHP: 50
+  enemyMaxHP: 0
   enemyDamage: 25
   enemyKnockBackForce: 10
   rangeAttack: 1.09
@@ -495,7 +496,7 @@ GameObject:
   - component: {fileID: 9144347687210246048}
   - component: {fileID: 1094966640057117767}
   - component: {fileID: 6145392421747660446}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: UI_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,7 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11a7eeb85f1ccf4da9237997edf1204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyReference: {fileID: 6226170014874994646}
   enemyHealthBar: {fileID: 9189611935223722848}
   enemyDamageEntry: {fileID: 5276345892122122799}
   enemyUIUpdate: 0
-  enemyReference: {fileID: 6226170014874994646}
