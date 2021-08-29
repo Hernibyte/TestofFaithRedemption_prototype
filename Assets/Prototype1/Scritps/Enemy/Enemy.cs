@@ -46,6 +46,21 @@ namespace Proto1
             enemyMaxHP = enemyHP;
             enemyState = STATENEMY.Idle;
             target = GameObject.FindGameObjectWithTag("Player");
+
+            GameManager gma = FindObjectOfType<GameManager>();
+            for (int i = 0; i < 7; i++)
+            {
+                if(gma.GetCard(i).card != null) {
+                    enemyMaxHP += gma.GetCard(i).card.sCard.hp;
+                    enemySpeed += gma.GetCard(i).card.sCard.movementSpeed;
+                    attackColdown += gma.GetCard(i).card.sCard.attackColdown;
+                    maxAttackDelay += gma.GetCard(i).card.sCard.attackDelay;
+                    enemyDamage += gma.GetCard(i).card.sCard.damage;
+                    enemyKnockBackForce += gma.GetCard(i).card.sCard.knockback;
+                }
+            }
+
+            enemyHP = enemyMaxHP;
         }
     
         void Update()

@@ -8,6 +8,7 @@ public class DeckOfCards : MonoBehaviour
     public Slot[] slots = new Slot[7];
     public Slot slotCardTaked;
     public Slot None;
+    public bool updateDeck = false;
 
     private void Awake()
     {
@@ -18,20 +19,9 @@ public class DeckOfCards : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        //if (slotCardTaked.card == null)
-        //    Debug.Log("nulo");
-        //else
-        //    Debug.Log("no nulo");
-
-        //Debug.Log(slotCardTaked.card);
-    }
-
     public void SetCardTaked(Slot card)
     {
         slotCardTaked = card;
-        //Debug.Log(slotCardTaked);
     }
 
     public void SetSlot(Card card)
@@ -49,6 +39,7 @@ public class DeckOfCards : MonoBehaviour
     public void SetSlot(int index)
     {
         slots[index] = slotCardTaked;
+        updateDeck = true;
     }
 
     public Slot GetSlot(int index)

@@ -35,6 +35,27 @@ namespace Proto1
             Attack();
         }
 
+        private void FixedUpdate()
+        {
+            GameManager gma = FindObjectOfType<GameManager>();
+            if (gma.deck.updateDeck)
+            {
+                for (int i = 0; i < 7; i++)
+                {
+                    if(gma.GetCard(i).card != null)
+                    {
+                        maxPlayerHP += gma.GetCard(i).card.sCard.hp;
+                        defensePlayer += gma.GetCard(i).card.sCard.defense;
+                        playerDamage += gma.GetCard(i).card.sCard.damage;
+                        playerKnockBackForce += gma.GetCard(i).card.sCard.knockback;
+                        attackColdown += gma.GetCard(i).card.sCard.attackColdown;
+                        attackSpeed += gma.GetCard(i).card.sCard.attackSpeed;
+                    }
+                }
+                gma.deck.updateDeck = false;
+            }
+        }
+
         void MeleeAttack()
         {
             if (Input.GetKeyDown(KeyCode.Mouse0) && attackColdown == 0)
