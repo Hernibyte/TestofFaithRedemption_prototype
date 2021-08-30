@@ -4,7 +4,6 @@ namespace Proto1
 {
     public class PlayerAttack : MonoBehaviour, IHittable
     {
-
         [SerializeField] LayerMask enemyLayer;
         [HideInInspector] public float horizontalAttack;
         [HideInInspector] public float verticalAttack;
@@ -24,10 +23,13 @@ namespace Proto1
         public delegate void UpdateUIData(int hitOnHP);
         public UpdateUIData updateUI;
 
+        public PlayerMovement movementPlayer;
+
         void Start()
         {
             attackColdown = 0;
             maxPlayerHP = playerHP;
+            movementPlayer = GetComponent<PlayerMovement>();
         }
     
         void Update()
@@ -50,6 +52,7 @@ namespace Proto1
                         playerKnockBackForce += gma.GetCard(i).card.sCard.knockback;
                         attackColdown += gma.GetCard(i).card.sCard.attackColdown;
                         attackSpeed += gma.GetCard(i).card.sCard.attackSpeed;
+                        movementPlayer.speed += gma.GetCard(i).card.sCard.movementSpeed;
                     }
                 }
                 gma.deck.updateDeck = false;

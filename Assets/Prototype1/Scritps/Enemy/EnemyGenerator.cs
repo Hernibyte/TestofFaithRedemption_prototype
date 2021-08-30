@@ -12,12 +12,19 @@ public class EnemyGenerator : MonoBehaviour
     {
         enemyCreated = false;
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(!enemyCreated)
         {
-            Instantiate(prefabEnemy, spawnArea.transform.position, Quaternion.identity);
+            GameObject obj = Instantiate(prefabEnemy, spawnArea.transform.position, Quaternion.identity);
+            obj.GetComponent<Proto1.Enemy>().deathEvent.AddListener(SpawnLoot);
             enemyCreated = true;
         }
+    }
+
+    void SpawnLoot()
+    {
+
     }
 }

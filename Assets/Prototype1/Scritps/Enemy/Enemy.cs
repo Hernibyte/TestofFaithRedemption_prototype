@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 namespace Proto1
 {
@@ -28,6 +29,8 @@ namespace Proto1
 
         public delegate void UpdateEnemyUIData(int amountDamage);
         public UpdateEnemyUIData updateUIData;
+
+        public UnityEvent deathEvent;
 
         [System.Serializable]
         public enum STATENEMY
@@ -212,6 +215,7 @@ namespace Proto1
         }
         public void Die()
         {
+            deathEvent.Invoke();
             Destroy(gameObject);
         }
     }
