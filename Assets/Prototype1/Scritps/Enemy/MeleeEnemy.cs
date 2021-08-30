@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 namespace Proto1
 {
-    public class Enemy : MonoBehaviour, IHittable
+    public class MeleeEnemy : MonoBehaviour, IHittable
     {
         [SerializeField] LayerMask playerLayer;
         [SerializeField] Animator enemyAnimator;
@@ -215,7 +215,7 @@ namespace Proto1
         }
         public void Die()
         {
-            deathEvent.Invoke();
+            deathEvent?.Invoke();
             Destroy(gameObject);
         }
     }

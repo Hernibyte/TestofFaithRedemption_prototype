@@ -311,8 +311,8 @@ GameObject:
   - component: {fileID: 6226170014874994664}
   - component: {fileID: 6226170014874994665}
   - component: {fileID: 6104354508160232845}
-  - component: {fileID: 6226170014874994646}
   - component: {fileID: 6723181152724773383}
+  - component: {fileID: 3398405092786312210}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -328,7 +328,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6226170014874994644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalPosition: {x: -3.57, y: -1.7, z: 0}
   m_LocalScale: {x: 6, y: 6, z: 6}
   m_Children:
   - {fileID: 8002217849766921429}
@@ -433,37 +433,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &6226170014874994646
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6226170014874994644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30b81a5ed66ef3548841b9b24a865fc1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  enemyAnimator: {fileID: 6723181152724773383}
-  spriteEnemy: {fileID: 6226170014874994664}
-  rig: {fileID: 6104354508160232845}
-  enemySpeed: 20
-  attackColdown: 0
-  attackDelay: 0.5
-  maxAttackDelay: 0.5
-  target: {fileID: 0}
-  distanceToTarget: 8
-  maxNearDistance: 1.4
-  enemyHP: 50
-  enemyMaxHP: 0
-  enemyDamage: 25
-  enemyKnockBackForce: 10
-  rangeAttack: 1.09
-  enemyState: 1
 --- !u!95 &6723181152724773383
 Animator:
   serializedVersion: 3
@@ -483,6 +452,40 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3398405092786312210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6226170014874994644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e0c606fb7a0e04bb216b9e9133f5ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  enemyAnimator: {fileID: 6723181152724773383}
+  spriteEnemy: {fileID: 6226170014874994664}
+  rig: {fileID: 6104354508160232845}
+  enemySpeed: 20
+  attackColdown: 0
+  attackDelay: 0
+  maxAttackDelay: 0.6
+  target: {fileID: 0}
+  distanceToTarget: 8
+  maxNearDistance: 1.2
+  enemyHP: 85
+  enemyMaxHP: 85
+  enemyDamage: 20
+  enemyKnockBackForce: 10
+  rangeAttack: 0.95
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  enemyState: 0
 --- !u!1 &8185431195215112273
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,7 +598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b11a7eeb85f1ccf4da9237997edf1204, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyReference: {fileID: 6226170014874994646}
+  enemyReference: {fileID: 3398405092786312210}
   enemyHealthBar: {fileID: 9189611935223722848}
   enemyDamageEntry: {fileID: 5276345892122122799}
   enemyUIUpdate: 0

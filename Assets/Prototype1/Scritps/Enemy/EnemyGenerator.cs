@@ -18,8 +18,8 @@ public class EnemyGenerator : MonoBehaviour
         if(!enemyCreated)
         {
             GameObject obj = Instantiate(prefabEnemy, spawnArea.transform.position, Quaternion.identity);
-            obj.GetComponent<Proto1.Enemy>().deathEvent.AddListener(SpawnLoot);
             enemyCreated = true;
+            obj.GetComponent<Proto1.MeleeEnemy>().deathEvent.AddListener(SpawnLoot);
         }
     }
 

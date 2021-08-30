@@ -5,7 +5,7 @@ namespace Proto1
 {
     public class UI_Enemy : MonoBehaviour
     {
-        [SerializeField] Enemy enemyReference;
+        [SerializeField] MeleeEnemy enemyReference;
         [SerializeField] Image enemyHealthBar; 
         [SerializeField] Image enemyDamageEntry;
         float amountHPLose;
