@@ -6,8 +6,8 @@ public class StatsMenu : MonoBehaviour
     [SerializeField] CanvasGroup canvasIcon;
     [SerializeField] CanvasGroup canvasGStats;
 
-    bool openStats;
-    int flagToOpen;
+    public bool openStats;
+    public int flagToOpen;
 
     bool fadeIn = false;
     bool fadeOut = false;

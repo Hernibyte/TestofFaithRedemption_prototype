@@ -817,6 +817,8 @@ MonoBehaviour:
     type: 3}
   spawnArea: {fileID: 7859077427438366232}
   enemyCreated: 0
+  lootChest: {fileID: 1239203090205887322, guid: ddfac4bb14dbb52438d8dd5214920938,
+    type: 3}
 --- !u!1 &8449138440278949756
 GameObject:
   m_ObjectHideFlags: 0

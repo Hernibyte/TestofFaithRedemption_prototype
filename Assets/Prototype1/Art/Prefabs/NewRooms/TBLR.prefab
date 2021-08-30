@@ -1196,6 +1196,8 @@ MonoBehaviour:
     type: 3}
   spawnArea: {fileID: 6980541501729994274}
   enemyCreated: 0
+  lootChest: {fileID: 1239203090205887322, guid: ddfac4bb14dbb52438d8dd5214920938,
+    type: 3}
 --- !u!1 &8396115280717647154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1242,6 +1244,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSide: 3
+  rand: 0
+  spawned: 0
   myId: {fileID: 2788478049584130973}
 --- !u!65 &1384264545186541983
 BoxCollider:
@@ -1318,6 +1322,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSide: 1
+  rand: 0
+  spawned: 0
   myId: {fileID: 2788478049584130973}
 --- !u!65 &8180752124102508821
 BoxCollider:
@@ -1394,6 +1400,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSide: 4
+  rand: 0
+  spawned: 0
   myId: {fileID: 2788478049584130973}
 --- !u!65 &3851288857906616959
 BoxCollider:
@@ -1470,6 +1478,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSide: 2
+  rand: 0
+  spawned: 0
   myId: {fileID: 2788478049584130973}
 --- !u!65 &5588536167060005404
 BoxCollider:

@@ -1010,3 +1010,5 @@ MonoBehaviour:
     type: 3}
   spawnArea: {fileID: 9062531870460215687}
   enemyCreated: 0
+  lootChest: {fileID: 1239203090205887322, guid: ddfac4bb14dbb52438d8dd5214920938,
+    type: 3}

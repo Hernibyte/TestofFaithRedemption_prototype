@@ -201,6 +201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSide: 2
+  rand: 0
+  spawned: 0
   myId: {fileID: 8228283106950393106}
 --- !u!65 &1700092825105239100
 BoxCollider:
@@ -277,6 +279,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSide: 4
+  rand: 0
+  spawned: 0
   myId: {fileID: 8228283106950393106}
 --- !u!65 &4709705403888062396
 BoxCollider:
@@ -1053,3 +1057,5 @@ MonoBehaviour:
     type: 3}
   spawnArea: {fileID: 8736003208923925070}
   enemyCreated: 0
+  lootChest: {fileID: 1239203090205887322, guid: ddfac4bb14dbb52438d8dd5214920938,
+    type: 3}

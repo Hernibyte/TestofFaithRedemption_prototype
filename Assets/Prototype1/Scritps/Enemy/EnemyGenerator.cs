@@ -7,6 +7,7 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField] GameObject prefabEnemy;
     [SerializeField] GameObject spawnArea;
     [SerializeField] bool enemyCreated;
+    [SerializeField] GameObject lootChest;
 
     private void Start()
     {
@@ -25,6 +26,6 @@ public class EnemyGenerator : MonoBehaviour
 
     void SpawnLoot()
     {
-
+        Instantiate(lootChest, spawnArea.transform.position, Quaternion.identity);
     }
 }
