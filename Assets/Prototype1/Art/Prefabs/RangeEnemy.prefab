@@ -556,7 +556,7 @@ MonoBehaviour:
   prefabBullet: {fileID: 7468984581150530208, guid: ba656d3fde6f4714e88ae770ab09eb55,
     type: 3}
   firePoint: {fileID: 2125260446019254936}
-  deleayPerShoot: 1.2
+  deleayPerShoot: 2.5
   speedBullet: 4000
   directionAttack: {x: 0, y: 0}
   newPosWhereMove: {x: 0, y: 0}

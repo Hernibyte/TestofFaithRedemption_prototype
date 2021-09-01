@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 3025674770544856421}
   - component: {fileID: 8759114098441587335}
   - component: {fileID: 4464583364451569646}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: R
   m_TagString: RoomSpace
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -679,7 +679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4083279164826499063}
   - component: {fileID: 7629271750890563130}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GameObject (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -728,7 +728,7 @@ GameObject:
   - component: {fileID: 8306624625733020072}
   - component: {fileID: 8032937976144870276}
   - component: {fileID: 1428276189034636360}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RoomSpawn3
   m_TagString: SpawnPoint
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -762,6 +762,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openSide: 3
+  rand: 0
+  spawned: 0
   myId: {fileID: 4464583364451569646}
 --- !u!65 &8032937976144870276
 BoxCollider:

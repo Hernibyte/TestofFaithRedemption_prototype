@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 17.5, y: 9.5, z: 1}
   m_Children: []
   m_Father: {fileID: 6295894143902538842}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8491162946847892290
 BoxCollider2D:
@@ -65,17 +65,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1466805547891079203}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19ab4390d6468ed4f99f0b1c95066bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabEnemy: {fileID: 6226170014874994644, guid: ae85e6fedfdc8374fbcba1d61edf3ecc,
-    type: 3}
+  prefabEnemyWarrior: {fileID: 0}
+  prefabEnemyRanger: {fileID: 0}
   spawnArea: {fileID: 1466805547891079203}
   enemyCreated: 0
   lootChest: {fileID: 1239203090205887322, guid: ddfac4bb14dbb52438d8dd5214920938,
     type: 3}
+  spawnPoints: []
 --- !u!1 &3258719824436582776
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +107,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6295894143902538842}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &2981265578394643384
 BoxCollider2D:
@@ -322,7 +323,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6295894143902538842}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8640377658508292685
 BoxCollider2D:
@@ -761,9 +762,9 @@ Transform:
   - {fileID: 8829952649792967857}
   - {fileID: 7286742858063134207}
   - {fileID: 7286742857579956800}
-  - {fileID: 5727967861836585015}
   - {fileID: 8729670386333212683}
   - {fileID: 1421432394999144185}
+  - {fileID: 5727967861836585015}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

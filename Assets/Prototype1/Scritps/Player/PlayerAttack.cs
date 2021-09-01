@@ -23,6 +23,9 @@ namespace Proto1
         public delegate void UpdateUIData(int hitOnHP);
         public UpdateUIData updateUI;
 
+        public delegate void PlayerHasAttack();
+        public PlayerHasAttack attackFromPlayer;
+
         public PlayerMovement movementPlayer;
 
         void Start()
@@ -87,6 +90,8 @@ namespace Proto1
         {
             if (Input.GetKeyDown(KeyCode.Mouse1) && attackColdown == 0)
             {
+                attackFromPlayer?.Invoke();
+
                 attackColdown = attackSpeed;
 
                 rangeMode.Shoot();

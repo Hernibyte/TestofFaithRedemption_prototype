@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1065870545484466347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5572497993184747386}
+  m_Layer: 13
+  m_Name: SpawnPoint_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5572497993184747386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1065870545484466347}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.092, y: 0.359, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4008473497266390288}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1092000394174689438
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,7 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3245427421385754409}
   - component: {fileID: 4125912108826372729}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: GameObject (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +197,7 @@ GameObject:
   - component: {fileID: 4767879958828015358}
   - component: {fileID: 4767879958828015359}
   - component: {fileID: 4767879958828015352}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RoomSpawn3
   m_TagString: SpawnPoint
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -186,7 +216,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8449138440658449852}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4767879958828015358
 MonoBehaviour:
@@ -569,7 +599,7 @@ GameObject:
   - component: {fileID: 5097142721973649307}
   - component: {fileID: 268659684729350250}
   - component: {fileID: 4487384958213391294}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: RoomSpawn2
   m_TagString: SpawnPoint
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -588,7 +618,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8449138440658449852}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5097142721973649307
 MonoBehaviour:
@@ -635,6 +665,66 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &6383794057204183926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3188347331922207411}
+  m_Layer: 13
+  m_Name: SpawnPoint_3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3188347331922207411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6383794057204183926}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.423, y: 0.322, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4008473497266390288}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6823539405010082118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 228794551766211084}
+  m_Layer: 13
+  m_Name: SpawnPoint_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &228794551766211084
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6823539405010082118}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.384, y: -0.008, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4008473497266390288}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7396552558458691498
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +844,7 @@ GameObject:
   - component: {fileID: 4008473497266390288}
   - component: {fileID: 5837766019858558074}
   - component: {fileID: 1370328429009648872}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: EnemyGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -771,9 +861,12 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 17.5, y: 9.5, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 228794551766211084}
+  - {fileID: 5572497993184747386}
+  - {fileID: 3188347331922207411}
   m_Father: {fileID: 8449138440658449852}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5837766019858558074
 BoxCollider2D:
@@ -813,12 +906,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ab4390d6468ed4f99f0b1c95066bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabEnemy: {fileID: 6226170014874994644, guid: ae85e6fedfdc8374fbcba1d61edf3ecc,
+  prefabEnemyWarrior: {fileID: 6226170014874994644, guid: ae85e6fedfdc8374fbcba1d61edf3ecc,
+    type: 3}
+  prefabEnemyRanger: {fileID: 7229216304297253021, guid: d2f24ba679972444ca45e3b94c32f81a,
     type: 3}
   spawnArea: {fileID: 7859077427438366232}
   enemyCreated: 0
   lootChest: {fileID: 1239203090205887322, guid: ddfac4bb14dbb52438d8dd5214920938,
     type: 3}
+  spawnPoints:
+  - {fileID: 6823539405010082118}
+  - {fileID: 1065870545484466347}
+  - {fileID: 6383794057204183926}
 --- !u!1 &8449138440278949756
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,7 +1038,7 @@ GameObject:
   - component: {fileID: 5662079368687942006}
   - component: {fileID: 4748417543662288695}
   - component: {fileID: 7358092367971502404}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: BR
   m_TagString: RoomSpace
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -964,9 +1063,9 @@ Transform:
   - {fileID: 4767879959944900759}
   - {fileID: 4767879960121413711}
   - {fileID: 4767879959218281944}
-  - {fileID: 4008473497266390288}
   - {fileID: 4767879958828015353}
   - {fileID: 5440748158460707562}
+  - {fileID: 4008473497266390288}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

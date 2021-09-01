@@ -29,15 +29,16 @@ namespace Proto1
         public Vector2 directionAttack;
         public Vector2 newPosWhereMove;
 
-        [SerializeField] bool hasTakenDamage;
-
         [Space(20)]
 
-        private float timeToRestore;
-        private float coldownAfterHit;
+        private bool movingToNewPosition;
+        private float timeMoving;
+        private float movingOtherPosition;
 
         public delegate void UpdateEnemyUIData(int amountDamage);
         public UpdateEnemyUIData updateUIData;
+
+        PlayerAttack playerReference;
 
         [System.Serializable]
         public enum STATENEMY
@@ -52,14 +53,24 @@ namespace Proto1
         void Start()
         {
             timerPerShoot = 0;
-            hasTakenDamage = false;
 
-            timeToRestore = 0;
-            coldownAfterHit = 0.1f;
+            target = GameObject.FindGameObjectWithTag("Player");
+            playerReference = target.GetComponent<PlayerAttack>();
+
+            if(playerReference != null)
+                playerReference.attackFromPlayer += ChangePosition;
+
+            timeMoving = 0;
+            movingOtherPosition = 2f;
+            movingToNewPosition = false;
+
             enemyMaxHP = enemyHP;
             enemyState = STATENEMY.Idle;
-            target = GameObject.FindGameObjectWithTag("Player");
-
+        }
+        private void OnDisable()
+        {
+            if(playerReference != null)
+                playerReference.attackFromPlayer -= ChangePosition;
         }
         void Update()
         {
@@ -90,15 +101,6 @@ namespace Proto1
                         timerPerShoot = 0;
                     }
 
-                    if (hasTakenDamage)
-                    {
-                        enemyAnimator.SetBool("attack", false);
-                        enemyAnimator.SetBool("fallBack", true);
-                        enemyState = STATENEMY.FallBack;
-                        timerPerShoot = deleayPerShoot;
-                        newPosWhereMove = target.transform.position * -1;
-                    }
-
                     if (timerPerShoot > 0)
                     {
                         enemyAnimator.SetBool("attack", false);
@@ -122,13 +124,18 @@ namespace Proto1
                     break;
                 case STATENEMY.FallBack:
 
-                    rig.MovePosition(Vector2.MoveTowards(rig.position, newPosWhereMove, enemySpeed * Time.deltaTime));
-                    
-                    if(rig.position == newPosWhereMove)
+                    if (timeMoving < movingOtherPosition)
+                        timeMoving += Time.deltaTime;
+                    else
+                        timeMoving = movingOtherPosition;
+
+
+                    if (timeMoving >= movingOtherPosition)
                     {
                         enemyAnimator.SetBool("fallBack", false);
                         enemyState = STATENEMY.Attacking;
-                        hasTakenDamage = false;
+                        rig.velocity = Vector2.zero;
+                        movingToNewPosition = false;
                     }
 
                     break;
@@ -138,13 +145,44 @@ namespace Proto1
                     break;
             }
         }
+
+        public void ChangePosition()
+        {
+            int randomProb = Random.Range(0, 100);
+
+            if (randomProb < 60)
+                return;
+            else
+            {
+                if (movingToNewPosition)
+                    return;
+
+                movingToNewPosition = true;
+
+                enemyAnimator.SetBool("attack", false);
+                enemyAnimator.SetBool("fallBack", true);
+                timeMoving = 0;
+
+                int direction = Random.Range(0,100);
+                if(direction < 25)
+                    rig.AddForce(rig.transform.right * (enemySpeed * 20) * Time.deltaTime, ForceMode2D.Impulse);
+                else if(direction > 25 && direction < 50)
+                    rig.AddForce(-rig.transform.right * (enemySpeed * 20) * Time.deltaTime, ForceMode2D.Impulse);
+                else if(direction > 50 && direction < 75)
+                    rig.AddForce(rig.transform.up * (enemySpeed * 20) * Time.deltaTime, ForceMode2D.Impulse);
+                else if(direction > 75 && direction < 100)
+                    rig.AddForce(-rig.transform.up * (enemySpeed * 20) * Time.deltaTime, ForceMode2D.Impulse);
+
+                enemyState = STATENEMY.FallBack;
+                timerPerShoot = deleayPerShoot;
+            }
+        }
+
         public void Hit(int amountDamage, float knockBackForce, Vector2 posAttacker)
         {
             if (enemyHP > 0)
             {
                 enemyHP -= amountDamage;
-
-                hasTakenDamage = true;
 
                 updateUIData?.Invoke(amountDamage);
             }
