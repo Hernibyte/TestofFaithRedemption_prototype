@@ -18,7 +18,7 @@ namespace Proto1
         public float distanceToTarget;
         public float maxNearDistance;
 
-        [SerializeField] float enemyHP;
+        [SerializeField] public float enemyHP;
         [SerializeField] public float enemyMaxHP;
         [SerializeField] int enemyDamage;
         [SerializeField] float enemyKnockBackForce;

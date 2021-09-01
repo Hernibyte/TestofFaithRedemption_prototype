@@ -14,7 +14,7 @@ namespace Proto1
 
         [SerializeField] GameObject target;
 
-        [SerializeField] float enemyHP;
+        [SerializeField] public float enemyHP;
         [SerializeField] public float enemyMaxHP;
         [SerializeField] public int enemyDamage;
         [SerializeField] float enemyKnockBackForce;
@@ -39,6 +39,7 @@ namespace Proto1
         public UpdateEnemyUIData updateUIData;
 
         PlayerAttack playerReference;
+        public UnityEvent deathEvent;
 
         [System.Serializable]
         public enum STATENEMY
@@ -198,6 +199,7 @@ namespace Proto1
         }
         public void Die()
         {
+            deathEvent?.Invoke();
             Destroy(gameObject);
         }
     }

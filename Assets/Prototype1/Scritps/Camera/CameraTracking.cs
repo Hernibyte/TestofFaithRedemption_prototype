@@ -24,7 +24,7 @@ namespace Proto1
                 refRoom = playerRef.GetPlayerOnRoom();
                 if(refRoom != null)
                 {
-                    transform.position = Vector3.Lerp(transform.position, new Vector3(refRoom.transform.position.x, refRoom.transform.position.y,transform.position.z), 10 * Time.deltaTime);
+                    transform.position = Vector3.Lerp(transform.position, new Vector3(refRoom.transform.position.x, refRoom.transform.position.y,transform.position.z), 5 * Time.deltaTime);
                 }
             }
         }

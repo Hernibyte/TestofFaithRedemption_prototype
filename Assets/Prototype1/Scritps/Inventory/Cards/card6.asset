@@ -14,3 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sCard:
     name: +20% Attack Speed _ -15% Damage
+    hp: 0
+    defense: 0
+    damage: -10
+    knockback: 0
+    attackColdown: 0
+    attackSpeed: -0.3
+    attackDelay: 0
+    movementSpeed: 0
