@@ -19,6 +19,8 @@ public class LootBehaviour : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                taked.panel.alpha = 1f;
+
                 taked.card = slotsElection[Random.Range(0, (slotsElection.Count - 1))];
 
                 Destroy(this.gameObject);
