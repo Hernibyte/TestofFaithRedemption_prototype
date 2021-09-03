@@ -8,6 +8,14 @@ namespace Proto1
         public Rigidbody2D rig;
         bool alive = true;
 
+        int damageCrow;
+        float knockbackCrow;
+
+        public void SetCrowStats(int damage,float knockback)
+        {
+            damageCrow = damage;
+            knockbackCrow = knockback;
+        }
         private void Update()
         {
             if(alive)
@@ -18,7 +26,7 @@ namespace Proto1
                     IHittable hitObj = hit.GetComponent<IHittable>();
                     if(hitObj != null)
                     {
-                        hitObj.Hit(10, 1, rig.position);
+                        hitObj.Hit(damageCrow, knockbackCrow, rig.position);
                         alive = false;
                         Destroy(gameObject);
                     }

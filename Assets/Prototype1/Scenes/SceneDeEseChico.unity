@@ -344,6 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deck: {fileID: 285546669}
+  panel: {fileID: 1905944342}
   card: {fileID: 7093565254033156423, guid: 246f0248e79123b4e8ee84df8cf37ce5, type: 3}
 --- !u!1 &228063339
 GameObject:

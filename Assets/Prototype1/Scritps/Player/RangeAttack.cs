@@ -6,6 +6,7 @@ namespace Proto1
     {
         [SerializeField] Rigidbody2D rb;
         [SerializeField] PlayerMovement followPlayer;
+        [SerializeField] PlayerAttack playerStats;
         [SerializeField] Vector2 mousePosition;
         [SerializeField] Camera cam;
 
@@ -16,6 +17,7 @@ namespace Proto1
         public void Shoot()
         {
             Crow crowCreated = Instantiate(crowMagic, firePoint.position, firePoint.rotation);
+            crowCreated.SetCrowStats(playerStats.playerDamage, playerStats.playerKnockBackForce);
             crowCreated.rig.AddForce(firePoint.up * crowForce, ForceMode2D.Impulse);
         }
         private void Update()

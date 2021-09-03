@@ -98,6 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 107167073090869888}
   followPlayer: {fileID: 5919561122757471342}
+  playerStats: {fileID: 5919561122757471343}
   mousePosition: {x: 0, y: 0}
   cam: {fileID: 0}
   firePoint: {fileID: 2683087992497446728}
