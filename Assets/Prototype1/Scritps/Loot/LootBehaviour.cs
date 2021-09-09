@@ -17,7 +17,7 @@ public class LootBehaviour : MonoBehaviour
     {
         if (Contains(playerMask, collision.gameObject.layer))
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKey(KeyCode.E))
             {
                 taked.panel.alpha = 1f;
 
