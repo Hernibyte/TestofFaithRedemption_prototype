@@ -66,7 +66,7 @@ namespace Proto1
             enemyHP = enemyMaxHP;
         }
     
-        void Update()
+        void FixedUpdate()
         {
             switch (enemyState)
             {

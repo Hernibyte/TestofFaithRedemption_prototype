@@ -4010,6 +4010,11 @@ PrefabInstance:
       propertyPath: rig
       value: 
       objectReference: {fileID: 1581591485}
+    - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: speed
+      value: 55
+      objectReference: {fileID: 0}
     - target: {fileID: 5919561122757471343, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: maxPlayerHP

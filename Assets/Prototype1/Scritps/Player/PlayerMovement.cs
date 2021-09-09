@@ -46,6 +46,10 @@ namespace Proto1
                 dodgeTrails.gameObject.SetActive(false);
             }
 
+        }
+
+        private void FixedUpdate()
+        {
             Movement();
         }
 
@@ -68,7 +72,7 @@ namespace Proto1
             if (!canDodge)
                 return;
 
-            if (Input.GetKeyDown(KeyCode.Space) && rig.velocity != Vector2.zero)
+            if (Input.GetKey(KeyCode.Space) && rig.velocity != Vector2.zero)
             {
                 rig.AddForce(direction * 1.5f, ForceMode2D.Impulse);
                 playerAnimator.SetTrigger("dodge");
@@ -84,7 +88,7 @@ namespace Proto1
             float x = Input.GetAxis("Horizontal");
             float y = Input.GetAxis("Vertical");
 
-            Vector2 position = new Vector2(x * Time.deltaTime * speed, y * Time.deltaTime * speed);
+            Vector2 position = new Vector2(x * speed, y * speed);
 
             rig.AddForce(position);
 

@@ -73,7 +73,7 @@ namespace Proto1
             if(playerReference != null)
                 playerReference.attackFromPlayer -= ChangePosition;
         }
-        void Update()
+        void FixedUpdate()
         {
             if (target == null)
                 return;

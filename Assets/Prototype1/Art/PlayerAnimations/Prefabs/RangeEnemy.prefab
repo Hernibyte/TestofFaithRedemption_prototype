@@ -545,7 +545,7 @@ MonoBehaviour:
   enemyAnimator: {fileID: 8032470007617910094}
   spriteEnemy: {fileID: 7229216304297253025}
   rig: {fileID: 7386923031441470148}
-  enemySpeed: 20
+  enemySpeed: 5
   target: {fileID: 0}
   enemyHP: 35
   enemyMaxHP: 35
@@ -557,9 +557,12 @@ MonoBehaviour:
     type: 3}
   firePoint: {fileID: 2125260446019254936}
   deleayPerShoot: 3
-  speedBullet: 3200
+  speedBullet: 700
   directionAttack: {x: 0, y: 0}
   newPosWhereMove: {x: 0, y: 0}
+  deathEvent:
+    m_PersistentCalls:
+      m_Calls: []
   enemyState: 0
 --- !u!1 &8747007253905544059
 GameObject:

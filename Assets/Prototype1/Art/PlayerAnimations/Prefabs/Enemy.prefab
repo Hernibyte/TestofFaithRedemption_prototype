@@ -501,7 +501,7 @@ MonoBehaviour:
   enemyAnimator: {fileID: 4884390928142549705}
   spriteEnemy: {fileID: 5279987251552217633}
   rig: {fileID: 6104354508160232845}
-  enemySpeed: 20
+  enemySpeed: 4
   attackColdown: 0
   attackDelay: 0
   maxAttackDelay: 0.6
