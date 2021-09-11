@@ -59,8 +59,12 @@ public class RoomLogic : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
+        if (other.CompareTag("RoomSpace"))
+        {
+            Destroy(gameObject);
+        }
         if (other.CompareTag("SpawnPoint"))
         {
             Destroy(gameObject);
