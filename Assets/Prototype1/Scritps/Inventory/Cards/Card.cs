@@ -18,6 +18,8 @@ public class SCard
     public float attackDelay; // enemy
 
     public float movementSpeed; // ambos
+    public enum CardUtility { Offensive, Misc, Defensive }
+    public CardUtility myType;
 }
 
 [CreateAssetMenu(fileName = "Card", menuName = "ScriptableObjects/Card", order = 1)]
