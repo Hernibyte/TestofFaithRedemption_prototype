@@ -25,6 +25,7 @@ namespace Proto1
         [SerializeField] Transform firePoint;
         [SerializeField] float deleayPerShoot;
         [SerializeField] float speedBullet;
+        [SerializeField] Light pointLightSpell;
         float timerPerShoot;
         public Vector2 directionAttack;
         public Vector2 newPosWhereMove;
@@ -105,6 +106,7 @@ namespace Proto1
                     if (timerPerShoot > 0)
                     {
                         enemyAnimator.SetBool("attack", false);
+                        pointLightSpell.gameObject.SetActive(false);
                         return;
                     }
 
@@ -112,6 +114,8 @@ namespace Proto1
                     enemyAnimator.SetBool("attack", true);
                     if(bullet != null)
                     {
+                        pointLightSpell.gameObject.SetActive(true);
+
                         bullet.FixRotation(directionAttack);
                         bullet.SetBulletParams(enemyDamage, enemyKnockBackForce);
 
