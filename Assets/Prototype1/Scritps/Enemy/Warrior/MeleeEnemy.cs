@@ -48,6 +48,10 @@ namespace Proto1
             coldownAfterHit = 0.1f;
             enemyMaxHP = enemyHP;
             enemyState = STATENEMY.Idle;
+
+            attackDelay = maxAttackDelay;
+            attackColdown = 0;
+
             target = GameObject.FindGameObjectWithTag("Player");
 
             GameManager gma = FindObjectOfType<GameManager>();
@@ -55,7 +59,7 @@ namespace Proto1
             {
                 if(gma.GetCard(i).card != null) {
                     enemyMaxHP += gma.GetCard(i).card.sCard.hp;
-                    enemySpeed += gma.GetCard(i).card.sCard.movementSpeed;
+                    //enemySpeed += gma.GetCard(i).card.sCard.movementSpeed;
                     attackColdown += gma.GetCard(i).card.sCard.attackColdown;
                     maxAttackDelay += gma.GetCard(i).card.sCard.attackDelay;
                     enemyDamage += gma.GetCard(i).card.sCard.damage;
@@ -118,7 +122,12 @@ namespace Proto1
                 return;
             }
 
-            if(Vector2.Distance(transform.position, target.transform.position) < distanceToTarget &&
+            if (Vector2.Distance(transform.position, target.transform.position) > distanceToTarget)
+            {
+                enemyState = STATENEMY.Idle;
+            }
+
+            if (Vector2.Distance(transform.position, target.transform.position) < distanceToTarget &&
                Vector2.Distance(transform.position, target.transform.position) > maxNearDistance)
             {
                 enemyAnimator.SetInteger("following", (int)enemyState);
@@ -138,6 +147,8 @@ namespace Proto1
 
         void Attack()
         {
+            //PREPARACION DEL ATAQUE
+
             enemyAnimator.SetFloat("prepareAttack", attackDelay);
 
             if (attackDelay > 0)
@@ -145,11 +156,13 @@ namespace Proto1
                 if (attackDelay > 0)
                     attackDelay -= Time.deltaTime;
                 else
-                {
                     attackDelay = 0;
-                }
+                
                 return;
             }
+
+
+            //ATAQUE EN SI 
 
             if (attackColdown == 0)
             {
@@ -168,6 +181,9 @@ namespace Proto1
                 }
             }
             
+
+            //COLDOWN PER HIT (Esto calcula el tiempo entre ataque del enemy)
+
             if (attackColdown > 0)
                 attackColdown -= Time.deltaTime;
             else
@@ -176,9 +192,12 @@ namespace Proto1
                 attackDelay = maxAttackDelay;
 
                 if (target != null)
-                    enemyState = STATENEMY.Following;
-                else
-                    enemyState = STATENEMY.Idle;
+                {
+                    if(Vector2.Distance(transform.position, target.transform.position) > distanceToTarget)
+                        enemyState = STATENEMY.Idle;
+                    else
+                        enemyState = STATENEMY.Following;
+                }
             }
         }
         private void OnDrawGizmos()

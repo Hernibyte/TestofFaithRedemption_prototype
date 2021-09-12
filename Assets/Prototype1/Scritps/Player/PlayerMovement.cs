@@ -74,7 +74,7 @@ namespace Proto1
 
             if (Input.GetKey(KeyCode.Space) && rig.velocity != Vector2.zero)
             {
-                rig.AddForce(direction * 1.5f, ForceMode2D.Impulse);
+                rig.AddForce(direction / 2, ForceMode2D.Impulse);
                 playerAnimator.SetTrigger("dodge");
                 dodgeTrails.gameObject.SetActive(true);
 

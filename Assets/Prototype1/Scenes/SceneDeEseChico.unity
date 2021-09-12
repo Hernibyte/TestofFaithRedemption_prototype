@@ -346,6 +346,7 @@ MonoBehaviour:
   deck: {fileID: 285546669}
   panel: {fileID: 1905944342}
   card: {fileID: 7093565254033156423, guid: 246f0248e79123b4e8ee84df8cf37ce5, type: 3}
+  cardImageType: {fileID: 0}
 --- !u!1 &228063339
 GameObject:
   m_ObjectHideFlags: 0
@@ -3738,6 +3739,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: speed
+      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73b6e082fe08542499c88fb7be72bda2, type: 3}

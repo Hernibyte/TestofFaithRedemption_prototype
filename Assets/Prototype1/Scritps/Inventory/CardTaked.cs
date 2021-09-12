@@ -25,8 +25,8 @@ public class CardTaked : MonoBehaviour
 
             if (theCardOnself != null)
             {
-                Debug.Log("ENTRO A TIPO CARTA");
-                cardImageType.SetCardUtility((CardType.CardUtility)theCardOnself.sCard.myType);
+                if(cardImageType != null)
+                    cardImageType.SetCardUtility((CardType.CardUtility)theCardOnself.sCard.myType);
             }
         }
     }
