@@ -21,6 +21,7 @@ namespace Proto1
         [SerializeField] public float bossActualHP;
         [SerializeField] public float bossMAX_HP;
         [SerializeField] public bool isInvulnerable;
+        [SerializeField] public bool isEnraged;
 
         [Header("NO TOCAR")]
         [Space(20)]
@@ -37,6 +38,7 @@ namespace Proto1
             bossCollider = gameObject.GetComponent<BoxCollider2D>();
 
             bossActualHP = bossMAX_HP;
+            isEnraged = false;
 
             target = GameObject.FindGameObjectWithTag("Player");
         }
@@ -44,7 +46,6 @@ namespace Proto1
         {
             if (target == null)
                 return;
-
 
             if (transform.position.x < target.transform.position.x)
             {
@@ -95,6 +96,9 @@ namespace Proto1
         }
         public void Hit(int damage, float kncokBack, Vector2 posAttacker)
         {
+            if (isInvulnerable)
+                return;
+
             if (bossActualHP > 0)
             {
                 bossActualHP -= damage;
@@ -104,12 +108,14 @@ namespace Proto1
                 updateUIData?.Invoke(damage);
             }
 
-            if(bossActualHP <= bossMAX_HP / 2f)
+            if(bossActualHP <= bossMAX_HP / 2f && !isEnraged)
             {
                 bossAnimator.SetBool("IsEnraged", true);
+                bossSpeed += 1.5f;
+                isEnraged = true;
             }
 
-            if(bossActualHP < 0)
+            if (bossActualHP < 0)
             {
                 bossActualHP = 0;
                 Die();

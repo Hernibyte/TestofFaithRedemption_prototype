@@ -6,7 +6,7 @@ namespace Proto1
 {
     public class BossChase : StateMachineBehaviour
     {
-        public float speedBoss;
+        float speedBoss;
 
         BossEnemy boss;
 
