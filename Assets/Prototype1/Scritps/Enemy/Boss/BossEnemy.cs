@@ -115,15 +115,16 @@ namespace Proto1
                 isEnraged = true;
             }
 
-            if (bossActualHP < 0)
+            if (bossActualHP <= 0)
             {
                 bossActualHP = 0;
+                bossAnimator.SetBool("IsDead",true);
                 Die();
             }
         }
         public void Die()
         {
-            Destroy(gameObject);
+            Destroy(gameObject,1f);
         }
     }
 }
