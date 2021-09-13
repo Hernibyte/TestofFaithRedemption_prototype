@@ -34,12 +34,9 @@ namespace Proto1
         public delegate void UpdateBossUIData(int amountDamage);
         public UpdateBossUIData updateUIData;
 
-        CameraShake camShake;
-
         void Start()
         {
             bossCollider = gameObject.GetComponent<BoxCollider2D>();
-            camShake = Camera.main.GetComponent<CameraShake>();
 
             bossActualHP = bossMAX_HP;
             isEnraged = false;
@@ -109,8 +106,7 @@ namespace Proto1
 
                 bossAnimator.SetTrigger("Hit");
 
-                if (camShake != null)
-                    StartCoroutine(camShake.Shake(.15f, .2f));
+                VFXManager.Get()?.ShakeScreen(.15f,.15f);
 
                 updateUIData?.Invoke(damage);
             }
