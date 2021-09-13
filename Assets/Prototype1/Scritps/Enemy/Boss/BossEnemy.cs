@@ -27,9 +27,15 @@ namespace Proto1
 
         BoxCollider2D bossCollider;
 
+        public delegate void UpdateBossUIData(int amountDamage);
+        public UpdateBossUIData updateUIData;
+
         void Start()
         {
             bossCollider = gameObject.GetComponent<BoxCollider2D>();
+
+            bossActualHP = bossMAX_HP;
+
             target = GameObject.FindGameObjectWithTag("Player");
         }
         void Update()
@@ -76,6 +82,7 @@ namespace Proto1
             {
                 bossActualHP -= damage;
 
+                updateUIData?.Invoke(damage);
             }
 
             if(bossActualHP < 0)
