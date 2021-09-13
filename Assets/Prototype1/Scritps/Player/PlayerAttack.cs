@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Proto1
 {
@@ -142,7 +143,7 @@ namespace Proto1
         }
         public void Die()
         {
-            Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name); // worked
         }
     }
 }
