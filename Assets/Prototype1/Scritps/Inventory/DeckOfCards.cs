@@ -12,10 +12,10 @@ public class DeckOfCards : MonoBehaviour
 
     private void Awake()
     {
-        slotCardTaked = new Slot();
+        slotCardTaked = None;
         for (int i = 0; i < 7; i++)
         {
-            slots[i] = new Slot();
+            slots[i] = None;
         }
     }
 

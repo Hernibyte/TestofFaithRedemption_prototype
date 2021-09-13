@@ -19,7 +19,7 @@ public class RoomLogic : MonoBehaviour
     void Start()
     {
         roomCreated = null;
-        myId = new RoomID();
+        //myId = new RoomID();
         templates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomPrefabs>();
         Invoke("Spawn", 0.2f);
     }
