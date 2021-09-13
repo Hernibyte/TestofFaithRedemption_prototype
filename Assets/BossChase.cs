@@ -29,7 +29,7 @@ namespace Proto1
             if (player == null)
                 return;
 
-            Vector2 target = new Vector2(player.transform.position.x, player.transform.position.y * 0.5f);
+            Vector2 target = new Vector2(player.transform.position.x, player.transform.position.y/* * 0.5f*/);
             Vector2 newPos = Vector2.MoveTowards(rb.position, target, speedBoss * Time.fixedDeltaTime);
             rb.MovePosition(newPos);
 
