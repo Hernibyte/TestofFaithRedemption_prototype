@@ -10,6 +10,7 @@ namespace Proto1
         [SerializeField] SpriteRenderer bossSprite;
         [SerializeField] public GameObject target;
         [SerializeField] public Rigidbody2D rb;
+        [SerializeField] Animator bossAnimator;
 
         [Header("BOSS STATS")]
         [Space(20)]
@@ -19,6 +20,7 @@ namespace Proto1
         [SerializeField] public float bossKnockBack;
         [SerializeField] public float bossActualHP;
         [SerializeField] public float bossMAX_HP;
+        [SerializeField] public bool isInvulnerable;
 
         [Header("NO TOCAR")]
         [Space(20)]
@@ -72,6 +74,21 @@ namespace Proto1
                 }
             }
         }
+
+        public void EnragedAttack()
+        {
+            Vector2 attackPosition = new Vector2(rb.position.x, rb.position.y);
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, attackRange, playerLayer);
+            foreach (Collider2D collider in colliders)
+            {
+                IHittable hittable = collider.GetComponent<IHittable>();
+                if (hittable != null)
+                {
+                    hittable.Hit(bossDamage * 2, bossKnockBack * 1.5f, transform.position);
+                }
+            }
+        }
+
         private void OnDrawGizmos()
         {
             Gizmos.DrawWireSphere(new Vector3(transform.position.x, transform.position.y, 0f), attackRange);
@@ -82,7 +99,14 @@ namespace Proto1
             {
                 bossActualHP -= damage;
 
+                bossAnimator.SetTrigger("Hit");
+
                 updateUIData?.Invoke(damage);
+            }
+
+            if(bossActualHP <= bossMAX_HP / 2f)
+            {
+                bossAnimator.SetBool("IsEnraged", true);
             }
 
             if(bossActualHP < 0)

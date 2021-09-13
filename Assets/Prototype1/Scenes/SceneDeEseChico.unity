@@ -1088,7 +1088,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 14.974991}
+  m_AnchoredPosition: {x: 0, y: 14.974976}
   m_SizeDelta: {x: 600, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &459437847
@@ -2125,12 +2125,14 @@ MonoBehaviour:
   bossSprite: {fileID: 1103730814}
   target: {fileID: 0}
   rb: {fileID: 1103730813}
+  bossAnimator: {fileID: 1103730812}
   bossSpeed: 2.5
   attackRange: 2
   bossDamage: 20
   bossKnockBack: 8
   bossActualHP: 0
   bossMAX_HP: 500
+  isInvulnerable: 0
   colliderOffsetXRight: -0.04449021
   colliderOffsetXLeft: 0.05
 --- !u!1 &1159616280
