@@ -223,7 +223,7 @@ namespace Proto1
                 attackColdown = 1;
                 enemyState = STATENEMY.BeignDamaged;
 
-                VFXManager.Get()?.ShakeScreen(.15f,.2f);
+                VFXManager.Get()?.ShakeScreen(.15f,.15f);
 
                 if (transform.position.x > posAttacker.x)
                     rig.velocity = new Vector2(knockBackForce,0);

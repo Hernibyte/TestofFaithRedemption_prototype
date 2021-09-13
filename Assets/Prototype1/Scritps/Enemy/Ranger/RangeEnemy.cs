@@ -191,7 +191,7 @@ namespace Proto1
                 
                 enemyAnimator.SetTrigger("hit");
 
-                VFXManager.Get()?.ShakeScreen(.15f, .2f);
+                VFXManager.Get()?.ShakeScreen(.15f, .15f);
 
                 updateUIData?.Invoke(amountDamage);
             }

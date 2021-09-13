@@ -128,7 +128,7 @@ namespace Proto1
                 else
                     rig.AddForce(-Vector2.right * knockBackForce, ForceMode2D.Impulse);
 
-                VFXManager.Get()?.ShakeScreen(.15f,.2f);
+                VFXManager.Get()?.ShakeScreen(.15f, .15f);
 
                 updateUI?.Invoke(damageAmount);
             }
