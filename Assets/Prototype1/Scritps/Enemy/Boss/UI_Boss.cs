@@ -7,7 +7,7 @@ namespace Proto1
 {
     public class UI_Boss : MonoBehaviour
     {
-        [SerializeField] bool bossIsActive;
+        public bool bossIsActive;
         [SerializeField] Image healtbarBoss;
         [SerializeField] Image damageEntryBoss;
         [SerializeField] GameObject uiHealthBarBoss;
@@ -21,25 +21,28 @@ namespace Proto1
 
         int triggerBoss;
 
-        void Start()
+        private void OnEnable()
         {
-            boss = FindObjectOfType<BossEnemy>();
-
-            bossIsActive = false;
-
-            if (!bossIsActive)
+            if (FindObjectOfType<BossEnemy>())
             {
-                boss.gameObject.SetActive(false);
-                uiHealthBarBoss.gameObject.SetActive(false);
-                triggerBoss = 0;
+                boss = FindObjectOfType<BossEnemy>();
+
+                bossIsActive = false;
+
+                if (!bossIsActive)
+                {
+                    boss.gameObject.SetActive(false);
+                    uiHealthBarBoss.gameObject.SetActive(false);
+                    triggerBoss = 0;
+                }
+
+                flagHealth = 0;
+                amountHPFillImage = 0;
+                auxFillAmount = damageEntryBoss.fillAmount;
+                amountHPLose = 0;
+
+                boss.updateUIData += AskForUpdate;
             }
-
-            flagHealth = 0;
-            amountHPFillImage = 0;
-            auxFillAmount = damageEntryBoss.fillAmount;
-            amountHPLose = 0;
-
-            boss.updateUIData += AskForUpdate;
         }
     
         void Update()

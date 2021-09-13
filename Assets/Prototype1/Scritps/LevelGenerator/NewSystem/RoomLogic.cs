@@ -54,6 +54,7 @@ public class RoomLogic : MonoBehaviour
                 myId.SetID(templates.amountRooms);
 
             templates.roomList.Add(roomCreated);
+            templates.localRoomTime = 2f;
 
             spawned = true;
         }

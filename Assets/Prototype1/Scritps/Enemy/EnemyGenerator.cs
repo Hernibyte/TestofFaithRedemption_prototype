@@ -19,6 +19,9 @@ public class EnemyGenerator : MonoBehaviour
     [SerializeField] MeleeEnemy warriorEnemy; //Lpm con no poder crear mas de uno hay que cambiar el loot system xd
     [SerializeField] RangeEnemy[] rangedEnemies;
 
+    public bool imSpawnBoss;
+    public UI_Boss uiBoss;
+
     private void Start()
     {
         enemyCreated = false;
@@ -32,6 +35,12 @@ public class EnemyGenerator : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (imSpawnBoss)
+        {
+            uiBoss.bossIsActive = true;
+            enemyCreated = true;
+            imSpawnBoss = false;
+        }
         if(!enemyCreated)
         {
             int randomSpawner = Random.Range(0, spawnPoints.Count-1);
@@ -55,5 +64,10 @@ public class EnemyGenerator : MonoBehaviour
     void SpawnLoot()
     {
         Instantiate(lootChest, spawnArea.transform.position, Quaternion.identity);
+    }
+
+    public void FindUI_Boss()
+    {
+        uiBoss = FindObjectOfType<UI_Boss>();
     }
 }
