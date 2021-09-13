@@ -27,6 +27,8 @@ namespace Proto1
         private float timeToRestore;
         private float coldownAfterHit;
 
+        bool triggerAttackAnim;
+
         public delegate void UpdateEnemyUIData(int amountDamage);
         public UpdateEnemyUIData updateUIData;
 
@@ -48,6 +50,8 @@ namespace Proto1
             coldownAfterHit = 0.1f;
             enemyMaxHP = enemyHP;
             enemyState = STATENEMY.Idle;
+
+            triggerAttackAnim = false;
 
             attackDelay = maxAttackDelay;
             attackColdown = 0;
@@ -160,14 +164,18 @@ namespace Proto1
                 
                 return;
             }
+            else
+            {
+                if(!triggerAttackAnim)
+                {
+                    enemyAnimator.SetTrigger("attack");
+                    triggerAttackAnim = true;
+                }
+            }
 
-
-            //ATAQUE EN SI 
-
-            if (attackColdown == 0)
+            if (attackColdown == 0 && triggerAttackAnim)
             {
                 attackColdown = 1.0f;
-                enemyAnimator.SetTrigger("attack");
 
                 Vector2 attackPosition = new Vector2(transform.position.x, transform.position.y);
                 Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, rangeAttack, playerLayer);
@@ -190,6 +198,7 @@ namespace Proto1
             {
                 attackColdown = 0;
                 attackDelay = maxAttackDelay;
+                triggerAttackAnim = false;
 
                 if (target != null)
                 {

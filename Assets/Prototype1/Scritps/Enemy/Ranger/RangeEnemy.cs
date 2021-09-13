@@ -188,6 +188,8 @@ namespace Proto1
             if (enemyHP > 0)
             {
                 enemyHP -= amountDamage;
+                
+                enemyAnimator.SetTrigger("hit");
 
                 updateUIData?.Invoke(amountDamage);
             }

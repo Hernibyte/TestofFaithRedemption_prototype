@@ -14,7 +14,7 @@ namespace Proto1
         public void SetCrowStats(int damage,float knockback)
         {
             damageCrow = damage;
-            knockbackCrow = knockback;
+            knockbackCrow = 0;
         }
         private void Update()
         {
