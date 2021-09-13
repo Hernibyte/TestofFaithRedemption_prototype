@@ -223,6 +223,8 @@ namespace Proto1
                 attackColdown = 1;
                 enemyState = STATENEMY.BeignDamaged;
 
+                VFXManager.Get()?.ShakeScreen(.15f,.2f);
+
                 if (transform.position.x > posAttacker.x)
                     rig.velocity = new Vector2(knockBackForce,0);
                 else
@@ -244,7 +246,7 @@ namespace Proto1
         public void Die()
         {
             deathEvent?.Invoke();
-            Destroy(gameObject);
+            Destroy(gameObject, .15f);
         }
     }
 }

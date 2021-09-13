@@ -11,11 +11,6 @@ namespace Proto1
         int damageCrow;
         float knockbackCrow;
 
-        public void SetCrowStats(int damage,float knockback)
-        {
-            damageCrow = damage;
-            knockbackCrow = 0;
-        }
         private void Update()
         {
             if(alive)
@@ -32,6 +27,11 @@ namespace Proto1
                     }
                 }
             }
+        }
+        public void SetCrowStats(int damage,float knockback)
+        {
+            damageCrow = damage;
+            knockbackCrow = 0;
         }
     }
 }

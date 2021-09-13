@@ -83,7 +83,7 @@ namespace Proto1
             }
 
             if(damageEntryBoss.fillAmount > (auxFillAmount - amountHPFillImage))
-                damageEntryBoss.fillAmount -= Time.deltaTime;
+                damageEntryBoss.fillAmount -= Time.deltaTime / 1.5f;
 
             if (damageEntryBoss.fillAmount <= (auxFillAmount - amountHPFillImage))
             {

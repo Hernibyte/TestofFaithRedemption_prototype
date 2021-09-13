@@ -29,18 +29,17 @@ namespace Proto1
 
         public PlayerMovement movementPlayer;
 
+
         void Start()
         {
             attackColdown = 0;
             maxPlayerHP = playerHP;
             movementPlayer = GetComponent<PlayerMovement>();
         }
-    
         void Update()
         {
             Attack();
         }
-
         private void FixedUpdate()
         {
             GameManager gma = FindObjectOfType<GameManager>();
@@ -76,6 +75,7 @@ namespace Proto1
                     if (hittable != null)
                     {
                         hittable.Hit(playerDamage, playerKnockBackForce, transform.position);
+                        VFXManager.Get()?.ShakeScreen(.15f, .2f);
                     }
                 }
                 playerAnimator.SetTrigger("attack");
@@ -127,7 +127,9 @@ namespace Proto1
                     rig.AddForce(Vector2.right * knockBackForce, ForceMode2D.Impulse);
                 else
                     rig.AddForce(-Vector2.right * knockBackForce, ForceMode2D.Impulse);
-                
+
+                VFXManager.Get()?.ShakeScreen(.15f,.2f);
+
                 updateUI?.Invoke(damageAmount);
             }
             else
