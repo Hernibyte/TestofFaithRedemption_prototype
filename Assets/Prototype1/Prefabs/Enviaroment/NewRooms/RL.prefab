@@ -70,7 +70,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 18, y: 10}
+  m_Size: {x: 17, y: 9}
   m_EdgeRadius: 0
 --- !u!212 &1218794647535688158
 SpriteRenderer:
@@ -418,7 +418,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8, y: 0.8}
   m_EdgeRadius: 0
 --- !u!114 &2154390525141286732
 MonoBehaviour:
@@ -447,6 +447,8 @@ MonoBehaviour:
   - {fileID: 5203684007368488976}
   warriorEnemy: {fileID: 0}
   rangedEnemies: []
+  imSpawnBoss: 0
+  uiBoss: {fileID: 0}
 --- !u!1 &5203684007368488976
 GameObject:
   m_ObjectHideFlags: 0

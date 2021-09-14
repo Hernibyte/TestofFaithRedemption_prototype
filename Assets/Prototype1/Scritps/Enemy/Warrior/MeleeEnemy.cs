@@ -27,8 +27,6 @@ namespace Proto1
         private float timeToRestore;
         private float coldownAfterHit;
 
-        bool triggerAttackAnim;
-
         public delegate void UpdateEnemyUIData(int amountDamage);
         public UpdateEnemyUIData updateUIData;
 
@@ -50,8 +48,6 @@ namespace Proto1
             coldownAfterHit = 0.1f;
             enemyMaxHP = enemyHP;
             enemyState = STATENEMY.Idle;
-
-            triggerAttackAnim = false;
 
             attackDelay = maxAttackDelay;
             attackColdown = 0;
@@ -149,6 +145,20 @@ namespace Proto1
             }
         }
 
+        public void MeleeAttack()
+        {
+            Vector2 attackPosition = new Vector2(transform.position.x, transform.position.y);
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, rangeAttack, playerLayer);
+            foreach (Collider2D collider in colliders)
+            {
+                IHittable hittable = collider.GetComponent<IHittable>();
+                if (hittable != null)
+                {
+                    hittable.Hit(enemyDamage, enemyKnockBackForce, transform.position);
+                }
+            }
+        }
+
         void Attack()
         {
             //PREPARACION DEL ATAQUE
@@ -166,30 +176,24 @@ namespace Proto1
             }
             else
             {
-                if(!triggerAttackAnim)
-                {
-                    enemyAnimator.SetTrigger("attack");
-                    triggerAttackAnim = true;
-                }
+                 enemyAnimator.SetTrigger("attack");
             }
 
-            if (attackColdown == 0 && triggerAttackAnim)
+            if (attackColdown == 0)
             {
                 attackColdown = 1.0f;
-
-                Vector2 attackPosition = new Vector2(transform.position.x, transform.position.y);
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, rangeAttack, playerLayer);
-                foreach (Collider2D collider in colliders)
-                {
-                    IHittable hittable = collider.GetComponent<IHittable>();
-                    if (hittable != null)
-                    {
-                        hittable.Hit(enemyDamage, enemyKnockBackForce, transform.position);
-                    }
-                }
+                //Vector2 attackPosition = new Vector2(transform.position.x, transform.position.y);
+                //Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, rangeAttack, playerLayer);
+                //foreach (Collider2D collider in colliders)
+                //{
+                //    IHittable hittable = collider.GetComponent<IHittable>();
+                //    if (hittable != null)
+                //    {
+                //        hittable.Hit(enemyDamage, enemyKnockBackForce, transform.position);
+                //    }
+                //}
             }
             
-
             //COLDOWN PER HIT (Esto calcula el tiempo entre ataque del enemy)
 
             if (attackColdown > 0)
@@ -198,8 +202,6 @@ namespace Proto1
             {
                 attackColdown = 0;
                 attackDelay = maxAttackDelay;
-                triggerAttackAnim = false;
-
                 if (target != null)
                 {
                     if(Vector2.Distance(transform.position, target.transform.position) > distanceToTarget)

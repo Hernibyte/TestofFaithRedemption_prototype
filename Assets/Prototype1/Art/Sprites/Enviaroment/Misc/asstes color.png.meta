@@ -1,7 +1,55 @@
 fileFormatVersion: 2
 guid: 3dc91f6d54278b64fb2d086fc897f64f
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7715202639811580062
+    second: asstes color_2
+  - first:
+      213: 884107481572616642
+    second: asstes color_5
+  - first:
+      213: -5389825935168799949
+    second: asstes color_6
+  - first:
+      213: -6551780126313407182
+    second: asstes color_9
+  - first:
+      213: -200919201798799141
+    second: asstes color_10
+  - first:
+      213: 7314379393041604672
+    second: asstes color_11
+  - first:
+      213: 2268511745469412586
+    second: asstes color_12
+  - first:
+      213: -2511194328095383837
+    second: asstes color_13
+  - first:
+      213: -8435285292317642415
+    second: asstes color_14
+  - first:
+      213: -8547349500003904149
+    second: asstes color_17
+  - first:
+      213: 7476822610078552218
+    second: asstes color_18
+  - first:
+      213: 7533218602560074574
+    second: asstes color_19
+  - first:
+      213: -7177211157523425700
+    second: asstes color_20
+  - first:
+      213: 3447133362548901401
+    second: asstes color_21
+  - first:
+      213: -5001816335863371964
+    second: asstes color_22
+  - first:
+      213: -8865916996667144625
+    second: asstes color_24
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -64,7 +112,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -76,7 +124,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -88,7 +136,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -100,7 +148,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -109,7 +157,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: asstes color_2
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 1810
+        width: 218
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e90102c8ce7e11b60800000000000000
+      internalID: 7715202639811580062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asstes color_5
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1810
+        width: 202
+        height: 634
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9a66ef11bf44c00800000000000000
+      internalID: 884107481572616642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asstes color_6
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 1810
+        width: 210
+        height: 652
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33b73155edd7335b0800000000000000
+      internalID: -5389825935168799949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asstes color_9
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 1810
+        width: 218
+        height: 646
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23d10ac10b66315a0800000000000000
+      internalID: -6551780126313407182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asstes color_10
+      rect:
+        serializedVersion: 2
+        x: 1170
+        y: 1942
+        width: 271
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd04a3cec01363df0800000000000000
+      internalID: -200919201798799141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asstes color_11
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 1929
+        width: 291
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 040aea20e45e18560800000000000000
+      internalID: 7314379393041604672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asstes color_12
+      rect:
+        serializedVersion: 2
+        x: 1990
+        y: 2057
+        width: 233
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae47185d96f5b7f10800000000000000
+      internalID: 2268511745469412586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asstes color_13
+      rect:
+        serializedVersion: 2
+        x: 2318
+        y: 2057
+        width: 232
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee16ef3012762dd0800000000000000
+      internalID: -2511194328095383837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asstes color_14
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 1834
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151745cf7b8dfea80800000000000000
+      internalID: -8435285292317642415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asstes color_17
+      rect:
+        serializedVersion: 2
+        x: 1953
+        y: 1810
+        width: 216
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6597216ae6b16980800000000000000
+      internalID: -8547349500003904149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asstes color_18
+      rect:
+        serializedVersion: 2
+        x: 2280
+        y: 1810
+        width: 217
+        height: 244
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a90575acc8203c760800000000000000
+      internalID: 7476822610078552218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asstes color_19
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 993
+        width: 519
+        height: 631
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4335f4086e5b8860800000000000000
+      internalID: 7533218602560074574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asstes color_20
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 1012
+        width: 404
+        height: 529
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5698dd8a7c656c90800000000000000
+      internalID: -7177211157523425700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asstes color_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 644
+        height: 547
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9160020978da6df20800000000000000
+      internalID: 3447133362548901401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asstes color_22
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 256
+        width: 757
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4472e151b8af59ab0800000000000000
+      internalID: -5001816335863371964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asstes color_24
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 267
+        width: 675
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f468e85177fe5f480800000000000000
+      internalID: -8865916996667144625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
