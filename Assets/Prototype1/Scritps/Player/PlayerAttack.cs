@@ -6,8 +6,7 @@ namespace Proto1
     public class PlayerAttack : MonoBehaviour, IHittable
     {
         [SerializeField] LayerMask enemyLayer;
-        [HideInInspector] public float horizontalAttack;
-        [HideInInspector] public float verticalAttack;
+        [SerializeField] Transform meleeAttackPoint;
         [SerializeField] public float distanceMelee;
         public float playerHP;
         public float maxPlayerHP;
@@ -82,7 +81,7 @@ namespace Proto1
 
         public void MeleeAttack()
         {
-            Vector2 attackPosition = new Vector2(transform.position.x + horizontalAttack, transform.position.y + verticalAttack);
+            Vector2 attackPosition = new Vector2(meleeAttackPoint.position.x, meleeAttackPoint.position.y);
             Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, distanceMelee, enemyLayer);
             foreach (Collider2D collider in colliders)
             {
@@ -111,7 +110,7 @@ namespace Proto1
 
         private void OnDrawGizmos()
         {
-            Gizmos.DrawWireSphere(new Vector3(transform.position.x + horizontalAttack, transform.position.y + verticalAttack, 0f), distanceMelee);
+            Gizmos.DrawWireSphere(new Vector3(meleeAttackPoint.position.x, meleeAttackPoint.position.y, 0f), distanceMelee);
         }
         public void Hit(int damageAmount, float knockBackForce, Vector2 posAttacker)
         {

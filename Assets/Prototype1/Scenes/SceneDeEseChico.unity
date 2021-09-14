@@ -3046,6 +3046,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2f24ba679972444ca45e3b94c32f81a, type: 3}
+--- !u!4 &1793668767 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8262492798884378014, guid: 73b6e082fe08542499c88fb7be72bda2,
+    type: 3}
+  m_PrefabInstance: {fileID: 5919561122682376212}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1825106738
 GameObject:
   m_ObjectHideFlags: 0
@@ -4267,6 +4273,11 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: meleeAttackPoint
+      value: 
+      objectReference: {fileID: 1793668767}
     - target: {fileID: 5782591533679000513, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: attackSpeedMelee

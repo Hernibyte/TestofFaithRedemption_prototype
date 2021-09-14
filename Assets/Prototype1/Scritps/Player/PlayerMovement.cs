@@ -7,6 +7,7 @@ namespace Proto1
         [SerializeField] public float speed;
         [SerializeField] Animator playerAnimator;
         [SerializeField] SpriteRenderer mySprite;
+        [SerializeField] Transform attackPoint;
         PlayerAttack playerAttack;
         public Rigidbody2D rig;
         [HideInInspector] public RoomID actualRoom;
@@ -41,10 +42,13 @@ namespace Proto1
                 dodgeRecovery = recoverDodge;
             }
 
+            if(dodgeRecovery >= recoverDodge / 2)
+            {
+                dodgeTrails.gameObject.SetActive(false);
+            }
             if(dodgeRecovery == recoverDodge)
             {
                 canDodge = true;
-                dodgeTrails.gameObject.SetActive(false);
             }
 
         }
@@ -100,42 +104,19 @@ namespace Proto1
 
             if (playerAnimator != null)
             {
+                if(attackPoint.position.x > transform.position.x)
+                    mySprite.flipX = false;
+                else
+                    mySprite.flipX = true;
+
                 if (position != Vector2.zero)
                 {
-                    if (position.x < 0)
-                        mySprite.flipX = true;
-                    else
-                        mySprite.flipX = false;
-
-
                     playerAnimator.SetFloat("speed", position.magnitude);
                 }
                 else
                 {
                     playerAnimator.SetFloat("speed", 0);
                 }
-            }
-
-            if (x > 0)
-            {
-                playerAttack.horizontalAttack = 0.4f;
-                playerAttack.verticalAttack = 0;
-            }
-            else if (x < 0)
-            {
-                playerAttack.horizontalAttack = -0.4f;
-                playerAttack.verticalAttack = 0;
-            }
-
-            if (y > 0)
-            {
-                playerAttack.verticalAttack = 0.4f;
-                playerAttack.horizontalAttack = 0;
-            }
-            else if (y < 0)
-            {
-                playerAttack.verticalAttack = -0.4f;
-                playerAttack.horizontalAttack = 0;
             }
         }
     }
