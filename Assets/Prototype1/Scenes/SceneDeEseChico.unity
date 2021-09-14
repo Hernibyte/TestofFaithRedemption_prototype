@@ -282,18 +282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fb579b5cceab740b81b9993c906824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &194641019 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5919561122757471343, guid: 73b6e082fe08542499c88fb7be72bda2,
-    type: 3}
-  m_PrefabInstance: {fileID: 5919561122682376212}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 401e19f700f8dc943b315699404ad221, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &201959766
 GameObject:
   m_ObjectHideFlags: 0
@@ -1115,7 +1103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd768d0d8fbcc344a74190c3816ee9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBasicStats: {fileID: 194641019}
+  playerBasicStats: {fileID: 5919561122682376213}
   playerMoveStats: {fileID: 194641018}
   healthBar: {fileID: 92877245}
   damageEntry: {fileID: 228063341}
@@ -4279,6 +4267,26 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 5782591533679000513, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: attackSpeedMelee
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782591533679000513, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: attackSpeedRanged
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782591533679000513, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: attackColdownMelee
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782591533679000513, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: attackColdownRanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5919561122757471330, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: m_Name
@@ -4349,6 +4357,11 @@ PrefabInstance:
       propertyPath: speed
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: decreaseSpeedAttack
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5919561122757471343, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: playerDamage
@@ -4356,6 +4369,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73b6e082fe08542499c88fb7be72bda2, type: 3}
+--- !u!114 &5919561122682376213 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+    type: 3}
+  m_PrefabInstance: {fileID: 5919561122682376212}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 401e19f700f8dc943b315699404ad221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5983875105415024695
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -16,8 +16,10 @@ namespace Proto1
         public float playerKnockBackForce;
         [SerializeField] Animator playerAnimator;
         [SerializeField] Rigidbody2D rig;
-        public float attackColdown;
-        public float attackSpeed;
+        public float attackColdownMelee;
+        public float attackSpeedMelee;
+        public float attackColdownRanged;
+        public float attackSpeedRanged;
 
         [SerializeField] RangeAttack rangeMode;
 
@@ -32,13 +34,29 @@ namespace Proto1
 
         void Start()
         {
-            attackColdown = 0;
+            attackColdownMelee = 0;
             maxPlayerHP = playerHP;
             movementPlayer = GetComponent<PlayerMovement>();
         }
         void Update()
         {
-            Attack();
+            if (attackColdownMelee > 0)
+                attackColdownMelee -= Time.deltaTime;
+            else
+                attackColdownMelee = 0;
+
+            if (attackColdownRanged > 0)
+                attackColdownRanged -= Time.deltaTime;
+            else
+                attackColdownRanged = 0;
+
+            if (Input.GetKeyDown(KeyCode.Mouse0) && attackColdownMelee == 0)
+            {
+                attackColdownMelee = attackSpeedMelee;
+                playerAnimator.SetTrigger("attack");
+            }
+
+            RangeAttack();
         }
         private void FixedUpdate()
         {
@@ -53,8 +71,8 @@ namespace Proto1
                         defensePlayer += gma.GetCard(i).card.sCard.defense;
                         playerDamage += gma.GetCard(i).card.sCard.damage;
                         playerKnockBackForce += gma.GetCard(i).card.sCard.knockback;
-                        attackColdown += gma.GetCard(i).card.sCard.attackColdown;
-                        attackSpeed += gma.GetCard(i).card.sCard.attackSpeed;
+                        attackColdownMelee += gma.GetCard(i).card.sCard.attackColdown;
+                        attackSpeedMelee += gma.GetCard(i).card.sCard.attackSpeed;
                         movementPlayer.speed += gma.GetCard(i).card.sCard.movementSpeed;
                     }
                 }
@@ -62,55 +80,33 @@ namespace Proto1
             }
         }
 
-        void MeleeAttack()
+        public void MeleeAttack()
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0) && attackColdown == 0)
+            Vector2 attackPosition = new Vector2(transform.position.x + horizontalAttack, transform.position.y + verticalAttack);
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, distanceMelee, enemyLayer);
+            foreach (Collider2D collider in colliders)
             {
-                attackColdown = attackSpeed;
-                Vector2 attackPosition = new Vector2(transform.position.x + horizontalAttack, transform.position.y + verticalAttack);
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, distanceMelee, enemyLayer);
-                foreach (Collider2D collider in colliders)
+                IHittable hittable = collider.GetComponent<IHittable>();
+                if (hittable != null)
                 {
-                    IHittable hittable = collider.GetComponent<IHittable>();
-                    if (hittable != null)
-                    {
-                        hittable.Hit(playerDamage, playerKnockBackForce, transform.position);
-                        VFXManager.Get()?.ShakeScreen(.15f, .2f);
-                    }
+                    hittable.Hit(playerDamage, playerKnockBackForce, transform.position);
+                    VFXManager.Get()?.ShakeScreen(.15f, .16f);
                 }
-                playerAnimator.SetTrigger("attack");
             }
-
-            if (attackColdown > 0)
-                attackColdown -= Time.deltaTime;
-            else
-                attackColdown = 0;
         }
 
-        void RangeAttack()
+        public void RangeAttack()
         {
-            if (Input.GetKeyDown(KeyCode.Mouse1) && attackColdown == 0)
+            if (Input.GetKeyDown(KeyCode.Mouse1) && attackColdownRanged == 0)
             {
                 attackFromPlayer?.Invoke();
 
-                attackColdown = attackSpeed;
+                attackColdownRanged = attackSpeedRanged;
 
-                rangeMode.Shoot();
-
+                rangeMode.Shoot();            
+                
                 playerAnimator.SetTrigger("attack2");
             }
-
-            if (attackColdown > 0)
-                attackColdown -= Time.deltaTime;
-            else
-                attackColdown = 0;
-        }
-
-        void Attack()
-        {
-            MeleeAttack();
-
-            RangeAttack();
         }
 
         private void OnDrawGizmos()
@@ -123,6 +119,7 @@ namespace Proto1
             {
                 playerHP -= damageAmount;
                 playerAnimator.SetTrigger("hit");
+
                 if(transform.position.x > posAttacker.x)
                     rig.AddForce(Vector2.right * knockBackForce, ForceMode2D.Impulse);
                 else

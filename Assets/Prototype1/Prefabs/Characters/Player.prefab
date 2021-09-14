@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 107167073090869888}
   followPlayer: {fileID: 5919561122757471342}
-  playerStats: {fileID: 5919561122757471343}
+  playerStats: {fileID: 4829890793479982778}
   mousePosition: {x: 0, y: 0}
   cam: {fileID: 0}
   firePoint: {fileID: 2683087992497446728}
@@ -115,6 +115,7 @@ GameObject:
   - component: {fileID: 5919561121392281251}
   - component: {fileID: 5919561121392281261}
   - component: {fileID: 5919561121392281260}
+  - component: {fileID: 3003658788205191280}
   m_Layer: 8
   m_Name: PlayerSprite
   m_TagString: Player
@@ -206,6 +207,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3003658788205191280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5919561121392281250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11a539e4dd3315c4782a4c5129814988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAttack: {fileID: 4829890793479982778}
 --- !u!1 &5919561122757471330
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +232,7 @@ GameObject:
   - component: {fileID: 5919561122757471341}
   - component: {fileID: 5919561122757471340}
   - component: {fileID: 5919561122757471342}
-  - component: {fileID: 5919561122757471343}
+  - component: {fileID: 4829890793479982778}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -309,10 +323,11 @@ MonoBehaviour:
   rig: {fileID: 5919561122757471341}
   actualRoom: {fileID: 0}
   playerOnRoom: 0
+  decreaseSpeedAttack: 0
   dodgeTrails: {fileID: 8450586103697065273}
   dodgeRecovery: 0
   recoverDodge: 2
---- !u!114 &5919561122757471343
+--- !u!114 &4829890793479982778
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -337,8 +352,10 @@ MonoBehaviour:
   playerKnockBackForce: 6
   playerAnimator: {fileID: 5919561121392281260}
   rig: {fileID: 5919561122757471341}
-  attackColdown: 0
-  attackSpeed: 1
+  attackColdownMelee: 0
+  attackSpeedMelee: 0.8
+  attackColdownRanged: 0
+  attackSpeedRanged: 0.4
   rangeMode: {fileID: 4083474246483729162}
   movementPlayer: {fileID: 5919561122757471342}
 --- !u!1 &7334773875059960518

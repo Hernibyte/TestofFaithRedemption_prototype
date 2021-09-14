@@ -14,6 +14,7 @@ namespace Proto1
 
         bool canDodge;
 
+        [SerializeField] public float decreaseSpeedAttack;
         [SerializeField] public GameObject dodgeTrails;
         [SerializeField] public float dodgeRecovery;
         [SerializeField][Range(1,4)] public float recoverDodge;
@@ -21,7 +22,7 @@ namespace Proto1
         void Awake()
         {
             rig = GetComponent<Rigidbody2D>();
-            playerAttack = GetComponent<PlayerAttack>();
+            playerAttack = GetComponentInChildren<PlayerAttack>();
         }
 
         void Start()
@@ -94,7 +95,7 @@ namespace Proto1
 
             DodgeInDirection(position);
 
-            if (playerAttack.attackColdown > 0)
+            if (playerAttack.attackColdownMelee > playerAttack.attackSpeedMelee - decreaseSpeedAttack)
                 rig.velocity = Vector3.zero;
 
             if (playerAnimator != null)
