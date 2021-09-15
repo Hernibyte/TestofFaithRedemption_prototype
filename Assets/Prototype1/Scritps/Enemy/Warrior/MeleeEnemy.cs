@@ -182,16 +182,6 @@ namespace Proto1
             if (attackColdown == 0)
             {
                 attackColdown = 1.0f;
-                //Vector2 attackPosition = new Vector2(transform.position.x, transform.position.y);
-                //Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, rangeAttack, playerLayer);
-                //foreach (Collider2D collider in colliders)
-                //{
-                //    IHittable hittable = collider.GetComponent<IHittable>();
-                //    if (hittable != null)
-                //    {
-                //        hittable.Hit(enemyDamage, enemyKnockBackForce, transform.position);
-                //    }
-                //}
             }
             
             //COLDOWN PER HIT (Esto calcula el tiempo entre ataque del enemy)
@@ -222,7 +212,9 @@ namespace Proto1
                 enemyHP -= amountDamage;
                 attackDelay = 0;
                 enemyAnimator.SetFloat("prepareAttack", attackDelay);
+                enemyAnimator.SetFloat("Knockback", knockBackForce);
                 attackColdown = 1;
+
                 enemyState = STATENEMY.BeignDamaged;
 
                 VFXManager.Get()?.ShakeScreen(.15f,.15f);

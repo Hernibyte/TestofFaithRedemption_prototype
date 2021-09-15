@@ -5,6 +5,7 @@ namespace Proto1
     public class Crow : MonoBehaviour
     {
         [SerializeField] LayerMask enemyLayer;
+        [SerializeField] GameObject crowEffect;
         public Rigidbody2D rig;
         bool alive = true;
 
@@ -22,6 +23,16 @@ namespace Proto1
                     if(hitObj != null)
                     {
                         hitObj.Hit(damageCrow, knockbackCrow, rig.position);
+
+                        GameObject go = Instantiate(crowEffect, rig.position, Quaternion.identity);
+                        if(go != null)
+                        {
+                            Animator crowEff = go.GetComponent<Animator>();
+                            if(crowEff != null)
+                            {
+                                crowEff.Play("CrowAttack");
+                            }
+                        }
                         alive = false;
                         Destroy(gameObject);
                     }

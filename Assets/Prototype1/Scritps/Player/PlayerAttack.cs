@@ -7,6 +7,7 @@ namespace Proto1
     {
         [SerializeField] LayerMask enemyLayer;
         [SerializeField] Transform meleeAttackPoint;
+        [SerializeField] GameObject slashEffect;
         [SerializeField] public float distanceMelee;
         public float playerHP;
         public float maxPlayerHP;
@@ -36,6 +37,9 @@ namespace Proto1
             attackColdownMelee = 0;
             maxPlayerHP = playerHP;
             movementPlayer = GetComponent<PlayerMovement>();
+
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = false;
         }
         void Update()
         {
@@ -89,6 +93,17 @@ namespace Proto1
                 if (hittable != null)
                 {
                     hittable.Hit(playerDamage, playerKnockBackForce, transform.position);
+
+                    GameObject go = Instantiate(slashEffect, meleeAttackPoint.transform.position, Quaternion.identity);
+                    if(go != null)
+                    {
+                        Animator animSlash = go.GetComponent<Animator>();
+                        if(animSlash != null)
+                        {
+                            animSlash.Play("SlashAttack");
+                        }
+                    }
+
                     VFXManager.Get()?.ShakeScreen(.15f, .16f);
                 }
             }

@@ -97,6 +97,8 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 512
+  crowEffect: {fileID: 3741380644531196460, guid: e313c7837cc0f69468f1103e0f188dd6,
+    type: 3}
   rig: {fileID: 6553380412057108503}
 --- !u!96 &770391529014197904
 TrailRenderer:

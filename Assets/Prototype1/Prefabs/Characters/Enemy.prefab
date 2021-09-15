@@ -520,7 +520,7 @@ MonoBehaviour:
   attackDelay: 0
   maxAttackDelay: 0.09
   target: {fileID: 0}
-  distanceToTarget: 8
+  distanceToTarget: 16
   maxNearDistance: 1.2
   enemyHP: 85
   enemyMaxHP: 85
