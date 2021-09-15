@@ -2,7 +2,7 @@
 
 public class StatsMenu : MonoBehaviour
 {
-    [SerializeField] Animation animations;
+    //[SerializeField] Animation animations;
     [SerializeField] CanvasGroup canvasIcon;
     [SerializeField] CanvasGroup canvasGStats;
 
@@ -22,7 +22,8 @@ public class StatsMenu : MonoBehaviour
         openStats = false;
         canvasIcon.alpha = 0;
         canvasGStats.alpha = 0;
-        animations.Play("StatsClose");
+        //animations.Play("StatsClose");
+        animator.SetTrigger("Close");
     }
 
     void Update()
@@ -37,13 +38,15 @@ public class StatsMenu : MonoBehaviour
         {
             if(openStats)
             {
-                animations.Play("StatsOpen");
+                //animator.Play("StatsOpen");
+                animator.SetTrigger("Open");
                 fadeIn = true;
                 fadeOut = false;
             }
             else
             {
-                animations.Play("StatsClose");
+                //animator.Play("StatsClose");
+                animator.SetTrigger("Close");
                 fadeOut = true;
                 fadeIn = false;
             }
