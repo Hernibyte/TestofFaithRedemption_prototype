@@ -4,20 +4,23 @@ namespace Proto1
 {
     public class PlayerMovement : MonoBehaviour
     {
-        [SerializeField] public float speed;
+        [Header("PLAYER NEEDS")]
         [SerializeField] Animator playerAnimator;
         [SerializeField] SpriteRenderer mySprite;
         [SerializeField] Transform attackPoint;
         PlayerAttack playerAttack;
         public Rigidbody2D rig;
         [HideInInspector] public RoomID actualRoom;
-        [SerializeField] public int playerOnRoom;
-
-        bool canDodge;
-
-        [SerializeField] public float decreaseSpeedAttack;
         [SerializeField] public GameObject dodgeTrails;
-        [SerializeField] public float dodgeRecovery;
+
+
+        [Header("PLAYER MOVE STATS")]
+        [Space(10)]
+        [SerializeField] bool canDodge;
+        [SerializeField] public float speed;
+        [SerializeField] public int playerOnRoom;
+        [SerializeField] public float decreaseSpeedAttack;
+        [SerializeField] public float dodgeOnRecover;
         [SerializeField][Range(1,4)] public float recoverDodge;
 
         void Awake()
@@ -34,19 +37,19 @@ namespace Proto1
 
         void Update()
         {
-            if (dodgeRecovery <= recoverDodge)
-                dodgeRecovery += Time.deltaTime;
+            if (dodgeOnRecover <= recoverDodge)
+                dodgeOnRecover += Time.deltaTime;
 
-            if(dodgeRecovery > recoverDodge)
+            if(dodgeOnRecover > recoverDodge)
             {
-                dodgeRecovery = recoverDodge;
+                dodgeOnRecover = recoverDodge;
             }
 
-            if(dodgeRecovery >= recoverDodge / 2)
+            if(dodgeOnRecover >= recoverDodge / 2)
             {
                 dodgeTrails.gameObject.SetActive(false);
             }
-            if(dodgeRecovery == recoverDodge)
+            if(dodgeOnRecover == recoverDodge)
             {
                 canDodge = true;
             }
@@ -83,7 +86,7 @@ namespace Proto1
                 playerAnimator.SetTrigger("dodge");
                 dodgeTrails.gameObject.SetActive(true);
 
-                dodgeRecovery = 0;
+                dodgeOnRecover = 0;
                 canDodge = false;
             }
         }

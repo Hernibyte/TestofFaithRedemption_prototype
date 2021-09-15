@@ -5,23 +5,31 @@ namespace Proto1
 {
     public class PlayerAttack : MonoBehaviour, IHittable
     {
+        [Header("PLAYER NEEDS")]
         [SerializeField] LayerMask enemyLayer;
         [SerializeField] Transform meleeAttackPoint;
         [SerializeField] GameObject slashEffect;
-        [SerializeField] public float distanceMelee;
-        public float playerHP;
-        public float maxPlayerHP;
-        public float defensePlayer;
-        public int playerDamage;
-        public float playerKnockBackForce;
         [SerializeField] Animator playerAnimator;
         [SerializeField] Rigidbody2D rig;
+        [SerializeField] RangeAttack rangeMode;
+        public PlayerMovement movementPlayer;
+
+        [Header("NORMAL STATS")]
+        [Space(15)]
+        public float max_HP;
+        public float actual_HP;
+        public float defensePlayer;
+        [Range(5,95)]public float defenseEfficiency;
+        [Range(15,98)]public float DMGReducedByDEF;
+
+        [Header("ATTACK STATS")]
+        public int playerDamage;
+        public float distanceMelee;
+        public float knockBackMelee;
         public float attackColdownMelee;
         public float attackSpeedMelee;
         public float attackColdownRanged;
         public float attackSpeedRanged;
-
-        [SerializeField] RangeAttack rangeMode;
 
         public delegate void UpdateUIData(int hitOnHP);
         public UpdateUIData updateUI;
@@ -29,13 +37,10 @@ namespace Proto1
         public delegate void PlayerHasAttack();
         public PlayerHasAttack attackFromPlayer;
 
-        public PlayerMovement movementPlayer;
-
-
         void Start()
         {
             attackColdownMelee = 0;
-            maxPlayerHP = playerHP;
+            actual_HP = max_HP;
             movementPlayer = GetComponent<PlayerMovement>();
 
             Cursor.lockState = CursorLockMode.Confined;
@@ -70,10 +75,10 @@ namespace Proto1
                 {
                     if(gma.GetCard(i).card != null)
                     {
-                        maxPlayerHP += gma.GetCard(i).card.sCard.hp;
+                        max_HP += gma.GetCard(i).card.sCard.hp;
                         defensePlayer += gma.GetCard(i).card.sCard.defense;
                         playerDamage += gma.GetCard(i).card.sCard.damage;
-                        playerKnockBackForce += gma.GetCard(i).card.sCard.knockback;
+                        knockBackMelee += gma.GetCard(i).card.sCard.knockback;
                         attackColdownMelee += gma.GetCard(i).card.sCard.attackColdown;
                         attackSpeedMelee += gma.GetCard(i).card.sCard.attackSpeed;
                         movementPlayer.speed += gma.GetCard(i).card.sCard.movementSpeed;
@@ -92,7 +97,7 @@ namespace Proto1
                 IHittable hittable = collider.GetComponent<IHittable>();
                 if (hittable != null)
                 {
-                    hittable.Hit(playerDamage, playerKnockBackForce, transform.position);
+                    hittable.Hit(playerDamage, knockBackMelee, transform.position);
 
                     GameObject go = Instantiate(slashEffect, meleeAttackPoint.transform.position, Quaternion.identity);
                     if(go != null)
@@ -129,10 +134,22 @@ namespace Proto1
         }
         public void Hit(int damageAmount, float knockBackForce, Vector2 posAttacker)
         {
-            if(playerHP > 0)
+            //Eficiencia de la defensa con respecto a daño plano y defensa porcentual
+
+            float rawDefense = defensePlayer;
+            float defensePorcentage = ( rawDefense * defenseEfficiency) / 100f; //Defensa porcentual con respecto a eficiencia PORCENTUAL
+            float finalDefense = (defensePorcentage * DMGReducedByDEF) / 100f; //Defensa final con respecto a daño reducido PORCENTUAL
+            float damageReduce = (damageAmount * finalDefense) / 100f; //Daño reducido final como porcentaje del 100% del daño plano
+
+            float damageEntry = damageAmount - damageReduce;  //Daño reducido
+
+            Debug.Log("Damage Recived:" + damageEntry);
+
+            if(actual_HP > 0)
             {
-                playerHP -= damageAmount;
-                playerAnimator.SetTrigger("hit");
+                actual_HP -= (int)damageEntry;
+
+                playerAnimator.SetTrigger("hit"); 
 
                 if(transform.position.x > posAttacker.x)
                     rig.AddForce(Vector2.right * knockBackForce, ForceMode2D.Impulse);
@@ -141,16 +158,16 @@ namespace Proto1
 
                 VFXManager.Get()?.ShakeScreen(.15f, .15f);
 
-                updateUI?.Invoke(damageAmount);
+                updateUI?.Invoke((int)damageEntry);
             }
             else
             {
-                playerHP = 0;
+                actual_HP = 0;
             }
 
-            if(playerHP <= 0)
+            if(actual_HP <= 0)
             {
-                playerHP = 0;
+                actual_HP = 0;
                 Die();
             }
         }

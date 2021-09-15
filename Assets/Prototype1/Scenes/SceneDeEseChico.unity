@@ -4275,15 +4275,40 @@ PrefabInstance:
       objectReference: {fileID: 963194227}
     - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
+      propertyPath: max_HP
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
       propertyPath: slashEffect
       value: 
       objectReference: {fileID: 7640395013230572804, guid: f66393b2a7fb5d94e9994d3bd97c97b5,
         type: 3}
     - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
+      propertyPath: knockBackMelee
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: DMGReducedByDEF
+      value: 98
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
       propertyPath: meleeAttackPoint
       value: 
       objectReference: {fileID: 1793668767}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: defenseEfficiency
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: damageReducedByDEF
+      value: 35
+      objectReference: {fileID: 0}
     - target: {fileID: 5782591533679000513, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: attackSpeedMelee

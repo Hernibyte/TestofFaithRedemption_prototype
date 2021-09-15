@@ -443,16 +443,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7fb579b5cceab740b81b9993c906824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 55
   playerAnimator: {fileID: 5919561121392281260}
   mySprite: {fileID: 5919561121392281261}
   attackPoint: {fileID: 8262492798884378014}
   rig: {fileID: 5919561122757471341}
   actualRoom: {fileID: 0}
-  playerOnRoom: 0
-  decreaseSpeedAttack: 0
   dodgeTrails: {fileID: 8450586103697065273}
-  dodgeRecovery: 0
+  canDodge: 0
+  speed: 55
+  playerOnRoom: 0
+  decreaseSpeedAttack: 0.5
+  dodgeOnRecover: 0
   recoverDodge: 2
 --- !u!114 &4829890793479982778
 MonoBehaviour:
@@ -470,20 +471,23 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   meleeAttackPoint: {fileID: 8262492798884378014}
-  distanceMelee: 0.9
-  playerHP: 150
-  maxPlayerHP: 150
-  defensePlayer: 35
-  playerDamage: 15
-  playerKnockBackForce: 6
+  slashEffect: {fileID: 0}
   playerAnimator: {fileID: 5919561121392281260}
   rig: {fileID: 5919561122757471341}
+  rangeMode: {fileID: 4083474246483729162}
+  movementPlayer: {fileID: 5919561122757471342}
+  max_HP: 200
+  actual_HP: 0
+  defensePlayer: 35
+  defenseEfficiency: 95
+  DMGReducedByDEF: 90.1
+  playerDamage: 15
+  distanceMelee: 0.9
+  knockBackMelee: 6
   attackColdownMelee: 0
   attackSpeedMelee: 0.8
   attackColdownRanged: 0
   attackSpeedRanged: 0.4
-  rangeMode: {fileID: 4083474246483729162}
-  movementPlayer: {fileID: 5919561122757471342}
 --- !u!1 &7334773875059960518
 GameObject:
   m_ObjectHideFlags: 0

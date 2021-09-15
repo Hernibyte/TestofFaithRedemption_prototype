@@ -6,6 +6,8 @@ public class StatsMenu : MonoBehaviour
     [SerializeField] CanvasGroup canvasIcon;
     [SerializeField] CanvasGroup canvasGStats;
 
+    Animator animator;
+
     public bool openStats;
     public int flagToOpen;
 
@@ -14,6 +16,8 @@ public class StatsMenu : MonoBehaviour
 
     private void Start()
     {
+        animator = gameObject.GetComponent<Animator>();
+
         flagToOpen = 0;
         openStats = false;
         canvasIcon.alpha = 0;

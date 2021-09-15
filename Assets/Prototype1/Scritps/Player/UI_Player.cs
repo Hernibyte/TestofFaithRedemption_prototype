@@ -50,7 +50,7 @@ namespace Proto1
 
         void UpdatePlayerHP()
         {
-            amountHPFillImage = (amountHPGone * 1) / playerBasicStats.maxPlayerHP;
+            amountHPFillImage = (amountHPGone * 1) / playerBasicStats.max_HP;
 
             if(flagHealth == 1)
             {
@@ -75,7 +75,7 @@ namespace Proto1
                 return;
 
             playerStats.text = "-STATS-" + "\n" + "\n"
-                + "HP: " + playerBasicStats.maxPlayerHP + "\n"
+                + "HP: " + playerBasicStats.max_HP + "\n"
                 + "DEF: " + playerBasicStats.defensePlayer + "\n"
                 + "VEL: " + playerMoveStats.speed + "\n"
                 + "A.SPD: "+ playerBasicStats.attackSpeedMelee + "\n"

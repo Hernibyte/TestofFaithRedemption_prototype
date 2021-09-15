@@ -28,7 +28,7 @@ namespace Proto1
         public void Shoot()
         {
             Crow crowCreated = Instantiate(crowMagic, firePoint.position, firePoint.rotation);
-            crowCreated.SetCrowStats(playerStats.playerDamage, playerStats.playerKnockBackForce);
+            crowCreated.SetCrowStats(playerStats.playerDamage, playerStats.knockBackMelee);
             crowCreated.rig.AddForce(firePoint.up * crowForce, ForceMode2D.Impulse);
         }
     }
