@@ -7,7 +7,7 @@ public class MenuSystem : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene("Prototype1");
+        SceneManager.LoadScene("GameLoading");
     }
 
     public void Options()
