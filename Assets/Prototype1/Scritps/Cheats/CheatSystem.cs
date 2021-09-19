@@ -15,13 +15,18 @@ public class CheatSystem : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Backslash))
+        if (Input.GetKeyDown(KeyCode.LeftAlt))
         {
             inputState = !inputState;
             if (inputState)
                 inputField.SetActive(true);
             else
                 inputField.SetActive(false);
+        }
+        if (Input.GetKeyDown(KeyCode.Return) && inputState)
+        {
+            inputField.SetActive(false);
+            inputState = false;
         }
     }
 
