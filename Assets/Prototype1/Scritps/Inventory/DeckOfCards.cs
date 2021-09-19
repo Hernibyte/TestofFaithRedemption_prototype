@@ -38,8 +38,12 @@ public class DeckOfCards : MonoBehaviour
 
     public void SetSlot(int index)
     {
-        slots[index] = slotCardTaked;
-        updateDeck = true;
+        if (slotCardTaked != None)
+        {
+            slots[index] = slotCardTaked;
+            slotCardTaked = None;
+            updateDeck = true;
+        }
     }
 
     public Slot GetSlot(int index)
