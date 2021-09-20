@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3211941468701155010}
   - component: {fileID: 3211941468701155008}
   - component: {fileID: 3211941468701155011}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: EnemyGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 3211941469792786401}
   - component: {fileID: 3211941469792786400}
   - component: {fileID: 3211941469792786403}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RoomSpawn2
   m_TagString: SpawnPoint
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -502,7 +502,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3297932532838121986}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,7 +532,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1284827738657693438}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +562,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3822611230187264906}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -593,7 +593,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1878338306120769629}
   - component: {fileID: 5429956060778328464}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: GameObject (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1011,7 +1011,7 @@ GameObject:
   - component: {fileID: 5943123866591164745}
   - component: {fileID: 3683271028087241485}
   - component: {fileID: 4279568487085647689}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: DownGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1136,10 +1136,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3782932682515426395, guid: d3a4ca41b131d8843b83583c3090b2b9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3983893080332600380, guid: d3a4ca41b131d8843b83583c3090b2b9,
         type: 3}
       propertyPath: m_Name
       value: DoorBot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983893080332600380, guid: d3a4ca41b131d8843b83583c3090b2b9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a4ca41b131d8843b83583c3090b2b9, type: 3}

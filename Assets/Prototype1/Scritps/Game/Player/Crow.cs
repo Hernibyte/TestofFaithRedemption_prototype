@@ -5,6 +5,7 @@ namespace Proto1
     public class Crow : MonoBehaviour
     {
         [SerializeField] LayerMask enemyLayer;
+        [SerializeField] LayerMask roomLayer;
         [SerializeField] GameObject crowEffect;
         public Rigidbody2D rig;
         bool alive = true;
@@ -27,34 +28,50 @@ namespace Proto1
                     damageCrow += 4;
                     timerToPowerDamage = 0;
                 }
-
-                Collider2D[] hits = Physics2D.OverlapCircleAll(rig.position, 0.5f, enemyLayer);
-                foreach(Collider2D hit in hits)
-                {
-                    IHittable hitObj = hit.GetComponent<IHittable>();
-                    if(hitObj != null)
-                    {
-                        hitObj.Hit(damageCrow, knockbackCrow, rig.position);
-
-                        GameObject go = Instantiate(crowEffect, rig.position, Quaternion.identity);
-                        if(go != null)
-                        {
-                            Animator crowEff = go.GetComponent<Animator>();
-                            if(crowEff != null)
-                            {
-                                crowEff.Play("CrowAttack");
-                            }
-                        }
-                        alive = false;
-                        Destroy(gameObject);
-                    }
-                }
             }
         }
+
+        public bool Contains(LayerMask mask, int layer)
+        {
+            return mask == (mask | (1 << layer));
+        }
+
         public void SetCrowStats(int damage,float knockback)
         {
             damageCrow = (int)(damage * 0.5f);
             knockbackCrow = 0;
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (Contains(enemyLayer, collision.gameObject.layer))
+            {
+                IHittable hitObj = collision.GetComponent<IHittable>();
+                if (hitObj != null)
+                {
+                    hitObj.Hit(damageCrow, knockbackCrow, rig.position);
+
+                    GameObject go = Instantiate(crowEffect, rig.position, Quaternion.identity);
+                    if (go != null)
+                    {
+                        Animator crowEff = go.GetComponent<Animator>();
+                        if (crowEff != null)
+                        {
+                            crowEff.Play("CrowAttack");
+                        }
+                    }
+                    alive = false;
+                    Destroy(gameObject);
+                }
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            if (Contains(roomLayer, collision.gameObject.layer))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

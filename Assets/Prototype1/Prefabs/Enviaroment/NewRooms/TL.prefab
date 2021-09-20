@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 8478197778653158965}
   - component: {fileID: 2686238693635034883}
   - component: {fileID: 1836548422229509020}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RoomSpawn1
   m_TagString: SpawnPoint
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 902779869501034854}
   - component: {fileID: 1704817217709797293}
   - component: {fileID: 8391344379633479511}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RoomSpawn4
   m_TagString: SpawnPoint
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
@@ -650,7 +650,7 @@ GameObject:
   - component: {fileID: 944970944577607859}
   - component: {fileID: 273965399592705185}
   - component: {fileID: 3977106598102518708}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: LeftGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -722,7 +722,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 633389884841700617}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -754,7 +754,7 @@ GameObject:
   - component: {fileID: 7893240279421859632}
   - component: {fileID: 4537902269270976428}
   - component: {fileID: 5377616755879474018}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: EnemyGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1167,7 +1167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1071083910028782802}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1198,7 +1198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3634380654215751991}
   - component: {fileID: 1901218705294478435}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: GameObject (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1246,7 +1246,7 @@ GameObject:
   - component: {fileID: 243764469157660995}
   - component: {fileID: 7280751142342980732}
   - component: {fileID: 5917109646675381198}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: TopGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1318,7 +1318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5884345221394230281}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1401,10 +1401,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8173801339569507260, guid: d4feab59afaa1dd44943a7430ed7cd48,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8239653962307314651, guid: d4feab59afaa1dd44943a7430ed7cd48,
         type: 3}
       propertyPath: m_Name
       value: DoorTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239653962307314651, guid: d4feab59afaa1dd44943a7430ed7cd48,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4feab59afaa1dd44943a7430ed7cd48, type: 3}
@@ -1437,6 +1447,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DoorLeft
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977802154971473954, guid: 5326ef8ffbcb4194e987f98b28714fe1,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8747427543524660356, guid: 5326ef8ffbcb4194e987f98b28714fe1,
         type: 3}
@@ -1491,6 +1506,11 @@ PrefabInstance:
     - target: {fileID: 8747427543524660356, guid: 5326ef8ffbcb4194e987f98b28714fe1,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8992788019872065898, guid: 5326ef8ffbcb4194e987f98b28714fe1,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

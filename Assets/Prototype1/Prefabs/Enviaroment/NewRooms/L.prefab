@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8861115763569641127}
   - component: {fileID: 3244545252506749143}
   - component: {fileID: 3719162520431881649}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: EnemyGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 2818695753923115947}
   - component: {fileID: 2818695753923115944}
   - component: {fileID: 2818695753923115945}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RoomSpawn4
   m_TagString: SpawnPoint
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
@@ -502,7 +502,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7237856220137149247}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -534,7 +534,7 @@ GameObject:
   - component: {fileID: 7153235854004848159}
   - component: {fileID: 9034618517423360924}
   - component: {fileID: 6670511109572010992}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: LeftGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -607,7 +607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2491490918329766701}
   - component: {fileID: 8347891617035043552}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: GameObject (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1000,7 +1000,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3017509530699550534}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1030,7 +1030,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9133125042872790741}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

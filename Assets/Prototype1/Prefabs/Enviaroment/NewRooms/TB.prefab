@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4191012953176769659}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 365614623041870351}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 60074909102575177}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 2184998770553617245}
   - component: {fileID: 5698581337340309505}
   - component: {fileID: 2659672351977427898}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: TopGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -441,7 +441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6680251636505207702}
   - component: {fileID: 1008563875171332699}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: GameObject (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -598,7 +598,7 @@ GameObject:
   - component: {fileID: 3854617595707294392}
   - component: {fileID: 3854617595707294391}
   - component: {fileID: 3854617595707294390}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RoomSpawn1
   m_TagString: SpawnPoint
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -781,7 +781,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6163966857603679140}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -813,7 +813,7 @@ GameObject:
   - component: {fileID: 7653634998885178633}
   - component: {fileID: 7653634998885178635}
   - component: {fileID: 7653634998885178632}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: EnemyGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1123,7 +1123,7 @@ GameObject:
   - component: {fileID: 7653634999976154154}
   - component: {fileID: 7653634999976154155}
   - component: {fileID: 7653634999976154152}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RoomSpawn2
   m_TagString: SpawnPoint
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -1308,7 +1308,7 @@ GameObject:
   - component: {fileID: 1425705923251294022}
   - component: {fileID: 7482558436366437771}
   - component: {fileID: 3554643991342953203}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: DownGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1433,10 +1433,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3782932682515426395, guid: d3a4ca41b131d8843b83583c3090b2b9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3983893080332600380, guid: d3a4ca41b131d8843b83583c3090b2b9,
         type: 3}
       propertyPath: m_Name
       value: DoorBot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983893080332600380, guid: d3a4ca41b131d8843b83583c3090b2b9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a4ca41b131d8843b83583c3090b2b9, type: 3}
@@ -1520,10 +1530,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8173801339569507260, guid: d4feab59afaa1dd44943a7430ed7cd48,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8239653962307314651, guid: d4feab59afaa1dd44943a7430ed7cd48,
         type: 3}
       propertyPath: m_Name
       value: DoorTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239653962307314651, guid: d4feab59afaa1dd44943a7430ed7cd48,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4feab59afaa1dd44943a7430ed7cd48, type: 3}

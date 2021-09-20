@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1211746733637363330}
   - component: {fileID: 6393013413579681720}
   - component: {fileID: 8041015169589805623}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: TopGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 6555222944849599990}
   - component: {fileID: 1714125449114072059}
   - component: {fileID: 6594464818027769632}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RightGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6711738464425141000}
   - component: {fileID: 7745312076061970238}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: GameObject (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 1268687265400964161}
   - component: {fileID: 1268687265400964167}
   - component: {fileID: 1268687265400964160}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: GameObject (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 1268687267033379838}
   - component: {fileID: 1268687267033379836}
   - component: {fileID: 1268687267033379837}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: GameObject (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 4263388934139566306}
   - component: {fileID: 7722761888928129249}
   - component: {fileID: 1005493188991323310}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: LeftGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 2583795154951362714}
   - component: {fileID: 2583795154951362713}
   - component: {fileID: 8778495164024865105}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: GameObject (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -749,7 +749,7 @@ GameObject:
   - component: {fileID: 5346931067877395646}
   - component: {fileID: 3093238369400655098}
   - component: {fileID: 8036971480615669577}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: DownGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -824,7 +824,7 @@ GameObject:
   - component: {fileID: 7382199302841540217}
   - component: {fileID: 1356248870853593317}
   - component: {fileID: 3375379254450237664}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Destruction
   m_TagString: SpawnPoint
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -897,7 +897,7 @@ GameObject:
   - component: {fileID: 7439119091367563512}
   - component: {fileID: 246633577464855628}
   - component: {fileID: 6078904418082254273}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: GameObject (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1005,7 +1005,7 @@ GameObject:
   - component: {fileID: 5425800600439854530}
   - component: {fileID: 5425800600439854528}
   - component: {fileID: 5425800600439854529}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: GameObject (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1114,7 +1114,7 @@ GameObject:
   - component: {fileID: 5425800600467095621}
   - component: {fileID: 5425800600467095619}
   - component: {fileID: 5425800600467095620}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: GameObject (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1223,7 +1223,7 @@ GameObject:
   - component: {fileID: 982623284778577418}
   - component: {fileID: 6763117337159509433}
   - component: {fileID: 437854958977928367}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: GameObject (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1331,7 +1331,7 @@ GameObject:
   - component: {fileID: 1012946509589617328}
   - component: {fileID: 2088376752823486392}
   - component: {fileID: 27546676883871711}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: GameObject (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1440,7 +1440,7 @@ GameObject:
   - component: {fileID: 4321531708110132790}
   - component: {fileID: 95233011983953219}
   - component: {fileID: 4353239672874319600}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: EnemyGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1524,7 +1524,7 @@ GameObject:
   - component: {fileID: 41194238595327562}
   - component: {fileID: 1384264545186541983}
   - component: {fileID: 8711262190449153138}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RoomSpawn3
   m_TagString: SpawnPoint
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -1602,7 +1602,7 @@ GameObject:
   - component: {fileID: 41194239270422371}
   - component: {fileID: 8180752124102508821}
   - component: {fileID: 6919659445779817773}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RoomSpawn1
   m_TagString: SpawnPoint
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -1680,7 +1680,7 @@ GameObject:
   - component: {fileID: 41194239216791347}
   - component: {fileID: 3851288857906616959}
   - component: {fileID: 5517003238015575039}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RoomSpawn4
   m_TagString: SpawnPoint
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
@@ -1758,7 +1758,7 @@ GameObject:
   - component: {fileID: 41194240092062601}
   - component: {fileID: 5588536167060005404}
   - component: {fileID: 3915224254143221907}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RoomSpawn2
   m_TagString: SpawnPoint
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1380466565018149183}
   - component: {fileID: 7022894380864478568}
   - component: {fileID: 5963850476573226263}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RightGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1947511037400010382}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -785,7 +785,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4083279164826499063}
   - component: {fileID: 7629271750890563130}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: GameObject (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -831,7 +831,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5630703074270562073}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -861,7 +861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6159840238404310800}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -894,7 +894,7 @@ GameObject:
   - component: {fileID: 8306624625733020072}
   - component: {fileID: 8032937976144870276}
   - component: {fileID: 1428276189034636360}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RoomSpawn3
   m_TagString: SpawnPoint
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -971,7 +971,7 @@ GameObject:
   - component: {fileID: 1145728380343694591}
   - component: {fileID: 6081730925737709495}
   - component: {fileID: 4958366440142844843}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: EnemyGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}

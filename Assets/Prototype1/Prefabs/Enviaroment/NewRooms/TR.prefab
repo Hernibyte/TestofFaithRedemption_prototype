@@ -117,7 +117,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 856084954301737196}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 358815013086778044}
   - component: {fileID: 3889091868862620444}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 631853458749937672}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -334,7 +334,7 @@ GameObject:
   - component: {fileID: 5060114178580542281}
   - component: {fileID: 464289035640732826}
   - component: {fileID: 997326002293978111}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RightGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4403450116341669003}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 795087776676071354}
   - component: {fileID: 8791171646523691495}
   - component: {fileID: 8681735773788884177}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: EnemyGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   - component: {fileID: 7053654201475277418}
   - component: {fileID: 7527245561028095228}
   - component: {fileID: 1711754614860438560}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: TopGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1195,7 +1195,7 @@ GameObject:
   - component: {fileID: 4470060445168278136}
   - component: {fileID: 6643835592535399012}
   - component: {fileID: 3938232131601927867}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RoomSpawn1
   m_TagString: SpawnPoint
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -1273,7 +1273,7 @@ GameObject:
   - component: {fileID: 3636563088557099271}
   - component: {fileID: 8744886623671340104}
   - component: {fileID: 9204411644598167811}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RoomSpawn3
   m_TagString: SpawnPoint
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -1356,6 +1356,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorRight
       objectReference: {fileID: 0}
+    - target: {fileID: 5360046852869796636, guid: 428808c033ce383448b95562b2d045ea,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6039765945206427578, guid: 428808c033ce383448b95562b2d045ea,
         type: 3}
       propertyPath: m_RootOrder
@@ -1409,6 +1414,11 @@ PrefabInstance:
     - target: {fileID: 6039765945206427578, guid: 428808c033ce383448b95562b2d045ea,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230828143471129172, guid: 428808c033ce383448b95562b2d045ea,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7995570209852025220, guid: 428808c033ce383448b95562b2d045ea,
@@ -1513,10 +1523,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8173801339569507260, guid: d4feab59afaa1dd44943a7430ed7cd48,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8239653962307314651, guid: d4feab59afaa1dd44943a7430ed7cd48,
         type: 3}
       propertyPath: m_Name
       value: DoorTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 8239653962307314651, guid: d4feab59afaa1dd44943a7430ed7cd48,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4feab59afaa1dd44943a7430ed7cd48, type: 3}

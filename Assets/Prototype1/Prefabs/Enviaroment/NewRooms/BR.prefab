@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5523943284205141551}
   - component: {fileID: 7350878412492057457}
   - component: {fileID: 4100424037835399706}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: DownGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5572497993184747386}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3245427421385754409}
   - component: {fileID: 4125912108826372729}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: GameObject (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 4767879958828015358}
   - component: {fileID: 4767879958828015359}
   - component: {fileID: 4767879958828015352}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RoomSpawn3
   m_TagString: SpawnPoint
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
@@ -673,7 +673,7 @@ GameObject:
   - component: {fileID: 5097142721973649307}
   - component: {fileID: 268659684729350250}
   - component: {fileID: 4487384958213391294}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RoomSpawn2
   m_TagString: SpawnPoint
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -750,7 +750,7 @@ GameObject:
   - component: {fileID: 1162079335861672295}
   - component: {fileID: 4642568716392202038}
   - component: {fileID: 7284262908394113825}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: RightGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -822,7 +822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3188347331922207411}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -852,7 +852,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 228794551766211084}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: SpawnPoint_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -992,7 +992,7 @@ GameObject:
   - component: {fileID: 4008473497266390288}
   - component: {fileID: 5837766019858558074}
   - component: {fileID: 1370328429009648872}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: EnemyGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1351,6 +1351,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorRight
       objectReference: {fileID: 0}
+    - target: {fileID: 5360046852869796636, guid: 428808c033ce383448b95562b2d045ea,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6039765945206427578, guid: 428808c033ce383448b95562b2d045ea,
         type: 3}
       propertyPath: m_RootOrder
@@ -1404,6 +1409,11 @@ PrefabInstance:
     - target: {fileID: 6039765945206427578, guid: 428808c033ce383448b95562b2d045ea,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6230828143471129172, guid: 428808c033ce383448b95562b2d045ea,
+        type: 3}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1488,10 +1498,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3782932682515426395, guid: d3a4ca41b131d8843b83583c3090b2b9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3983893080332600380, guid: d3a4ca41b131d8843b83583c3090b2b9,
         type: 3}
       propertyPath: m_Name
       value: DoorBot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3983893080332600380, guid: d3a4ca41b131d8843b83583c3090b2b9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a4ca41b131d8843b83583c3090b2b9, type: 3}
