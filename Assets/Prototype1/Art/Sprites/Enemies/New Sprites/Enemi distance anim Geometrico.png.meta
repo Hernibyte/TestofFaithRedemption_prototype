@@ -1,0 +1,536 @@
+fileFormatVersion: 2
+guid: 4e158b69f0a619b4887a97551d564860
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3438337815905422442
+    second: Enemi distance anim Geometrico_6
+  - first:
+      213: -2341478069114236979
+    second: Enemi distance anim Geometrico_7
+  - first:
+      213: -5629351056515163026
+    second: Enemi distance anim Geometrico_8
+  - first:
+      213: -260103338187494620
+    second: Enemi distance anim Geometrico_9
+  - first:
+      213: -2302916264979820888
+    second: Enemi distance anim Geometrico_10
+  - first:
+      213: -4258669823895846336
+    second: Enemi distance anim Geometrico_11
+  - first:
+      213: 8054150852097140917
+    second: Enemi distance anim Geometrico_20
+  - first:
+      213: 6288336800555181139
+    second: Enemi distance anim Geometrico_22
+  - first:
+      213: 5720108119764176721
+    second: Enemi distance anim Geometrico_23
+  - first:
+      213: -8055838832084472186
+    second: Enemi distance anim Geometrico_25
+  - first:
+      213: -7133996781916937012
+    second: Enemi distance anim Geometrico_26
+  - first:
+      213: 4408800380998486539
+    second: Enemi distance anim Geometrico_27
+  - first:
+      213: 7627546053674733133
+    second: Enemi distance anim Geometrico_33
+  - first:
+      213: -7864373160410465215
+    second: Enemi distance anim Geometrico_34
+  - first:
+      213: -3019470373988176562
+    second: Enemi distance anim Geometrico_35
+  - first:
+      213: 5831265234532053604
+    second: Enemi distance anim Geometrico_36
+  - first:
+      213: -9108003616621624303
+    second: Enemi distance anim Geometrico_37
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1600
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_6
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 2554
+        width: 192
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6cc5d6c60e67bf20800000000000000
+      internalID: 3438337815905422442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_7
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 2516
+        width: 293
+        height: 310
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf04111a16618fd0800000000000000
+      internalID: -2341478069114236979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_8
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 2485
+        width: 293
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c91782a0780e1b0800000000000000
+      internalID: -5629351056515163026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_9
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 2470
+        width: 292
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42be07a546de36cf0800000000000000
+      internalID: -260103338187494620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_10
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 2508
+        width: 295
+        height: 313
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ae886ebbd56a00e0800000000000000
+      internalID: -2302916264979820888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_11
+      rect:
+        serializedVersion: 2
+        x: 2098
+        y: 2489
+        width: 240
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 042430bcb5a26e4c0800000000000000
+      internalID: -4258669823895846336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_20
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 1339
+        width: 308
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8e8aaf68716cf60800000000000000
+      internalID: 8054150852097140917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_22
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1475
+        width: 166
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 354ab19c009a44750800000000000000
+      internalID: 6288336800555181139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_23
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 1341
+        width: 308
+        height: 360
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f0f5b4708e16f40800000000000000
+      internalID: 5720108119764176721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_25
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 1345
+        width: 276
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68eaecd8349e33090800000000000000
+      internalID: -8055838832084472186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_26
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 1338
+        width: 266
+        height: 370
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc4af0179b3fefc90800000000000000
+      internalID: -7133996781916937012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_27
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 1298
+        width: 225
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a850376943f2d30800000000000000
+      internalID: 4408800380998486539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_33
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 300
+        width: 298
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e073d29bc7ad960800000000000000
+      internalID: 7627546053674733133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_34
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 307
+        width: 240
+        height: 356
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c3e9027422cd290800000000000000
+      internalID: -7864373160410465215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_35
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 370
+        width: 320
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4d6e9451bfa816d0800000000000000
+      internalID: -3019470373988176562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_36
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 380
+        width: 298
+        height: 214
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4623e5fd5d0dce050800000000000000
+      internalID: 5831265234532053604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Enemi distance anim Geometrico_37
+      rect:
+        serializedVersion: 2
+        x: 2069
+        y: 315
+        width: 235
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1148b4a87fed99180800000000000000
+      internalID: -9108003616621624303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: fa737f3a0e3578c4783f1e117e98f280
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
