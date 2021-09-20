@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: d92db04f3b474eb4687b348afc5dd13e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1770677933204322761
+    second: Monje anim Geometrico_0
+  - first:
+      213: -4337981418573666462
+    second: Monje anim Geometrico_1
+  - first:
+      213: 8622690177105246638
+    second: Monje anim Geometrico_2
+  - first:
+      213: 5023779790310568479
+    second: Monje anim Geometrico_3
+  - first:
+      213: 6350215903283326140
+    second: Monje anim Geometrico_4
+  - first:
+      213: 7107781921464971214
+    second: Monje anim Geometrico_5
+  - first:
+      213: -6581913133131625151
+    second: Monje anim Geometrico_6
+  - first:
+      213: -150190733789898745
+    second: Monje anim Geometrico_7
+  - first:
+      213: 203754608906242361
+    second: Monje anim Geometrico_8
+  - first:
+      213: 6830892490721908430
+    second: Monje anim Geometrico_9
+  - first:
+      213: 8806740078475384947
+    second: Monje anim Geometrico_10
+  - first:
+      213: 7261261549006801190
+    second: Monje anim Geometrico_11
+  - first:
+      213: -1727663541497141870
+    second: Monje anim Geometrico_12
+  - first:
+      213: -8050102226206972156
+    second: Monje anim Geometrico_13
+  - first:
+      213: -3644603480253991766
+    second: Monje anim Geometrico_14
+  - first:
+      213: 5679562660099949847
+    second: Monje anim Geometrico_15
+  - first:
+      213: -1629308534852573620
+    second: Monje anim Geometrico_16
+  - first:
+      213: -6610739964660276716
+    second: Monje anim Geometrico_17
+  - first:
+      213: -3668798519645757543
+    second: Monje anim Geometrico_18
+  - first:
+      213: -5649704909715121815
+    second: Monje anim Geometrico_19
+  - first:
+      213: 2606562513462141234
+    second: Monje anim Geometrico_20
+  - first:
+      213: 4257440310592338764
+    second: Monje anim Geometrico_21
+  - first:
+      213: -4337504575939660996
+    second: Monje anim Geometrico_22
+  - first:
+      213: -6919739672062501212
+    second: Monje anim Geometrico_23
+  - first:
+      213: -4643280002326950588
+    second: Monje anim Geometrico_24
+  - first:
+      213: -6641509063467120321
+    second: Monje anim Geometrico_25
+  - first:
+      213: -5321575500006601695
+    second: Monje anim Geometrico_26
+  - first:
+      213: -5215102972027132334
+    second: Monje anim Geometrico_27
+  - first:
+      213: 7773643442169272331
+    second: Monje anim Geometrico_28
+  - first:
+      213: 4558654334539376083
+    second: Monje anim Geometrico_29
+  - first:
+      213: 2056818880032241621
+    second: Monje anim Geometrico_30
+  - first:
+      213: 5095256503803347196
+    second: Monje anim Geometrico_31
+  - first:
+      213: -4785517070544052578
+    second: Monje anim Geometrico_32
+  - first:
+      213: 4344362699521427832
+    second: Monje anim Geometrico_33
+  - first:
+      213: 7421741790386518143
+    second: Monje anim Geometrico_34
+  - first:
+      213: 4238712778952947277
+    second: Monje anim Geometrico_35
+  - first:
+      213: -398658144700400870
+    second: Monje anim Geometrico_36
+  - first:
+      213: 4911184025124864169
+    second: Monje anim Geometrico_37
+  - first:
+      213: 5004568187920893740
+    second: Monje anim Geometrico_38
+  - first:
+      213: 6757405039779550833
+    second: Monje anim Geometrico_39
+  - first:
+      213: 2501754546354831238
+    second: Monje anim Geometrico_40
+  - first:
+      213: 2021398507025893571
+    second: Monje anim Geometrico_41
+  - first:
+      213: 423073364719330853
+    second: Monje anim Geometrico_47
+  - first:
+      213: -2914460452684599067
+    second: Monje anim Geometrico_49
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Monje anim Geometrico_0
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 3013
+        width: 153
+        height: 358
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736cbbb1dc94d67e0800000000000000
+      internalID: -1770677933204322761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_1
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 3015
+        width: 197
+        height: 349
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267eba722e46cc3c0800000000000000
+      internalID: -4337981418573666462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_2
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 3010
+        width: 126
+        height: 380
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea9bb96f703f9a770800000000000000
+      internalID: 8622690177105246638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_3
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 3020
+        width: 132
+        height: 387
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f127f372a1d08b540800000000000000
+      internalID: 5023779790310568479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_4
+      rect:
+        serializedVersion: 2
+        x: 1173
+        y: 3004
+        width: 175
+        height: 360
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc2d3a18bf702850800000000000000
+      internalID: 6350215903283326140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_5
+      rect:
+        serializedVersion: 2
+        x: 1603
+        y: 3004
+        width: 199
+        height: 358
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfecd9bff9e3a260800000000000000
+      internalID: 7107781921464971214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_6
+      rect:
+        serializedVersion: 2
+        x: 1867
+        y: 3011
+        width: 250
+        height: 334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14d063db0e858a4a0800000000000000
+      internalID: -6581913133131625151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_7
+      rect:
+        serializedVersion: 2
+        x: 2203
+        y: 3006
+        width: 150
+        height: 356
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708d5e7c25a6aedf0800000000000000
+      internalID: -150190733789898745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_16
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 2013
+        width: 151
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46a99e15888369e0800000000000000
+      internalID: -1629308534852573620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_17
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 2013
+        width: 157
+        height: 351
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41222fff60fe144a0800000000000000
+      internalID: -6610739964660276716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_19
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 2013
+        width: 206
+        height: 351
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96956aa61573891b0800000000000000
+      internalID: -5649704909715121815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_20
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 2011
+        width: 219
+        height: 351
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231a2cbbbce5c2420800000000000000
+      internalID: 2606562513462141234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_21
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 2011
+        width: 229
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4bf845d767751b30800000000000000
+      internalID: 4257440310592338764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_22
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 2013
+        width: 331
+        height: 431
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c333c7bb1961ec3c0800000000000000
+      internalID: -4337504575939660996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_23
+      rect:
+        serializedVersion: 2
+        x: 1773
+        y: 2009
+        width: 328
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ae598c3e6528ff90800000000000000
+      internalID: -6919739672062501212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_24
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 2009
+        width: 334
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44d80a46071cf8fb0800000000000000
+      internalID: -4643280002326950588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_39
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 894
+        width: 158
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1769e77d41027cd50800000000000000
+      internalID: 6757405039779550833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_40
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 894
+        width: 221
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68fb2ba418408b220800000000000000
+      internalID: 2501754546354831238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_41
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 894
+        width: 261
+        height: 362
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c888c87b337d0c10800000000000000
+      internalID: 2021398507025893571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_47
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 829
+        width: 199
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 99.5, y: -50.5}
+        - {x: 61.5, y: -179.5}
+        - {x: -99.5, y: -181.5}
+        - {x: -99.5, y: 3.5}
+        - {x: -70.5, y: 93.5}
+        - {x: -33.5, y: 178.5}
+        - {x: 66.5, y: 165.5}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5266602dbfe0fd500800000000000000
+      internalID: 423073364719330853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Geometrico_49
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 829
+        width: 225
+        height: 476
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -33.5, y: -238}
+        - {x: -45.5, y: 40}
+        - {x: -112.5, y: 75}
+        - {x: -112.5, y: 189}
+        - {x: -90, y: 232}
+        - {x: 112.5, y: 238}
+        - {x: 112.5, y: -238}
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e07fc5e8a1cd87d0800000000000000
+      internalID: -2914460452684599067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

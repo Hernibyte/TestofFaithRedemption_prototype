@@ -20,16 +20,25 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 6589228581194206350, guid: 114c09bd2dc01a54197f3d1e77161fa8,
+      value: {fileID: -6610739964660276716, guid: d92db04f3b474eb4687b348afc5dd13e,
         type: 3}
     - time: 0.083333336
-      value: {fileID: 1782678119196743231, guid: 114c09bd2dc01a54197f3d1e77161fa8,
+      value: {fileID: -5649704909715121815, guid: d92db04f3b474eb4687b348afc5dd13e,
         type: 3}
     - time: 0.16666667
-      value: {fileID: -1815552846190724527, guid: 114c09bd2dc01a54197f3d1e77161fa8,
+      value: {fileID: 2606562513462141234, guid: d92db04f3b474eb4687b348afc5dd13e,
         type: 3}
     - time: 0.25
-      value: {fileID: -8462762260358757171, guid: 114c09bd2dc01a54197f3d1e77161fa8,
+      value: {fileID: 4257440310592338764, guid: d92db04f3b474eb4687b348afc5dd13e,
+        type: 3}
+    - time: 0.33333334
+      value: {fileID: -4337504575939660996, guid: d92db04f3b474eb4687b348afc5dd13e,
+        type: 3}
+    - time: 0.41666666
+      value: {fileID: -6919739672062501212, guid: d92db04f3b474eb4687b348afc5dd13e,
+        type: 3}
+    - time: 0.5
+      value: {fileID: -4643280002326950588, guid: d92db04f3b474eb4687b348afc5dd13e,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -50,16 +59,19 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 6589228581194206350, guid: 114c09bd2dc01a54197f3d1e77161fa8, type: 3}
-    - {fileID: 1782678119196743231, guid: 114c09bd2dc01a54197f3d1e77161fa8, type: 3}
-    - {fileID: -1815552846190724527, guid: 114c09bd2dc01a54197f3d1e77161fa8, type: 3}
-    - {fileID: -8462762260358757171, guid: 114c09bd2dc01a54197f3d1e77161fa8, type: 3}
+    - {fileID: -6610739964660276716, guid: d92db04f3b474eb4687b348afc5dd13e, type: 3}
+    - {fileID: -5649704909715121815, guid: d92db04f3b474eb4687b348afc5dd13e, type: 3}
+    - {fileID: 2606562513462141234, guid: d92db04f3b474eb4687b348afc5dd13e, type: 3}
+    - {fileID: 4257440310592338764, guid: d92db04f3b474eb4687b348afc5dd13e, type: 3}
+    - {fileID: -4337504575939660996, guid: d92db04f3b474eb4687b348afc5dd13e, type: 3}
+    - {fileID: -6919739672062501212, guid: d92db04f3b474eb4687b348afc5dd13e, type: 3}
+    - {fileID: -4643280002326950588, guid: d92db04f3b474eb4687b348afc5dd13e, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.29166666
+    m_StopTime: 0.5416667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -79,7 +91,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.20833333
+  - time: 0.375
     functionName: MeleeDamage
     data: 
     objectReferenceParameter: {fileID: 0}
