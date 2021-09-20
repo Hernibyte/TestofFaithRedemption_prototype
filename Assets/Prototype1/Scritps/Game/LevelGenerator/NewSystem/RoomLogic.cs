@@ -62,10 +62,10 @@ public class RoomLogic : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("RoomSpace"))
-        {
-            Destroy(gameObject);
-        }
+        //if (other.CompareTag("RoomSpace"))
+        //{
+        //    Destroy(gameObject);
+        //}
         if (other.CompareTag("SpawnPoint"))
         {
             Destroy(gameObject);
