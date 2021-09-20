@@ -454,7 +454,7 @@ MonoBehaviour:
   playerOnRoom: 0
   decreaseSpeedAttack: 0.5
   dodgeOnRecover: 0
-  recoverDodge: 2
+  recoverDodge: 1
 --- !u!114 &4829890793479982778
 MonoBehaviour:
   m_ObjectHideFlags: 0

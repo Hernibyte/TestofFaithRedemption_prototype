@@ -9,13 +9,25 @@ namespace Proto1
         public Rigidbody2D rig;
         bool alive = true;
 
-        int damageCrow;
+        [SerializeField] int damageCrow;
         float knockbackCrow;
+
+        float timeToIncrease = 0.2f;
+        float timerToPowerDamage;
 
         private void Update()
         {
             if(alive)
             {
+                if (timerToPowerDamage < timeToIncrease)
+                    timerToPowerDamage += Time.deltaTime;
+
+                if(timerToPowerDamage > timeToIncrease)
+                {
+                    damageCrow += 4;
+                    timerToPowerDamage = 0;
+                }
+
                 Collider2D[] hits = Physics2D.OverlapCircleAll(rig.position, 0.5f, enemyLayer);
                 foreach(Collider2D hit in hits)
                 {
@@ -41,7 +53,7 @@ namespace Proto1
         }
         public void SetCrowStats(int damage,float knockback)
         {
-            damageCrow = damage;
+            damageCrow = (int)(damage * 0.5f);
             knockbackCrow = 0;
         }
     }
