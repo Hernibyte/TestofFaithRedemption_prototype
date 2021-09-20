@@ -38,6 +38,8 @@ public class RoomPrefabs : MonoBehaviour
 
             if (localRoomTime <= 0f)
             {
+                ClearDuplicateRoom();
+                
                 int index = roomList.Count - 1;
                 Vector3 bossPosition = roomList[index].transform.position;
 
@@ -51,8 +53,27 @@ public class RoomPrefabs : MonoBehaviour
                 if (roomList[index].GetComponentInChildren<EnemyGenerator>())
                     roomList[index].GetComponentInChildren<EnemyGenerator>().FindUI_Boss();
 
+
                 enemySpawned = true;
             }
+        }
+    }
+
+    void ClearDuplicateRoom()
+    {
+        List<int> index = new List<int>();
+        GameObject objeto = roomList[0];
+        for (int i = 1; i < roomList.Count; i++)
+        {
+            if (roomList[i].transform.position == objeto.transform.position)
+            {
+                index.Add(i);
+            }
+            objeto = roomList[i];
+        }
+        for (int i = 0; i < index.Count; i++)
+        {
+            roomList.RemoveAt(index[i]);
         }
     }
 }

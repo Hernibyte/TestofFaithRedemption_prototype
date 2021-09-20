@@ -57,15 +57,17 @@ public class RoomLogic : MonoBehaviour
             templates.localRoomTime = 2f;
 
             spawned = true;
+
+            //Destroy(gameObject);
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        //if (other.CompareTag("RoomSpace"))
-        //{
-        //    Destroy(gameObject);
-        //}
+        if (other.CompareTag("RoomSpace"))
+        {
+            Destroy(gameObject);
+        }
         if (other.CompareTag("SpawnPoint"))
         {
             Destroy(gameObject);
