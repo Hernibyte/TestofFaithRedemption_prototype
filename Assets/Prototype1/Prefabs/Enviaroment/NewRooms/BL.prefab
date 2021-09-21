@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 4118430733802333055}
   - component: {fileID: 3274018892598496815}
   m_Layer: 0
-  m_Name: GameObject (5)
+  m_Name: Center
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 2533178024744581726}
   - component: {fileID: 76454791167038005}
   - component: {fileID: 2514418282224445203}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LeftGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -552,6 +552,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomId: 0
+  distanceBetweenRooms: 12
+  roomLayer:
+    serializedVersion: 2
+    m_Bits: 8192
+  doors:
+  - {fileID: 3569569323254324386}
+  - {fileID: 7906030052182280456}
+  directionDoors: 0200000001000000
 --- !u!114 &1734917511828736562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -723,7 +731,7 @@ GameObject:
   - component: {fileID: 4691765328024902778}
   - component: {fileID: 7020014586729772094}
   - component: {fileID: 1357153998334313138}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DownGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1229,7 +1237,7 @@ GameObject:
   - component: {fileID: 2561840710700884294}
   - component: {fileID: 4985028103825229868}
   - component: {fileID: 516202669453957310}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemyGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}

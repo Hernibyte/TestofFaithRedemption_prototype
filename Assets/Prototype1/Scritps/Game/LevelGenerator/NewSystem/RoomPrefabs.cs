@@ -39,7 +39,9 @@ public class RoomPrefabs : MonoBehaviour
             if (localRoomTime <= 0f)
             {
                 ClearDuplicateRoom();
-                
+
+                CloseEmptyRooms();
+
                 int index = roomList.Count - 1;
                 Vector3 bossPosition = roomList[index].transform.position;
 
@@ -57,6 +59,21 @@ public class RoomPrefabs : MonoBehaviour
                 enemySpawned = true;
             }
         }
+    }
+
+    void CloseEmptyRooms()
+    {
+        for (int i = 0; i < roomList.Count; i++)
+        {
+            RoomID idRoom = roomList[i].GetComponent<RoomID>();
+
+            if(idRoom != null)
+            {
+                idRoom.CheckAllDirections();
+            }
+        }
+
+        Debug.Break();
     }
 
     void ClearDuplicateRoom()

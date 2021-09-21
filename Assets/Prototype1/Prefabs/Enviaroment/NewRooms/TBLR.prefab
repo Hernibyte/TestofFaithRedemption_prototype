@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1211746733637363330}
   - component: {fileID: 6393013413579681720}
   - component: {fileID: 8041015169589805623}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: TopGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 6555222944849599990}
   - component: {fileID: 1714125449114072059}
   - component: {fileID: 6594464818027769632}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: RightGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -158,7 +158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6711738464425141000}
   - component: {fileID: 7745312076061970238}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   - component: {fileID: 4263388934139566306}
   - component: {fileID: 7722761888928129249}
   - component: {fileID: 1005493188991323310}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LeftGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -629,6 +629,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   roomId: 0
+  distanceBetweenRooms: 0
+  roomLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  doors: []
+  directionDoors: 
 --- !u!1 &2583795154951362715
 GameObject:
   m_ObjectHideFlags: 0
@@ -749,7 +755,7 @@ GameObject:
   - component: {fileID: 5346931067877395646}
   - component: {fileID: 3093238369400655098}
   - component: {fileID: 8036971480615669577}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DownGate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
