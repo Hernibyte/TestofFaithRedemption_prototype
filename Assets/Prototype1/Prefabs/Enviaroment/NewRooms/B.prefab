@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 3211941469489955785}
   - component: {fileID: 3211941469489955783}
   - component: {fileID: 3211941469489955782}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 3211941469490823242}
   - component: {fileID: 3211941469490823240}
   - component: {fileID: 3211941469490823243}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -396,7 +396,7 @@ GameObject:
   - component: {fileID: 3211941470299622530}
   - component: {fileID: 3211941470299622528}
   - component: {fileID: 3211941470299622531}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -594,7 +594,7 @@ GameObject:
   - component: {fileID: 1878338306120769629}
   - component: {fileID: 5429956060778328464}
   m_Layer: 2
-  m_Name: Center
+  m_Name: Center B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 8530777016636857902}
   - component: {fileID: 8530777016636857903}
   - component: {fileID: 1284266953746459833}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -910,7 +910,7 @@ GameObject:
   - component: {fileID: 8530777017417402890}
   - component: {fileID: 8530777017417402891}
   - component: {fileID: 3267477859942840837}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1146,7 +1146,7 @@ PrefabInstance:
     - target: {fileID: 3782932682515426395, guid: d3a4ca41b131d8843b83583c3090b2b9,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3983893080332600380, guid: d3a4ca41b131d8843b83583c3090b2b9,
         type: 3}
@@ -1156,7 +1156,7 @@ PrefabInstance:
     - target: {fileID: 3983893080332600380, guid: d3a4ca41b131d8843b83583c3090b2b9,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a4ca41b131d8843b83583c3090b2b9, type: 3}

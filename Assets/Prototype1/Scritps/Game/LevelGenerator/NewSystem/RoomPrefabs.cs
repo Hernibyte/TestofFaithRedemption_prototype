@@ -73,7 +73,6 @@ public class RoomPrefabs : MonoBehaviour
             }
         }
 
-        Debug.Break();
     }
 
     void ClearDuplicateRoom()

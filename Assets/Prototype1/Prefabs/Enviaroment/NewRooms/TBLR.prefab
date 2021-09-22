@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 6711738464425141000}
   - component: {fileID: 7745312076061970238}
   m_Layer: 2
-  m_Name: GameObject (5)
+  m_Name: Center TBLR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -830,7 +830,7 @@ GameObject:
   - component: {fileID: 7382199302841540217}
   - component: {fileID: 1356248870853593317}
   - component: {fileID: 3375379254450237664}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Destruction
   m_TagString: SpawnPoint
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}

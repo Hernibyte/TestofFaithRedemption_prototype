@@ -70,21 +70,26 @@ public class RoomID : MonoBehaviour
     void RaycastDirection(ref Ray2D directionRay, int iteration)
     {
         RaycastHit2D[] hits = Physics2D.RaycastAll(directionRay.origin, directionRay.direction, distanceBetweenRooms);
-        foreach (RaycastHit2D hit in hits)
+        
+        if(hits.Length <= 1)
         {
-            Debug.Log(hit.transform.gameObject.name);
-
-            if (hit.collider.gameObject != gameObject)
+            Collider2D colDoor = doors[iteration].gameObject.GetComponent<Collider2D>();
+            colDoor.isTrigger = false;
+            Debug.Log("No pego nadaa");
+        }
+        else
+        {
+            foreach (RaycastHit2D hit in hits)
             {
-                if (!Contains(roomLayer, hit.transform.gameObject.layer))
+                Debug.Log(hit.transform.gameObject.name);
+
+                if (hit.collider.gameObject != gameObject)
                 {
-                    Collider2D colDoor = doors[iteration].gameObject.GetComponent<Collider2D>();
-                    colDoor.isTrigger = false;
-                }
-                else if(Contains(roomLayer, hit.transform.gameObject.layer))
-                {
-                    Collider2D colDoor = doors[iteration].gameObject.GetComponent<Collider2D>();
-                    colDoor.isTrigger = true;
+                    if(Contains(roomLayer, hit.transform.gameObject.layer))
+                    {
+                        Collider2D colDoor = doors[iteration].gameObject.GetComponent<Collider2D>();
+                        colDoor.isTrigger = true;
+                    }
                 }
             }
         }

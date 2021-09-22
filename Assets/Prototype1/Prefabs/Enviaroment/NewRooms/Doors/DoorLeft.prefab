@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 260705101925116253}
   - component: {fileID: 4918331700807365306}
   - component: {fileID: 5783779833596934129}
-  m_Layer: 13
+  m_Layer: 2
   m_Name: DoorLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6860803560559045950}
   - component: {fileID: 3647361742407548903}
-  m_Layer: 13
+  m_Layer: 2
   m_Name: SpriteDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
