@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1420,6 +1420,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5919561122757471341, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919561122757471341, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: rig
@@ -1428,7 +1438,7 @@ PrefabInstance:
     - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: speed
-      value: 55
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 5919561122757471343, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
@@ -1493,6 +1503,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 664531743233487789, guid: 2e26efda7117158478fe3bb2f9b5f5e2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.00012207031
       objectReference: {fileID: 0}
     - target: {fileID: 4919148056322847385, guid: 2e26efda7117158478fe3bb2f9b5f5e2,
         type: 3}

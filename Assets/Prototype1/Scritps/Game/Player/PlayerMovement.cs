@@ -17,11 +17,12 @@ namespace Proto1
         [Header("PLAYER MOVE STATS")]
         [Space(10)]
         [SerializeField] bool canDodge;
+        [SerializeField] bool canMove;
         [SerializeField] public float speed;
         [SerializeField] public int playerOnRoom;
         [SerializeField] public float decreaseSpeedAttack;
         [SerializeField] public float dodgeOnRecover;
-        [SerializeField][Range(1,4)] public float recoverDodge;
+        [SerializeField][Range(0.5f,2)] public float recoverDodge;
 
         void Awake()
         {
@@ -32,6 +33,7 @@ namespace Proto1
         void Start()
         {
             canDodge = true;
+            canMove = true;
             playerOnRoom = 0;
         }
 
@@ -48,8 +50,9 @@ namespace Proto1
             if(dodgeOnRecover >= recoverDodge / 2)
             {
                 dodgeTrails.gameObject.SetActive(false);
+                canMove = true;
             }
-            if(dodgeOnRecover == recoverDodge)
+            if (dodgeOnRecover == recoverDodge)
             {
                 canDodge = true;
             }
@@ -82,17 +85,21 @@ namespace Proto1
 
             if (Input.GetKey(KeyCode.Space) && rig.velocity != Vector2.zero)
             {
-                rig.AddForce(direction / 2, ForceMode2D.Impulse);
+                rig.AddForce(direction / 1.2f, ForceMode2D.Impulse);
                 playerAnimator.SetTrigger("dodge");
                 dodgeTrails.gameObject.SetActive(true);
 
                 dodgeOnRecover = 0;
                 canDodge = false;
+                canMove = false;
             }
         }
 
         void Movement()
         {
+            if (!canMove)
+                return;
+
             float x = Input.GetAxis("Horizontal");
             float y = Input.GetAxis("Vertical");
 
