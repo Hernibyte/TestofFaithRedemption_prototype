@@ -557,9 +557,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8192
   doors:
-  - {fileID: 3569569323254324386}
   - {fileID: 7906030052182280456}
-  directionDoors: 0200000001000000
+  - {fileID: 3569569323254324386}
+  directionDoors: 0100000002000000
 --- !u!114 &1734917511828736562
 MonoBehaviour:
   m_ObjectHideFlags: 0
