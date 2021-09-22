@@ -1,0 +1,824 @@
+fileFormatVersion: 2
+guid: c37f5596152c9ad4791d1085c8b9e7f9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7802704622296407697
+    second: Monje anim Done 3.0_4
+  - first:
+      213: -8179118899563479218
+    second: Monje anim Done 3.0_5
+  - first:
+      213: 7209194957381740734
+    second: Monje anim Done 3.0_6
+  - first:
+      213: -7144513590274716276
+    second: Monje anim Done 3.0_7
+  - first:
+      213: -3556008242034228087
+    second: Monje anim Done 3.0_8
+  - first:
+      213: -6998275862726523937
+    second: Monje anim Done 3.0_9
+  - first:
+      213: 7055750704935214031
+    second: Monje anim Done 3.0_10
+  - first:
+      213: 377695525885411846
+    second: Monje anim Done 3.0_12
+  - first:
+      213: 4122201985108054026
+    second: Monje anim Done 3.0_26
+  - first:
+      213: 1300832638266169851
+    second: Monje anim Done 3.0_27
+  - first:
+      213: 1951228396712366044
+    second: Monje anim Done 3.0_28
+  - first:
+      213: -8939696105326316393
+    second: Monje anim Done 3.0_30
+  - first:
+      213: 424237588462091947
+    second: Monje anim Done 3.0_31
+  - first:
+      213: -657055985093170696
+    second: Monje anim Done 3.0_32
+  - first:
+      213: 3363608618801500818
+    second: Monje anim Done 3.0_46
+  - first:
+      213: -2321951878696624979
+    second: Monje anim Done 3.0_47
+  - first:
+      213: 3752085689270685267
+    second: Monje anim Done 3.0_49
+  - first:
+      213: -3548043726412418303
+    second: Monje anim Done 3.0_50
+  - first:
+      213: -5538690483623959830
+    second: Monje anim Done 3.0_51
+  - first:
+      213: -4496701808326787315
+    second: Monje anim Done 3.0_52
+  - first:
+      213: -3291261827156912687
+    second: Monje anim Done 3.0_53
+  - first:
+      213: 2286796858599025138
+    second: Monje anim Done 3.0_54
+  - first:
+      213: 6936359284345857140
+    second: Monje anim Done 3.0_57
+  - first:
+      213: -2054135349391503732
+    second: Monje anim Done 3.0_59
+  - first:
+      213: -5304671513866504192
+    second: Monje anim Done 3.0_66
+  - first:
+      213: 6150283986008538767
+    second: Monje anim Done 3.0_69
+  - first:
+      213: 6619348546440892611
+    second: Monje anim Done 3.0_70
+  - first:
+      213: 3262892531865464258
+    second: Monje anim Done 3.0_71
+  - first:
+      213: 2323994708661822050
+    second: Monje anim Done 3.0_73
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_4
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 3089
+        width: 151
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6169bc8c7937b390800000000000000
+      internalID: -7802704622296407697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_5
+      rect:
+        serializedVersion: 2
+        x: 396
+        y: 3085
+        width: 205
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fb5d712beed7e80800000000000000
+      internalID: -8179118899563479218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_6
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 3077
+        width: 170
+        height: 368
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8a6472e943c0460800000000000000
+      internalID: 7209194957381740734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_7
+      rect:
+        serializedVersion: 2
+        x: 911
+        y: 3072
+        width: 175
+        height: 373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8d89be2eb699dc90800000000000000
+      internalID: -7144513590274716276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_8
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 3079
+        width: 151
+        height: 366
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984403b285586aec0800000000000000
+      internalID: -3556008242034228087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_9
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 3080
+        width: 236
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3cef96e2121ee90800000000000000
+      internalID: -6998275862726523937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_10
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 3087
+        width: 200
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb106712ef0be160800000000000000
+      internalID: 7055750704935214031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_12
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 3091
+        width: 228
+        height: 463
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60287a56418dd3500800000000000000
+      internalID: 377695525885411846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_26
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2319
+        width: 158
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0096c67dd0053930800000000000000
+      internalID: 4122201985108054026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_27
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 2319
+        width: 219
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9d614746c7d0210800000000000000
+      internalID: 1300832638266169851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_28
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 2319
+        width: 268
+        height: 362
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf02b583e7241b10800000000000000
+      internalID: 1951228396712366044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_30
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 2319
+        width: 198
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 794f41ab1c1dfe380800000000000000
+      internalID: -8939696105326316393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_31
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 2326
+        width: 250
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baeb6a8c6d133e500800000000000000
+      internalID: 424237588462091947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_32
+      rect:
+        serializedVersion: 2
+        x: 1587
+        y: 2323
+        width: 149
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f92af2101ba1e6f0800000000000000
+      internalID: -657055985093170696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_46
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1447
+        width: 150
+        height: 363
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2921b17b730fdae20800000000000000
+      internalID: 3363608618801500818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_47
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 1440
+        width: 158
+        height: 358
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dac9cbc8115c6cfd0800000000000000
+      internalID: -2321951878696624979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_49
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 1447
+        width: 207
+        height: 351
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e4ec31e06121430800000000000000
+      internalID: 3752085689270685267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_50
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 1445
+        width: 219
+        height: 353
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10372a77701d2cec0800000000000000
+      internalID: -3548043726412418303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_51
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 1442
+        width: 231
+        height: 361
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2e1c2b95e9223b0800000000000000
+      internalID: -5538690483623959830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_52
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 1442
+        width: 400
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0f33d5a7818891c0800000000000000
+      internalID: -4496701808326787315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_53
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 1442
+        width: 312
+        height: 481
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d552895ec61352d0800000000000000
+      internalID: -3291261827156912687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_54
+      rect:
+        serializedVersion: 2
+        x: 1877
+        y: 1440
+        width: 339
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9264e70a55cbf10800000000000000
+      internalID: 2286796858599025138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_57
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1009
+        width: 480
+        height: 405
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474eae9c406e24060800000000000000
+      internalID: 6936359284345857140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_59
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1009
+        width: 369
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e42f278ce3e73e0800000000000000
+      internalID: -2054135349391503732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_66
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 704
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0087add0d550266b0800000000000000
+      internalID: -5304671513866504192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_69
+      rect:
+        serializedVersion: 2
+        x: 1854
+        y: 674
+        width: 21
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8effcd13b23a5550800000000000000
+      internalID: 6150283986008538767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_70
+      rect:
+        serializedVersion: 2
+        x: 1837
+        y: 606
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c09b13ae66acdb50800000000000000
+      internalID: 6619348546440892611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_71
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 594
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cdad1e587f184d20800000000000000
+      internalID: 3262892531865464258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monje anim Done 3.0_73
+      rect:
+        serializedVersion: 2
+        x: 2006
+        y: 481
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 262ecaddfdc704020800000000000000
+      internalID: 2323994708661822050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 9e802c6d67b32894db14a5f4e701d724
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -105,6 +105,9 @@ namespace Proto1
             if (playerAttack.attackColdownMelee > playerAttack.attackSpeedMelee - decreaseSpeedAttack)
                 rig.velocity = Vector3.zero;
 
+            if (playerAttack.attackColdownRanged > playerAttack.attackSpeedRanged - decreaseSpeedAttack * 0.5f)
+                rig.velocity = Vector3.zero;
+
             if (playerAnimator != null)
             {
                 if(attackPoint.position.x > transform.position.x)
