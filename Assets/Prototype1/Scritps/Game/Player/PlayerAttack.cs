@@ -12,6 +12,7 @@ namespace Proto1
         [SerializeField] Animator playerAnimator;
         [SerializeField] Rigidbody2D rig;
         [SerializeField] RangeAttack rangeMode;
+        [SerializeField] StatsMenu stats;
         public PlayerMovement movementPlayer;
 
         [Header("NORMAL STATS")]
@@ -58,13 +59,16 @@ namespace Proto1
             else
                 attackColdownRanged = 0;
 
-            if (Input.GetKeyDown(KeyCode.Mouse0) && attackColdownMelee == 0)
+            if(!stats.openStats)
             {
-                attackColdownMelee = attackSpeedMelee;
-                playerAnimator.SetTrigger("attack");
+                if (Input.GetKeyDown(KeyCode.Mouse0) && attackColdownMelee == 0)
+                {
+                    attackColdownMelee = attackSpeedMelee;
+                    playerAnimator.SetTrigger("attack");
+                }
+                //
+                RangeAttack();
             }
-
-            RangeAttack();
         }
         private void FixedUpdate()
         {

@@ -121,6 +121,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &36609180 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4919148056629615392, guid: 2e26efda7117158478fe3bb2f9b5f5e2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7127448125414316349}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18156728fee848d4680a5d5dbc994eaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &37167005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1280,6 +1292,11 @@ PrefabInstance:
       objectReference: {fileID: 194641018}
     - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 36609180}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
       propertyPath: slashEffect
       value: 
       objectReference: {fileID: 7640395013230572804, guid: f66393b2a7fb5d94e9994d3bd97c97b5,
@@ -1440,6 +1457,11 @@ PrefabInstance:
       propertyPath: speed
       value: 70
       objectReference: {fileID: 0}
+    - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: stats
+      value: 
+      objectReference: {fileID: 36609180}
     - target: {fileID: 5919561122757471343, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: maxPlayerHP

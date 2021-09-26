@@ -12,6 +12,7 @@ namespace Proto1
         public Rigidbody2D rig;
         [HideInInspector] public RoomID actualRoom;
         [SerializeField] public GameObject dodgeTrails;
+        [SerializeField] StatsMenu stats;
 
 
         [Header("PLAYER MOVE STATS")]
@@ -97,6 +98,8 @@ namespace Proto1
 
         void Movement()
         {
+            if(stats.openStats)
+                return;
             if (!canMove)
                 return;
 
