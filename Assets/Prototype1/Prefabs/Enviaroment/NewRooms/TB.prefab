@@ -892,15 +892,16 @@ MonoBehaviour:
   enemyCreated: 0
   lootChest: {fileID: 1239203090205887322, guid: ddfac4bb14dbb52438d8dd5214920938,
     type: 3}
-  rangersInRoom: 0
+  ragnersEnemyAmount: 2
+  meleeEnemyAmount: 3
+  rangersMinAmount: 0
+  meleeMinAmount: 1
   enemiesAlive: 0
   spawnPoints:
   - {fileID: 2089815532541295928}
   - {fileID: 1883005983572977654}
   - {fileID: 7432042840182669907}
   - {fileID: 2734909937537014661}
-  warriorEnemy: {fileID: 0}
-  rangedEnemies: []
   imSpawnBoss: 0
   uiBoss: {fileID: 0}
 --- !u!1 &7653634999136059395
