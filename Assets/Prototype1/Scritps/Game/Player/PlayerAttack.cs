@@ -13,6 +13,7 @@ namespace Proto1
         [SerializeField] Rigidbody2D rig;
         [SerializeField] RangeAttack rangeMode;
         [SerializeField] StatsMenu stats;
+        [SerializeField] CardTaked cardTakenSystem;
         public PlayerMovement movementPlayer;
 
         [Header("NORMAL STATS")]
@@ -61,13 +62,16 @@ namespace Proto1
 
             if(!stats.openStats)
             {
-                if (Input.GetKeyDown(KeyCode.Mouse0) && attackColdownMelee == 0)
+                if(!cardTakenSystem.isOpen)
                 {
-                    attackColdownMelee = attackSpeedMelee;
-                    playerAnimator.SetTrigger("attack");
+                    if (Input.GetKeyDown(KeyCode.Mouse0) && attackColdownMelee == 0)
+                    {
+                        attackColdownMelee = attackSpeedMelee;
+                        playerAnimator.SetTrigger("attack");
+                    }
+                    //
+                    RangeAttack();
                 }
-                //
-                RangeAttack();
             }
         }
         private void FixedUpdate()

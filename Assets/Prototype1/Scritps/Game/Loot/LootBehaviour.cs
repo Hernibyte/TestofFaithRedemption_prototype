@@ -21,6 +21,7 @@ public class LootBehaviour : MonoBehaviour
             {
                 taked.panel.alpha = 1f;
 
+                taked.isOpen = true;
                 taked.card = slotsElection[Random.Range(0, (slotsElection.Count - 1))];
 
                 Destroy(this.gameObject);

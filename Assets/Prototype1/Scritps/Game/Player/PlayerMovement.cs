@@ -13,6 +13,7 @@ namespace Proto1
         [HideInInspector] public RoomID actualRoom;
         [SerializeField] public GameObject dodgeTrails;
         [SerializeField] StatsMenu stats;
+        [SerializeField] CardTaked  cardTakenSystem;
 
 
         [Header("PLAYER MOVE STATS")]
@@ -99,6 +100,8 @@ namespace Proto1
         void Movement()
         {
             if(stats.openStats)
+                return;
+            if(cardTakenSystem.isOpen)
                 return;
             if (!canMove)
                 return;

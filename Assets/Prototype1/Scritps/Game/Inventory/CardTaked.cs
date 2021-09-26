@@ -10,6 +10,7 @@ public class CardTaked : MonoBehaviour
     public Slot card;
     public CardType cardImageType;
     StatsMenu stats;
+    public bool isOpen;
 
     private void Start()
     {
@@ -39,14 +40,14 @@ public class CardTaked : MonoBehaviour
             stats.openStats = !stats.openStats;
         }
         deck.SetCardTaked(card);
-        
+        isOpen = false;
         card = null;
-
         panel.alpha = .0f;
     }
 
     public void Discard()
     {
+        isOpen = false;
         card = null;
         panel.alpha = .0f;
     }
