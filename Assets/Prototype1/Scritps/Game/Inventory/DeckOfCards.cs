@@ -11,6 +11,9 @@ public class DeckOfCards : MonoBehaviour
     public Slot None;
     [HideInInspector] public bool updateDeck = false;
 
+    public delegate void UpdateDeckOfCards(int indexToUpdate);
+    public UpdateDeckOfCards updateSlotOfCard;
+
     private void Awake()
     {
         slotCardTaked = None;
@@ -45,6 +48,19 @@ public class DeckOfCards : MonoBehaviour
             texts[index].text = slotCardTaked.card.sCard.name;
             slotCardTaked = None;
             updateDeck = true;
+        }
+    }
+
+    public void SetSlotVarient(int index)
+    {
+        if(slotCardTaked != None)
+        {
+            slots[index] = slotCardTaked;
+            texts[index].text = slotCardTaked.card.newSCard.name;
+            slotCardTaked = None;
+            updateDeck = true;
+
+            updateSlotOfCard?.Invoke(index);
         }
     }
 

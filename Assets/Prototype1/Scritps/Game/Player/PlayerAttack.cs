@@ -21,6 +21,7 @@ namespace Proto1
         public float max_HP;
         public float actual_HP;
         public float defensePlayer;
+        public float playerCapHP;
         [Range(5,95)]public float defenseEfficiency;
         [Range(15,98)]public float DMGReducedByDEF;
 
@@ -39,11 +40,20 @@ namespace Proto1
         public delegate void PlayerHasAttack();
         public PlayerHasAttack attackFromPlayer;
 
+        public GameManager gmRef;
+
         void Start()
         {
             attackColdownMelee = 0;
             actual_HP = max_HP;
             movementPlayer = GetComponent<PlayerMovement>();
+
+            gmRef = FindObjectOfType<GameManager>();
+
+            if(gmRef != null)
+            {
+                gmRef.deck.updateSlotOfCard += UpdateSlotOfCard;
+            }
 
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = false;
@@ -74,25 +84,230 @@ namespace Proto1
                 }
             }
         }
-        private void FixedUpdate()
+
+        private void OnDisable()
         {
-            GameManager gma = FindObjectOfType<GameManager>();
-            if (gma.deck.updateDeck)
+            if (gmRef != null)
             {
-                for (int i = 0; i < 7; i++)
+                gmRef.deck.updateSlotOfCard -= UpdateSlotOfCard;
+            }
+        }
+
+        public void UpdateSlotOfCard(int indexSlot)
+        {
+            if (gmRef == null)
+            {
+                Debug.LogWarning("No se ha encontrado la referencia del Game Manager en PlayerAttack[Script]");
+                return;
+            }
+
+            if(gmRef.GetCard(indexSlot).card != null)
+            {
+                NewSCard cardTaked = gmRef.GetCard(indexSlot).card.newSCard;
+
+                //BASIC STATS
+                CalcBasicStats(cardTaked);
+
+                //OTHER STATS
+                CalcKnockback(cardTaked);
+                CalcAttackSpeed(cardTaked);
+
+                gmRef.deck.updateDeck = false;
+            }
+        }
+        public void CalcBasicStats(NewSCard cardTaked)
+        {
+            for (int i = 0; i < cardTaked.typeStats.Count; i++)
+            {
+                switch (cardTaked.typeStats[i])
                 {
-                    if(gma.GetCard(i).card != null)
-                    {
-                        max_HP += gma.GetCard(i).card.sCard.hp;
-                        defensePlayer += gma.GetCard(i).card.sCard.defense;
-                        playerDamage += gma.GetCard(i).card.sCard.damage;
-                        knockBackMelee += gma.GetCard(i).card.sCard.knockback;
-                        attackColdownMelee += gma.GetCard(i).card.sCard.attackColdown;
-                        attackSpeedMelee += gma.GetCard(i).card.sCard.attackSpeed;
-                        movementPlayer.speed += gma.GetCard(i).card.sCard.movementSpeed;
-                    }
+                    case NewSCard.CardType.HP_Plane:
+
+                        if (cardTaked.hp > 0)
+                        {
+                            //Positivo
+                            if (max_HP < playerCapHP)
+                                max_HP += cardTaked.hp;
+                            else
+                                max_HP = playerCapHP;
+                        }
+                        else
+                        {
+                            //Negativo
+                            if (max_HP > cardTaked.hp)
+                                max_HP -= cardTaked.hp;
+                            else
+                                max_HP = 1;
+                        }
+
+                        break;
+                    case NewSCard.CardType.HP_Porcent:
+
+                        if (cardTaked.hp > 0)
+                        {
+                            //Positivo
+                            if (max_HP < playerCapHP)
+                            {
+                                float amountHpPorcent = cardTaked.hp;
+                                float totalHp = max_HP;
+                                float finalHPIncreased = (totalHp * amountHpPorcent) / 100;
+
+                                max_HP += finalHPIncreased;
+                            }
+                            else
+                                max_HP = playerCapHP;
+                        }
+                        else
+                        {
+                            //Negativo
+                            float amountHpPorcent = Mathf.Abs(cardTaked.hp);
+                            float totalHp = max_HP;
+                            float finalHPDecreased = (totalHp * amountHpPorcent) / 100;
+
+                            if (max_HP > finalHPDecreased)
+                            {
+                                max_HP -= finalHPDecreased;
+                            }
+                            else
+                                max_HP = 1;
+                        }
+
+                        break;
+                    case NewSCard.CardType.ATK_Plane:
+
+                        if (cardTaked.damage > 0)
+                            playerDamage += cardTaked.damage;
+                        else
+                        {
+                            if (playerDamage > cardTaked.damage)
+                                playerDamage -= cardTaked.damage;
+                            else
+                                playerDamage = 5;
+                        }
+
+                        break;
+                    case NewSCard.CardType.ATK_Porcent:
+
+                        if (cardTaked.damage > 0)
+                        {
+                            //Positivo
+                            float amountDamagePorcent = cardTaked.damage;
+                            float actualDamage = playerDamage;
+                            float finalDamageIncrease = (actualDamage * amountDamagePorcent) / 100;
+
+                            playerDamage += (int)finalDamageIncrease;
+                        }
+                        else
+                        {
+                            //Negativo
+                            float amountDamagePorcent = Mathf.Abs(cardTaked.damage);
+                            float actualDamage = playerDamage;
+                            float finalDamageDecrease = (actualDamage * amountDamagePorcent) / 100;
+
+                            if (playerDamage > finalDamageDecrease)
+                                playerDamage -= (int)finalDamageDecrease;
+                            else
+                                playerDamage = 5;
+                        }
+
+
+                        break;
+                    case NewSCard.CardType.DEF_Plane:
+
+                        if (cardTaked.defense > 0)
+                            defensePlayer += cardTaked.defense;
+                        else
+                        {
+                            if (defensePlayer > cardTaked.defense)
+                                defensePlayer -= cardTaked.defense;
+                            else
+                                defensePlayer = 5;
+                        }
+
+                        break;
+                    case NewSCard.CardType.DEF_Porcent:
+
+                        if (cardTaked.defense > 0)
+                        {
+                            //Positivo
+                            float amountDefPorcent = cardTaked.defense;
+                            float defenseRaw = defensePlayer;
+                            float amountIncrease = (defenseRaw * amountDefPorcent) / 100;
+
+                            defensePlayer = amountIncrease;
+                        }
+                        else
+                        {
+                            //Negativo
+                            float amountDefPorcent = Mathf.Abs(cardTaked.defense);
+                            float defenseRaw = defensePlayer;
+                            float amountDecrease = (defenseRaw * amountDefPorcent) / 100;
+
+                            if (defensePlayer > amountDecrease)
+                            {
+                                defensePlayer -= amountDecrease;
+                            }
+                            else
+                                defensePlayer = 5;
+                        }
+
+                        break;
+                    case NewSCard.CardType.SPD_Plane:
+
+                        if (cardTaked.movementSpeed > 0)
+                        {
+                            //Positivo
+                            if (movementPlayer.speed < movementPlayer.playerSpeedCap)
+                                movementPlayer.speed += cardTaked.movementSpeed;
+                            else
+                                movementPlayer.speed = movementPlayer.playerSpeedCap;
+                        }
+                        else
+                        {
+                            //Negativo
+                            if (movementPlayer.speed > cardTaked.movementSpeed)
+                                movementPlayer.speed -= cardTaked.movementSpeed;
+                            else
+                                movementPlayer.speed = 10;
+                        }
+                        break;
+                    default:
+                        break;
                 }
-                gma.deck.updateDeck = false;
+            }
+        }
+
+        public void CalcKnockback(NewSCard cardTaked)
+        {
+            if (cardTaked.knockback > 0)
+                knockBackMelee += cardTaked.knockback;
+            else
+            {
+                if (knockBackMelee > cardTaked.knockback)
+                    knockBackMelee -= cardTaked.knockback;
+                else
+                    knockBackMelee = 1;
+            }
+        }
+
+        public void CalcAttackSpeed(NewSCard cardTaked)
+        {
+            if (cardTaked.attackSpeed > 0)
+            {
+                attackSpeedMelee += cardTaked.attackSpeed;
+                attackSpeedRanged += cardTaked.attackSpeed;
+            }
+            else
+            {
+                if (attackSpeedRanged > cardTaked.attackSpeed)
+                    attackSpeedRanged -= cardTaked.attackSpeed;
+                else
+                    attackSpeedRanged = 0.1f;
+
+                if (attackSpeedMelee > cardTaked.attackSpeed)
+                    attackSpeedMelee -= cardTaked.attackSpeed;
+                else
+                    attackSpeedMelee = 0.1f;
             }
         }
 

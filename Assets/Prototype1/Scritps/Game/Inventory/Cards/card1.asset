@@ -23,3 +23,16 @@ MonoBehaviour:
     attackDelay: 0
     movementSpeed: 1
     myType: 0
+  newSCard:
+    name: Awakening
+    hp: -10
+    defense: 10
+    damage: 5
+    knockback: 13
+    attackColdown: 0
+    attackSpeed: 0
+    attackDelay: 0
+    movementSpeed: 1
+    cardImage: {fileID: 0}
+    typeStats: 01000000040000000300000006000000
+    myUtility: 0

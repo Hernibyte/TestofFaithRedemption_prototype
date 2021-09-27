@@ -23,6 +23,7 @@ public class SCard
     public CardUtility myType;
 }
 
+[Serializable]
 public class NewSCard
 {
     public string name;
@@ -49,7 +50,7 @@ public class NewSCard
         DEF_Porcent,
         SPD_Plane,
     }
-    public CardType myType;
+    public List<CardType> typeStats;
     public enum CardUtility { Offensive, Misc, Defensive }
     public CardUtility myUtility;
 }

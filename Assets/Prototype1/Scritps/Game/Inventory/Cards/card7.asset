@@ -23,3 +23,16 @@ MonoBehaviour:
     attackDelay: 0
     movementSpeed: 0
     myType: 0
+  newSCard:
+    name: Master
+    hp: -149
+    defense: 0
+    damage: 140
+    knockback: 0
+    attackColdown: 0
+    attackSpeed: 0
+    attackDelay: 0
+    movementSpeed: 0
+    cardImage: {fileID: 0}
+    typeStats: 0000000002000000
+    myUtility: 0
