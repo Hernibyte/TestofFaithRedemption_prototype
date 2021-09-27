@@ -56,7 +56,7 @@ public class DeckOfCards : MonoBehaviour
         if(slotCardTaked != None)
         {
             slots[index] = slotCardTaked;
-            texts[index].text = slotCardTaked.card.newSCard.name;
+            texts[index].text = slotCardTaked.card.sCard.name;
             slotCardTaked = None;
             updateDeck = true;
 

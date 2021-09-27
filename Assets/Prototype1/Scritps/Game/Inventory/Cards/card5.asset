@@ -16,23 +16,13 @@ MonoBehaviour:
     name: Mistery
     hp: 45
     defense: 0
-    damage: 0
+    damage: 5
     knockback: 0
     attackColdown: 0
     attackSpeed: 0
     attackDelay: 0
     movementSpeed: -0.2
-    myType: 2
-  newSCard:
-    name: Mistery
-    hp: 45
-    defense: 0
-    damage: 0
-    knockback: 0
-    attackColdown: 0
-    attackSpeed: 0
-    attackDelay: 0
-    movementSpeed: -0.2
-    cardImage: {fileID: 0}
-    typeStats: 0000000006000000
-    myUtility: 2
+    cardImage: {fileID: -7903515274556104764, guid: 6f16eb8017a37a947b0f00d7a2068a3b,
+      type: 3}
+    typeStats: 
+    myUtility: 1

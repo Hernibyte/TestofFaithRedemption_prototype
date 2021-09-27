@@ -15,24 +15,14 @@ MonoBehaviour:
   sCard:
     name: Garall
     hp: 0
-    defense: 0
+    defense: 4
     damage: -10
-    knockback: 0
+    knockback: 1
     attackColdown: 0
     attackSpeed: -0.3
     attackDelay: 0
     movementSpeed: 0
-    myType: 0
-  newSCard:
-    name: Garall
-    hp: 0
-    defense: 0
-    damage: -10
-    knockback: 0
-    attackColdown: 0
-    attackSpeed: -0.3
-    attackDelay: 0
-    movementSpeed: 0
-    cardImage: {fileID: 0}
-    typeStats: 03000000
-    myUtility: 0
+    cardImage: {fileID: -7903515274556104764, guid: 6f16eb8017a37a947b0f00d7a2068a3b,
+      type: 3}
+    typeStats: 
+    myUtility: 1

@@ -27,7 +27,7 @@ public class CardTaked : MonoBehaviour
             if (theCardOnself != null)
             {
                 if(cardImageType != null)
-                    cardImageType.SetCardUtility((CardType.CardUtility)theCardOnself.sCard.myType);
+                    cardImageType.SetCardUtility((CardType.CardUtility)theCardOnself.sCard.myUtility);
             }
         }
     }

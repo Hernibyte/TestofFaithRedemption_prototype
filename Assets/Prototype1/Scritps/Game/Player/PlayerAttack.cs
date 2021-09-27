@@ -103,7 +103,7 @@ namespace Proto1
 
             if(gmRef.GetCard(indexSlot).card != null)
             {
-                NewSCard cardTaked = gmRef.GetCard(indexSlot).card.newSCard;
+                NewSCard cardTaked = gmRef.GetCard(indexSlot).card.sCard;
 
                 //BASIC STATS
                 CalcBasicStats(cardTaked);

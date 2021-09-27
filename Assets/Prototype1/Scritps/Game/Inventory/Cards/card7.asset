@@ -14,25 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sCard:
     name: Master
-    hp: -149
+    hp: -50
     defense: 0
-    damage: 140
-    knockback: 0
-    attackColdown: 0
+    damage: 50
+    knockback: -1
+    attackColdown: 1
     attackSpeed: 0
-    attackDelay: 0
-    movementSpeed: 0
-    myType: 0
-  newSCard:
-    name: Master
-    hp: -149
-    defense: 0
-    damage: 140
-    knockback: 0
-    attackColdown: 0
-    attackSpeed: 0
-    attackDelay: 0
-    movementSpeed: 0
-    cardImage: {fileID: 0}
-    typeStats: 0000000002000000
+    attackDelay: 0.5
+    movementSpeed: -2
+    cardImage: {fileID: 1214426178236278326, guid: 6f16eb8017a37a947b0f00d7a2068a3b,
+      type: 3}
+    typeStats: 
     myUtility: 0
