@@ -6,6 +6,7 @@ namespace Proto1
     {
         [SerializeField] Rigidbody2D rb;
         [SerializeField] LayerMask playerLayer;
+        [SerializeField] LayerMask roomLayer;
         int damage;
         float knockBackForce;
 
@@ -37,6 +38,14 @@ namespace Proto1
                     hit.Hit(damage, knockBackForce, rb.position);
                     Destroy(gameObject);
                 }
+            }
+        }
+
+        private void OnTriggerExit2D(Collider2D collision) 
+        {
+            if (Contains(roomLayer, collision.gameObject.layer))
+            {
+                Destroy(gameObject);
             }
         }
     }
