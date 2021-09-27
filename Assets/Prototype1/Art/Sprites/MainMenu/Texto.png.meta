@@ -1,16 +1,37 @@
 fileFormatVersion: 2
-guid: a21aa07600a36c346bce91ef76455548
+guid: 5cde7d837786c1945b62c8ece7033370
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1669587765549309381
-    second: Base_2
+      213: 5788072239786075281
+    second: Texto_0
   - first:
-      213: 1937871576842212991
-    second: Base_3
+      213: 1065722397815492082
+    second: Texto_46
   - first:
-      213: 3117725176291713478
-    second: Base_4
+      213: -4233992902388764741
+    second: Texto_1
+  - first:
+      213: -6498670431087510041
+    second: Texto_2
+  - first:
+      213: -7399119771241124533
+    second: Texto_3
+  - first:
+      213: -4228368656786895983
+    second: Texto_4
+  - first:
+      213: 1898503974950890496
+    second: Texto_5
+  - first:
+      213: -4720324616535903095
+    second: Texto_6
+  - first:
+      213: 7720176069641051144
+    second: Texto_7
+  - first:
+      213: 7068575828551313270
+    second: Texto_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -120,11 +141,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Base_0
+      name: Texto_0
       rect:
         serializedVersion: 2
-        x: 67
-        y: 1816
+        x: 63
+        y: 1809
         width: 1554
         height: 615
       alignment: 0
@@ -134,81 +155,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d5d8bdad92e348650800000000000000
-      internalID: 6234176133674011997
+      spriteID: 194afba190d535050800000000000000
+      internalID: 5788072239786075281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_1
+      name: Texto_46
       rect:
         serializedVersion: 2
-        x: 1011
-        y: 1283
-        width: 384
-        height: 252
-      alignment: 9
-      pivot: {x: 0.51835304, y: 0.51770693}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20eae752e302827e0800000000000000
-      internalID: -1790145400590651902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Base_12
-      rect:
-        serializedVersion: 2
-        x: 913
-        y: 853
-        width: 652
-        height: 285
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d59360566869b490800000000000000
-      internalID: -7730032496760089132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Base_27
-      rect:
-        serializedVersion: 2
-        x: 921
-        y: 454
-        width: 632
-        height: 223
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 085a65ee50d5daa10800000000000000
-      internalID: 1922294896011945344
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Base_38
-      rect:
-        serializedVersion: 2
-        x: 502
-        y: 149
+        x: 514
+        y: 23
         width: 677
         height: 184
       alignment: 0
@@ -218,20 +176,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ae416b46beb2ece0800000000000000
-      internalID: -1377328845863956827
+      spriteID: 2fd48f6dfd43ace00800000000000000
+      internalID: 1065722397815492082
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_2
+      name: Texto_1
       rect:
         serializedVersion: 2
-        x: 92
-        y: 864
+        x: 197
+        y: 1462
+        width: 479
+        height: 278
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbfa79f43e5dd35c0800000000000000
+      internalID: -4233992902388764741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texto_2
+      rect:
+        serializedVersion: 2
+        x: 983
+        y: 1455
+        width: 426
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edb1b2aca510d5a0800000000000000
+      internalID: -6498670431087510041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texto_3
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 1053
+        width: 662
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4d6a9035cb015990800000000000000
+      internalID: -7399119771241124533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texto_4
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 1053
         width: 652
-        height: 285
+        height: 293
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,41 +260,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5cd97e61a319b2710800000000000000
-      internalID: 1669587765549309381
+      spriteID: 19b42d80c11d155c0800000000000000
+      internalID: -4228368656786895983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Base_3
+      name: Texto_5
       rect:
         serializedVersion: 2
-        x: 260
-        y: 1287
-        width: 384
-        height: 252
-      alignment: 9
-      pivot: {x: 0.51835304, y: 0.51770693}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f76910e8ee3b4ea10800000000000000
-      internalID: 1937871576842212991
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Base_4
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 454
-        width: 632
-        height: 223
+        x: 116
+        y: 620
+        width: 638
+        height: 292
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,8 +281,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c1e8288782644b20800000000000000
-      internalID: 3117725176291713478
+      spriteID: 00c6d977e47d85a10800000000000000
+      internalID: 1898503974950890496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texto_6
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 627
+        width: 649
+        height: 282
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98478d645c90e7eb0800000000000000
+      internalID: -4720324616535903095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texto_7
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 246
+        width: 430
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c1d6a6b33932b60800000000000000
+      internalID: 7720176069641051144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Texto_8
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 239
+        width: 448
+        height: 289
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 677a6b0e340a81260800000000000000
+      internalID: 7068575828551313270
       vertices: []
       indices: 
       edges: []
@@ -290,7 +353,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 02102b7e7c352034c92c30cbde61533a
     internalID: 0
     vertices: []
     indices: 
