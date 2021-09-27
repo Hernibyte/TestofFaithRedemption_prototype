@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sCard:
     name: Aereo
-    hp: -1
-    defense: -1
+    hp: -5
+    defense: -5
     damage: 0
     knockback: 0
     attackColdown: 0
@@ -24,5 +24,5 @@ MonoBehaviour:
     movementSpeed: 5
     cardImage: {fileID: 1214426178236278326, guid: 6f16eb8017a37a947b0f00d7a2068a3b,
       type: 3}
-    typeStats: 
+    typeStats: 010000000500000006000000
     myUtility: 0

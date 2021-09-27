@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -640,7 +640,7 @@ Camera:
   far clip plane: 1000
   field of view: 45
   orthographic: 1
-  orthographic size: 5.5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1324,15 +1324,50 @@ PrefabInstance:
       objectReference: {fileID: 36609180}
     - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
+      propertyPath: playerCapHP
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: playerMinHP
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
       propertyPath: slashEffect
       value: 
       objectReference: {fileID: 7640395013230572804, guid: f66393b2a7fb5d94e9994d3bd97c97b5,
         type: 3}
     - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
+      propertyPath: defensePlayer
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: DMGReducedByDEF
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
       propertyPath: cardTakenSystem
       value: 
       objectReference: {fileID: 696790549}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: maxDefenseStack
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: minDefenseStack
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: defenseEfficiency
+      value: 95
+      objectReference: {fileID: 0}
     - target: {fileID: 5919561121392281251, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1477,7 +1512,7 @@ PrefabInstance:
     - target: {fileID: 5919561122757471341, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: m_LinearDrag
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
@@ -1494,6 +1529,21 @@ PrefabInstance:
       propertyPath: stats
       value: 
       objectReference: {fileID: 36609180}
+    - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: recoverDodge
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: playerMinSpeed
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: playerSpeedCap
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: cardTakenSystem
@@ -1573,6 +1623,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -0.00012207031
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919148056045618449, guid: 2e26efda7117158478fe3bb2f9b5f5e2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSlotVarient
       objectReference: {fileID: 0}
     - target: {fileID: 4919148056183661227, guid: 2e26efda7117158478fe3bb2f9b5f5e2,
         type: 3}
@@ -1729,6 +1784,36 @@ PrefabInstance:
       propertyPath: playerBasicStats
       value: 
       objectReference: {fileID: 711550494}
+    - target: {fileID: 4919148056521656513, guid: 2e26efda7117158478fe3bb2f9b5f5e2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSlotVarient
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919148056692990856, guid: 2e26efda7117158478fe3bb2f9b5f5e2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSlotVarient
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919148056821979002, guid: 2e26efda7117158478fe3bb2f9b5f5e2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSlotVarient
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919148056874529101, guid: 2e26efda7117158478fe3bb2f9b5f5e2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSlotVarient
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919148057045041750, guid: 2e26efda7117158478fe3bb2f9b5f5e2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSlotVarient
+      objectReference: {fileID: 0}
+    - target: {fileID: 4919148057212502275, guid: 2e26efda7117158478fe3bb2f9b5f5e2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSlotVarient
+      objectReference: {fileID: 0}
     - target: {fileID: 4919148057290536386, guid: 2e26efda7117158478fe3bb2f9b5f5e2,
         type: 3}
       propertyPath: m_FontData.m_FontSize

@@ -24,5 +24,5 @@ MonoBehaviour:
     movementSpeed: 0
     cardImage: {fileID: -740173431594546341, guid: 6f16eb8017a37a947b0f00d7a2068a3b,
       type: 3}
-    typeStats: 
+    typeStats: 0100000004000000
     myUtility: 2

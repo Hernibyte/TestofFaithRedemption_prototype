@@ -20,10 +20,14 @@ namespace Proto1
         [Space(15)]
         public float max_HP;
         public float actual_HP;
-        public float defensePlayer;
         public float playerCapHP;
+        public float playerMinHP;
+        [Header("--------------")]
+        public float defensePlayer;
         [Range(5,95)]public float defenseEfficiency;
         [Range(15,98)]public float DMGReducedByDEF;
+        public float maxDefenseStack;
+        public float minDefenseStack;
 
         [Header("ATTACK STATS")]
         public int playerDamage;
@@ -140,6 +144,11 @@ namespace Proto1
                                 max_HP = 1;
                         }
 
+                        if (max_HP < 0)
+                            max_HP = playerMinHP;
+                        else if (max_HP > playerCapHP)
+                            max_HP = playerCapHP;
+
                         break;
                     case NewSCard.CardType.HP_Porcent:
 
@@ -165,12 +174,13 @@ namespace Proto1
                             float finalHPDecreased = (totalHp * amountHpPorcent) / 100;
 
                             if (max_HP > finalHPDecreased)
-                            {
                                 max_HP -= finalHPDecreased;
-                            }
-                            else
-                                max_HP = 1;
                         }
+
+                        if (max_HP < 0)
+                            max_HP = playerMinHP;
+                        else if (max_HP > playerCapHP)
+                            max_HP = playerCapHP;
 
                         break;
                     case NewSCard.CardType.ATK_Plane:
@@ -220,9 +230,12 @@ namespace Proto1
                         {
                             if (defensePlayer > cardTaked.defense)
                                 defensePlayer -= cardTaked.defense;
-                            else
-                                defensePlayer = 5;
                         }
+
+                        if (defensePlayer < 0)
+                            defensePlayer = minDefenseStack;
+                        else if (defensePlayer > maxDefenseStack)
+                            defensePlayer = maxDefenseStack;
 
                         break;
                     case NewSCard.CardType.DEF_Porcent:
@@ -244,12 +257,13 @@ namespace Proto1
                             float amountDecrease = (defenseRaw * amountDefPorcent) / 100;
 
                             if (defensePlayer > amountDecrease)
-                            {
                                 defensePlayer -= amountDecrease;
-                            }
-                            else
-                                defensePlayer = 5;
                         }
+
+                        if (defensePlayer < 0)
+                            defensePlayer = minDefenseStack;
+                        else if (defensePlayer > maxDefenseStack)
+                            defensePlayer = maxDefenseStack;
 
                         break;
                     case NewSCard.CardType.SPD_Plane:
@@ -259,17 +273,19 @@ namespace Proto1
                             //Positivo
                             if (movementPlayer.speed < movementPlayer.playerSpeedCap)
                                 movementPlayer.speed += cardTaked.movementSpeed;
-                            else
-                                movementPlayer.speed = movementPlayer.playerSpeedCap;
                         }
                         else
                         {
                             //Negativo
                             if (movementPlayer.speed > cardTaked.movementSpeed)
                                 movementPlayer.speed -= cardTaked.movementSpeed;
-                            else
-                                movementPlayer.speed = 10;
                         }
+
+                        if (movementPlayer.speed < 0)
+                            movementPlayer.speed = movementPlayer.playerMinSpeed;
+                        else if (movementPlayer.speed > movementPlayer.playerSpeedCap)
+                            movementPlayer.speed = movementPlayer.playerSpeedCap;
+
                         break;
                     default:
                         break;

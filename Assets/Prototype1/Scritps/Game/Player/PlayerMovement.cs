@@ -24,7 +24,9 @@ namespace Proto1
         [SerializeField] public int playerOnRoom;
         [SerializeField] public float decreaseSpeedAttack;
         [SerializeField] public float dodgeOnRecover;
+
         [SerializeField] public float playerSpeedCap;
+        [SerializeField] public float playerMinSpeed;
         [SerializeField][Range(0.5f,2)] public float recoverDodge;
 
         void Awake()

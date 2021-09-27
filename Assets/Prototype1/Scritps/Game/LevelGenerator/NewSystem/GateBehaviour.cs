@@ -21,16 +21,16 @@ public class GateBehaviour : MonoBehaviour
             switch (side)
             {
                 case Side.Right:
-                    collision.gameObject.transform.position = RePosition(2f, 0f, 0f);
+                    collision.gameObject.transform.position = RePosition(6.5f, 0f, 0f);
                     break;
                 case Side.Left:
-                    collision.gameObject.transform.position = RePosition(-2f, 0f, 0f);
+                    collision.gameObject.transform.position = RePosition(-6.5f, 0f, 0f);
                     break;
                 case Side.Down:
-                    collision.gameObject.transform.position = RePosition(0f, -2f, 0f);
+                    collision.gameObject.transform.position = RePosition(0f, -6.5f, 0f);
                     break;
                 case Side.Top:
-                    collision.gameObject.transform.position = RePosition(0f, 2f, 0f);
+                    collision.gameObject.transform.position = RePosition(0f, 6.5f, 0f);
                     break;
             }
         }
