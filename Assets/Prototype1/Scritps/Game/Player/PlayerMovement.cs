@@ -100,8 +100,11 @@ namespace Proto1
 
         void Movement()
         {
-            if(stats.openStats)
+            if (stats.openStats)
+            {
+                playerAnimator.SetFloat("speed", 0);
                 return;
+            }
             if(cardTakenSystem.isOpen)
                 return;
             if (!canMove)

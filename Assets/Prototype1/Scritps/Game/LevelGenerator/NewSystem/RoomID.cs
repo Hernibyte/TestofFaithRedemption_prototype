@@ -75,14 +75,11 @@ public class RoomID : MonoBehaviour
         {
             Collider2D colDoor = doors[iteration].gameObject.GetComponent<Collider2D>();
             colDoor.isTrigger = false;
-            Debug.Log("No pego nadaa");
         }
         else
         {
             foreach (RaycastHit2D hit in hits)
             {
-                Debug.Log(hit.transform.gameObject.name);
-
                 if (hit.collider.gameObject != gameObject)
                 {
                     if(Contains(roomLayer, hit.transform.gameObject.layer))
