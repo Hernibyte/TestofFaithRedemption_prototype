@@ -34,7 +34,7 @@ public class MenuSystem : MonoBehaviour
     {
         Application.Quit();
     }
-    
+
     public void CloseOptions()
     {
         options.SetActive(false);
