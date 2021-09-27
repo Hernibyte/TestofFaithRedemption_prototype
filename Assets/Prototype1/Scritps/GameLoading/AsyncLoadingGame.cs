@@ -8,6 +8,6 @@ public class AsyncLoadingGame : MonoBehaviour
     IEnumerator Start()
     {
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadSceneAsync("Prototype1");
+        SceneManager.LoadScene("Prototype1");
     }
 }
