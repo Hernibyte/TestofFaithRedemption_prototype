@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class DeckOfCards : MonoBehaviour
 {
     public Slot[] slots = new Slot[7];
+    public Text[] texts = new Text[7];
     public Slot slotCardTaked;
     public Slot None;
-    public bool updateDeck = false;
+    [HideInInspector] public bool updateDeck = false;
 
     private void Awake()
     {
@@ -41,6 +42,7 @@ public class DeckOfCards : MonoBehaviour
         if (slotCardTaked != None)
         {
             slots[index] = slotCardTaked;
+            texts[index].text = slotCardTaked.card.sCard.name;
             slotCardTaked = None;
             updateDeck = true;
         }

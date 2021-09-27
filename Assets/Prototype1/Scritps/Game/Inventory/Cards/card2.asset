@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: card2
   m_EditorClassIdentifier: 
   sCard:
-    name: +15% Speed
+    name: Aereo
     hp: 0
     defense: 0
     damage: 0

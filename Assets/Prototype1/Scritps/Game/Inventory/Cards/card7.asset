@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: card7
   m_EditorClassIdentifier: 
   sCard:
-    name: +250% Damage | -99% Hp
+    name: Master
     hp: -149
     defense: 0
     damage: 140
@@ -22,3 +22,4 @@ MonoBehaviour:
     attackSpeed: 0
     attackDelay: 0
     movementSpeed: 0
+    myType: 0

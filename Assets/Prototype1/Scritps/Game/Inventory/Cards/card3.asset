@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: card3
   m_EditorClassIdentifier: 
   sCard:
-    name: +15% Defense
+    name: Tower
     hp: 0
     defense: 10
     damage: 0

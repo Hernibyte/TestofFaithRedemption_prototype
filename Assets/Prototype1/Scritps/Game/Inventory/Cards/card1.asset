@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: card1
   m_EditorClassIdentifier: 
   sCard:
-    name: +50% Damage
+    name: Awakening
     hp: -10
     defense: 10
     damage: 5
@@ -22,3 +22,4 @@ MonoBehaviour:
     attackSpeed: 0
     attackDelay: 0
     movementSpeed: 1
+    myType: 0

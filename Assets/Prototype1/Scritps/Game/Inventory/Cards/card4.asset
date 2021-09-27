@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: card4
   m_EditorClassIdentifier: 
   sCard:
-    name: +50% Defense
+    name: Tank
     hp: 0
     defense: 35
     damage: 0
