@@ -19,4 +19,9 @@ public class MenuSystem : MonoBehaviour
     {
         Debug.Log("Null");
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
