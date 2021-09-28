@@ -21,7 +21,7 @@ MonoBehaviour:
     attackColdown: 1
     attackSpeed: 0
     attackDelay: 0.5
-    movementSpeed: -2
+    movementSpeed: -4
     cardImage: {fileID: 1214426178236278326, guid: 6f16eb8017a37a947b0f00d7a2068a3b,
       type: 3}
     typeStats: 010000000200000006000000

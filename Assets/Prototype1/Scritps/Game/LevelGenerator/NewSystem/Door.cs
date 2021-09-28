@@ -2,16 +2,17 @@
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] Animation stateDoor;
-    [SerializeField] string openDoor;
-    [SerializeField] string closeDoor;
+    [SerializeField] Animator stateDoor;
+    [SerializeField] Collider2D doorColl;
 
     public void OpenDoor()
     {
-        stateDoor.Play(openDoor);
+        stateDoor.SetBool("DoorOpen", true);
+        doorColl.isTrigger = true;
     }
     public void CloseDoor()
     {
-        stateDoor.Play(closeDoor);
+        stateDoor.SetBool("DoorOpen", false);
+        doorColl.isTrigger = false;
     }
 }

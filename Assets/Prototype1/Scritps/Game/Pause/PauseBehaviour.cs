@@ -13,7 +13,7 @@ public class PauseBehaviour : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.P))
         {
             Time.timeScale = 0f;
             pause.SetActive(true);

@@ -31,6 +31,7 @@ namespace Proto1
 
         [Header("ATTACK STATS")]
         public int playerDamage;
+        [Range(5, 15)] public int minPlayerDamage;
         public float distanceMelee;
         public float knockBackMelee;
         public float attackColdownMelee;
@@ -191,9 +192,11 @@ namespace Proto1
                         {
                             if (playerDamage > cardTaked.damage)
                                 playerDamage -= cardTaked.damage;
-                            else
-                                playerDamage = 5;
                         }
+
+                        if (playerDamage < 0)
+                            playerDamage = minPlayerDamage;
+
 
                         break;
                     case NewSCard.CardType.ATK_Porcent:
@@ -216,10 +219,10 @@ namespace Proto1
 
                             if (playerDamage > finalDamageDecrease)
                                 playerDamage -= (int)finalDamageDecrease;
-                            else
-                                playerDamage = 5;
                         }
 
+                        if (playerDamage < 0)
+                            playerDamage = minPlayerDamage;
 
                         break;
                     case NewSCard.CardType.DEF_Plane:

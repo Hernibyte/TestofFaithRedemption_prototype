@@ -74,6 +74,9 @@ public class RoomID : MonoBehaviour
         if(hits.Length <= 1)
         {
             Collider2D colDoor = doors[iteration].gameObject.GetComponent<Collider2D>();
+            Door actualDoor = doors[iteration].gameObject.GetComponentInChildren<Door>();
+            if(actualDoor != null)
+                actualDoor.CloseDoor();
             colDoor.isTrigger = false;
         }
         else
