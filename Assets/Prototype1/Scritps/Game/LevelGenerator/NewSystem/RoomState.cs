@@ -7,7 +7,6 @@ public class RoomState : MonoBehaviour
     [SerializeField] public bool isLocked;
     [SerializeField] public EnemyGenerator enemiesInside;
     [SerializeField] public List<Door> doors;
-    [SerializeField] public RoomID checkEmptyRooms;
 
     public bool allDoorsOpen = false;
     public bool allDoorsClosed = false;
@@ -35,10 +34,10 @@ public class RoomState : MonoBehaviour
             {
                 for (int i = 0; i < doors.Count; i++)
                 {
-                    doors[i].OpenDoor();
+                    if(doors[i] != null)
+                        doors[i].OpenDoor();
                 }
                 allDoorsOpen = true;
-                checkEmptyRooms?.CheckAllDirections();
                 allDoorsClosed = false;
                 isLocked = false;
             }
@@ -61,7 +60,8 @@ public class RoomState : MonoBehaviour
             {
                 for (int i = 0; i < doors.Count; i++)
                 {
-                    doors[i].CloseDoor();
+                    if(doors[i] != null)
+                        doors[i].CloseDoor();
                 }
                 allDoorsClosed = true;
                 isLocked = true;

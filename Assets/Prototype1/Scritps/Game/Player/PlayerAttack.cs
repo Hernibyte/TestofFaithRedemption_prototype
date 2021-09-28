@@ -385,8 +385,6 @@ namespace Proto1
 
             float damageEntry = damageAmount - damageReduce;  //Daño reducido
 
-            Debug.Log("Damage Recived:" + damageEntry);
-
             if(actual_HP > 0)
             {
                 actual_HP -= (int)damageEntry;

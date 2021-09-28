@@ -399,6 +399,7 @@ MonoBehaviour:
   - {fileID: 2998335620143651587}
   imSpawnBoss: 0
   uiBoss: {fileID: 0}
+  checkEmptyRooms: {fileID: 7152144642949735001}
 --- !u!1 &5034573486311595750
 GameObject:
   m_ObjectHideFlags: 0

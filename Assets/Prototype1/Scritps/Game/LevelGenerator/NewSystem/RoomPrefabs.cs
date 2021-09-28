@@ -40,8 +40,6 @@ public class RoomPrefabs : MonoBehaviour
             {
                 ClearDuplicateRoom();
 
-                CloseEmptyRooms();
-
                 int index = roomList.Count - 1;
                 Vector3 bossPosition = roomList[index].transform.position;
 
@@ -57,6 +55,7 @@ public class RoomPrefabs : MonoBehaviour
                     EnemyGenerator boosRoom = roomList[index].GetComponentInChildren<EnemyGenerator>();
                     if(boosRoom != null)
                     {
+                        CloseEmptyRooms();
                         boosRoom.FindUI_Boss();
                         boosRoom.enemiesAlive = 1;
                     }

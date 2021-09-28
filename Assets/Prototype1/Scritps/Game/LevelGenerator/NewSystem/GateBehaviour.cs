@@ -14,7 +14,7 @@ public class GateBehaviour : MonoBehaviour
     [SerializeField] Side side;
     [SerializeField] LayerMask playerMask;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (Contains(playerMask, collision.gameObject.layer))
         {

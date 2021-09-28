@@ -69,15 +69,26 @@ public class RoomID : MonoBehaviour
 
     void RaycastDirection(ref Ray2D directionRay, int iteration)
     {
-        RaycastHit2D[] hits = Physics2D.RaycastAll(directionRay.origin, directionRay.direction, distanceBetweenRooms);
-        
-        if(hits.Length <= 1)
+        RaycastHit2D[] hits = Physics2D.RaycastAll(directionRay.origin, directionRay.direction, distanceBetweenRooms, roomLayer);
+
+        if (hits.Length <= 1)
         {
-            Collider2D colDoor = doors[iteration].gameObject.GetComponent<Collider2D>();
-            Door actualDoor = doors[iteration].gameObject.GetComponentInChildren<Door>();
-            if(actualDoor != null)
-                actualDoor.CloseDoor();
-            colDoor.isTrigger = false;
+            if(doors[iteration] != null)
+            {
+                Collider2D colDoor = doors[iteration].gameObject.GetComponent<Collider2D>();
+                
+                SpriteRenderer actualDoor = doors[iteration].gameObject.GetComponentInChildren<SpriteRenderer>();
+                if(actualDoor != null)
+                    actualDoor.enabled = false;
+
+                colDoor.isTrigger = false;
+                RoomState doorToRemove = gameObject.GetComponent<RoomState>();
+                if(doorToRemove != null)
+                {
+                    doorToRemove.doors[iteration] = null;   //Super rancio pero no supe como hacerlo mejor xd
+                }
+                doors[iteration] = null;
+            }
         }
         else
         {
@@ -87,8 +98,11 @@ public class RoomID : MonoBehaviour
                 {
                     if(Contains(roomLayer, hit.transform.gameObject.layer))
                     {
-                        Collider2D colDoor = doors[iteration].gameObject.GetComponent<Collider2D>();
-                        colDoor.isTrigger = true;
+                        if(doors[iteration] != null)
+                        {
+                            Collider2D colDoor = doors[iteration].gameObject.GetComponent<Collider2D>();
+                            colDoor.isTrigger = true;
+                        }
                     }
                 }
             }

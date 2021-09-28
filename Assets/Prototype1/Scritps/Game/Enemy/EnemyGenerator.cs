@@ -29,6 +29,9 @@ public class EnemyGenerator : MonoBehaviour
     public bool imSpawnBoss;
     public UI_Boss uiBoss;
 
+    [Space(20)]
+    [SerializeField] public RoomID checkEmptyRooms;
+
     private void Start()
     {
 
@@ -88,7 +91,8 @@ public class EnemyGenerator : MonoBehaviour
                 Instantiate(lootChest, spawnArea.transform.position, Quaternion.identity);
                 break;
             default:
-                //nada jaja salu2
+                //nada jaja salu2 
+                //JAJAJAJA dios mio este piB
                 break;
         }
     }

@@ -612,6 +612,7 @@ MonoBehaviour:
   - {fileID: 6383794057204183926}
   imSpawnBoss: 0
   uiBoss: {fileID: 0}
+  checkEmptyRooms: {fileID: 7358092367971502404}
 --- !u!1 &7877682013865123602
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,7 +803,6 @@ MonoBehaviour:
   doors:
   - {fileID: 4941531940754847959}
   - {fileID: 3856948746821443102}
-  checkEmptyRooms: {fileID: 7358092367971502404}
   allDoorsOpen: 0
   allDoorsClosed: 0
 --- !u!1 &9133861420193627194
