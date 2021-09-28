@@ -53,7 +53,11 @@ public class RoomPrefabs : MonoBehaviour
                 UIType_Boss.SetActive(true);
 
                 if (roomList[index].GetComponentInChildren<EnemyGenerator>())
-                    roomList[index].GetComponentInChildren<EnemyGenerator>().FindUI_Boss();
+                {
+                    EnemyGenerator boosRoom = roomList[index].GetComponentInChildren<EnemyGenerator>();
+                    boosRoom.FindUI_Boss();
+                    boosRoom.enemiesAlive = 1;
+                }
 
 
                 enemySpawned = true;
