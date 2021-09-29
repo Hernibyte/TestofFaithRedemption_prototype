@@ -131,10 +131,14 @@ namespace Proto1
             if (!canMove)
                 return;
 
-            float x = Input.GetAxis("Horizontal");
-            float y = Input.GetAxis("Vertical");
+            float x = Input.GetAxisRaw("Horizontal");
+            float y = Input.GetAxisRaw("Vertical");
 
-            Vector2 position = new Vector2(x * speed, y * speed);
+            Vector2 direction = new Vector2(x,y);
+            if (direction.magnitude > 1)
+                direction.Normalize();
+
+            Vector2 position = new Vector2(direction.x * speed, direction.y * speed);
 
             rig.AddForce(position);
 

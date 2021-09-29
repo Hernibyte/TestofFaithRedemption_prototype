@@ -1338,6 +1338,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2944776316410330256, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3506775804036608531, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1368,6 +1373,11 @@ PrefabInstance:
       propertyPath: stats
       value: 
       objectReference: {fileID: 36609180}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: cursorTex
+      value: 
+      objectReference: {fileID: 2800000, guid: 2760429e974591b419040eeb068cbdb4, type: 3}
     - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: playerCapHP
@@ -1889,6 +1899,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465779627481289289, guid: 2e26efda7117158478fe3bb2f9b5f5e2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7127448125057343206, guid: 2e26efda7117158478fe3bb2f9b5f5e2,
         type: 3}

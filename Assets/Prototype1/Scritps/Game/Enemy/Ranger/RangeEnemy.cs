@@ -25,6 +25,8 @@ namespace Proto1
         [SerializeField] Transform firePoint;
         [SerializeField] float deleayPerShoot;
         [SerializeField] float speedBullet;
+
+        [SerializeField][Range(5, 40)] int probabilityToEvade;
         float timerPerShoot;
         public Vector2 directionAttack;
         public Vector2 newPosWhereMove;
@@ -156,7 +158,7 @@ namespace Proto1
         {
             int randomProb = Random.Range(0, 100);
 
-            if (randomProb < 60)
+            if (randomProb < Mathf.Abs(100 - probabilityToEvade))
                 return;
             else
             {

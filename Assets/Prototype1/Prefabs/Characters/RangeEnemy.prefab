@@ -580,6 +580,7 @@ MonoBehaviour:
   firePoint: {fileID: 2125260446019254936}
   deleayPerShoot: 3
   speedBullet: 700
+  probabilityToEvade: 20
   directionAttack: {x: 0, y: 0}
   newPosWhereMove: {x: 0, y: 0}
   deathEvent:

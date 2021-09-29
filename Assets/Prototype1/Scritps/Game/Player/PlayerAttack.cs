@@ -15,6 +15,7 @@ namespace Proto1
         [SerializeField] StatsMenu stats;
         [SerializeField] CardTaked cardTakenSystem;
         public PlayerMovement movementPlayer;
+        [SerializeField] Texture2D cursorTex;
 
         [Header("NORMAL STATS")]
         [Space(15)]
@@ -61,7 +62,7 @@ namespace Proto1
             }
 
             Cursor.lockState = CursorLockMode.Confined;
-            Cursor.visible = false;
+            Cursor.SetCursor(cursorTex, Vector2.zero, CursorMode.Auto);
         }
         void Update()
         {
