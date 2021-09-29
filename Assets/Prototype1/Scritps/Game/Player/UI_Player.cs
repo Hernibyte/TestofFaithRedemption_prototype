@@ -9,6 +9,7 @@ namespace Proto1
         [SerializeField] public PlayerMovement playerMoveStats;
         [SerializeField] public Image healthBar;
         [SerializeField] public Image damageEntry;
+        [SerializeField] public Text playerHPPorcent;
         [SerializeField] public Text playerStats;
 
         public bool needUpdateData = false;
@@ -52,7 +53,10 @@ namespace Proto1
         {
             amountHPFillImage = (amountHPGone * 1) / playerBasicStats.max_HP;
 
-            if(flagHealth == 1)
+            float porcentHPPlayer = (playerBasicStats.actual_HP * 100) / playerBasicStats.max_HP;
+            playerHPPorcent.text = porcentHPPlayer.ToString() + "%";
+
+            if (flagHealth == 1)
             {
                 healthBar.fillAmount -= amountHPFillImage;
                 flagHealth = 0;
