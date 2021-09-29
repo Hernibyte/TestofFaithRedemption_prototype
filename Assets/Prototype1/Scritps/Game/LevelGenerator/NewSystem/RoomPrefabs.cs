@@ -19,6 +19,9 @@ public class RoomPrefabs : MonoBehaviour
     GameObject UIType_Boss;
     bool enemySpawned;
 
+    public delegate void ActivateGameplayAfterDungeon();
+    public static ActivateGameplayAfterDungeon activateGameplay;
+
     private void Awake()
     {
         UIType_Boss = FindObjectOfType<Proto1.UI_Boss>().gameObject;
@@ -58,6 +61,7 @@ public class RoomPrefabs : MonoBehaviour
                         CloseEmptyRooms();
                         boosRoom.FindUI_Boss();
                         boosRoom.enemiesAlive = 1;
+                        activateGameplay?.Invoke();
                     }
                 }
 

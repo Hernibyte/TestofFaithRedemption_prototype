@@ -1422,7 +1422,7 @@ PrefabInstance:
     - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: attackSpeedMelee
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
@@ -1432,7 +1432,7 @@ PrefabInstance:
     - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: meleeImpulseForce1
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5919561121392281251, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
@@ -1478,7 +1478,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 9012968947556550210, guid: c4dc072b80bbe93488d026825d404779,
+      objectReference: {fileID: -7802704622296407697, guid: c37f5596152c9ad4791d1085c8b9e7f9,
         type: 3}
     - target: {fileID: 5919561121392281261, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}

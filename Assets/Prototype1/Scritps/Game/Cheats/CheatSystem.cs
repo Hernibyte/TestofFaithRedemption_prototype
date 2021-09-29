@@ -42,6 +42,10 @@ public class CheatSystem : MonoBehaviour
                 pj.max_HP = 1000000f;
                 pj.actual_HP = 1000000f;
                 pj.playerDamage = 100000;
+                pj.meleeImpulseForce1 = 45;
+                pj.attackSpeedMelee = 0.01f;
+                pj.movementPlayer.godMode = true;
+                pj.movementPlayer.speed = pj.movementPlayer.playerSpeedCap;
                 break;
             case "max damage":
                 pj.playerDamage = 100000;

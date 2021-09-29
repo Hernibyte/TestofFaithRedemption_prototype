@@ -62,11 +62,13 @@ namespace Proto1
                 gmRef.deck.updateSlotOfCard += UpdateSlotOfCard;
             }
 
-            Cursor.lockState = CursorLockMode.Confined;
             Cursor.SetCursor(cursorTex, Vector2.zero, CursorMode.Auto);
         }
         void Update()
         {
+            if (!movementPlayer.activateGameplay)
+                return;
+
             if (attackColdownMelee > 0)
                 attackColdownMelee -= Time.deltaTime;
             else

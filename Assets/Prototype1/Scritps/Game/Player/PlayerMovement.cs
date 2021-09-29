@@ -33,10 +33,16 @@ namespace Proto1
         private float lastImagePosX;
         private float lastImagePosY;
 
+        [HideInInspector] public bool activateGameplay;
+
+        [HideInInspector] public bool godMode;
+
         void Awake()
         {
             rig = GetComponent<Rigidbody2D>();
             playerAttack = GetComponentInChildren<PlayerAttack>();
+            activateGameplay = false;
+            godMode = false;
         }
 
         void Start()
@@ -45,10 +51,15 @@ namespace Proto1
             isDoging = false;
             canMove = true;
             playerOnRoom = 0;
+
+            RoomPrefabs.activateGameplay += ActivateGameplay;
         }
 
         void Update()
         {
+            if (!activateGameplay)
+                return;
+
             if (dodgeOnRecover <= recoverDodge)
             {
                 dodgeOnRecover += Time.deltaTime;
@@ -56,13 +67,11 @@ namespace Proto1
 
             if(isDoging)
             {
-                if (Mathf.Abs(transform.position.x - lastImagePosX) > distanceBetweenImages ||
-                    Mathf.Abs(transform.position.y - lastImagePosY) > distanceBetweenImages)
-                {
-                    PlayerAfterImagePool.Instance.GetFromPool();
-                    lastImagePosX = transform.position.x;
-                    lastImagePosY = transform.position.y;
-                }
+                DoAfterImageEffect();
+            }
+            else if(godMode)
+            {
+                DoAfterImageEffect();
             }
 
             if(dodgeOnRecover > recoverDodge)
@@ -81,7 +90,32 @@ namespace Proto1
 
         private void FixedUpdate()
         {
+            if (!activateGameplay)
+                return;
+
             Movement();
+        }
+
+        private void OnDisable()
+        {
+            RoomPrefabs.activateGameplay -= ActivateGameplay;
+        }
+
+        public void DoAfterImageEffect()
+        {
+            if (Mathf.Abs(transform.position.x - lastImagePosX) > distanceBetweenImages ||
+                    Mathf.Abs(transform.position.y - lastImagePosY) > distanceBetweenImages)
+            {
+                PlayerAfterImagePool.Instance.GetFromPool();
+                lastImagePosX = transform.position.x;
+                lastImagePosY = transform.position.y;
+            }
+        }
+
+        public void ActivateGameplay()
+        {
+            activateGameplay = true;
+            playerAnimator.SetBool("StartGame", activateGameplay);
         }
 
         public RoomID GetPlayerOnRoom()
@@ -143,9 +177,6 @@ namespace Proto1
             rig.AddForce(position);
 
             DodgeInDirection(position);
-
-            //if (playerAttack.attackColdownMelee > playerAttack.attackSpeedMelee - decreaseSpeedAttack)
-            //    rig.velocity = Vector3.zero;
 
             if (playerAttack.attackColdownRanged > playerAttack.attackSpeedRanged - decreaseSpeedAttack * 0.5f)
                 rig.velocity = Vector3.zero;

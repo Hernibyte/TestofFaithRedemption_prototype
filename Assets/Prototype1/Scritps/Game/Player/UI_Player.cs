@@ -54,6 +54,7 @@ namespace Proto1
             amountHPFillImage = (amountHPGone * 1) / playerBasicStats.max_HP;
 
             float porcentHPPlayer = (playerBasicStats.actual_HP * 100) / playerBasicStats.max_HP;
+            Mathf.Round(porcentHPPlayer);
             playerHPPorcent.text = porcentHPPlayer.ToString() + "%";
 
             if (flagHealth == 1)
