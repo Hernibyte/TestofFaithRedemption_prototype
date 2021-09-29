@@ -1421,8 +1421,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
+      propertyPath: attackSpeedMelee
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
       propertyPath: defenseEfficiency
       value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: meleeImpulseForce1
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5919561121392281251, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
@@ -1646,6 +1656,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 2760429e974591b419040eeb068cbdb4,
         type: 3}
+    - target: {fileID: 6701485358697642017, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73b6e082fe08542499c88fb7be72bda2, type: 3}
 --- !u!1001 &7127448125414316349

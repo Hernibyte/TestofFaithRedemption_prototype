@@ -39,6 +39,7 @@ namespace Proto1
         public float attackSpeedMelee;
         public float attackColdownRanged;
         public float attackSpeedRanged;
+        public float meleeImpulseForce1;
 
         public delegate void UpdateUIData(int hitOnHP);
         public UpdateUIData updateUI;
@@ -333,6 +334,10 @@ namespace Proto1
 
         public void MeleeAttack()
         {
+            Vector2 directionImpulse = transform.position - meleeAttackPoint.position;
+            directionImpulse.Normalize();
+            rig.AddForce(-directionImpulse * meleeImpulseForce1, ForceMode2D.Impulse);
+
             Vector2 attackPosition = new Vector2(meleeAttackPoint.position.x, meleeAttackPoint.position.y);
             Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, distanceMelee, enemyLayer);
             foreach (Collider2D collider in colliders)
@@ -348,7 +353,7 @@ namespace Proto1
                         Animator animSlash = go.GetComponent<Animator>();
                         if(animSlash != null)
                         {
-                            animSlash.Play("SlashAttack");
+                            animSlash.Play("SlashAttack"); 
                         }
                     }
 

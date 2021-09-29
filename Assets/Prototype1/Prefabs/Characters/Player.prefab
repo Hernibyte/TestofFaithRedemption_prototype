@@ -543,23 +543,25 @@ MonoBehaviour:
   stats: {fileID: 0}
   cardTakenSystem: {fileID: 0}
   movementPlayer: {fileID: 5919561122757471342}
+  cursorTex: {fileID: 0}
   max_HP: 200
   actual_HP: 0
-  playerCapHP: 999999
-  playerMinHP: 0
+  playerCapHP: 100000000
+  playerMinHP: 50
   defensePlayer: 35
   defenseEfficiency: 95
   DMGReducedByDEF: 90.1
-  maxDefenseStack: 0
-  minDefenseStack: 0
+  maxDefenseStack: 200
+  minDefenseStack: 5
   playerDamage: 15
-  minPlayerDamage: 0
+  minPlayerDamage: 15
   distanceMelee: 0.9
   knockBackMelee: 6
   attackColdownMelee: 0
   attackSpeedMelee: 0.8
   attackColdownRanged: 0
   attackSpeedRanged: 0.4
+  meleeImpulseForce1: 5
   gmRef: {fileID: 0}
 --- !u!1 &7334773875059960518
 GameObject:

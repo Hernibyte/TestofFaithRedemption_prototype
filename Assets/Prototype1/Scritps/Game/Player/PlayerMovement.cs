@@ -144,8 +144,8 @@ namespace Proto1
 
             DodgeInDirection(position);
 
-            if (playerAttack.attackColdownMelee > playerAttack.attackSpeedMelee - decreaseSpeedAttack)
-                rig.velocity = Vector3.zero;
+            //if (playerAttack.attackColdownMelee > playerAttack.attackSpeedMelee - decreaseSpeedAttack)
+            //    rig.velocity = Vector3.zero;
 
             if (playerAttack.attackColdownRanged > playerAttack.attackSpeedRanged - decreaseSpeedAttack * 0.5f)
                 rig.velocity = Vector3.zero;
