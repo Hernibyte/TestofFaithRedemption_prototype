@@ -1907,6 +1907,52 @@ MonoBehaviour:
   firstRoom: {fileID: 4521672552227759609, guid: 774736df302b89a4eb022b2f8781562a,
     type: 3}
   roomMaxCount: 45
+--- !u!1 &1163065946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1163065948}
+  - component: {fileID: 1163065947}
+  m_Layer: 0
+  m_Name: AfterImagePool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1163065947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163065946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28a1f5439156f1f4abf4d51cfaf005b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabAfterImage: {fileID: 4130177226581325593, guid: da7f0c458b13c3147b1fabf169335b0a,
+    type: 3}
+  poolSize: 25
+--- !u!4 &1163065948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163065946}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 7, y: 7, z: 5}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1209520898
 GameObject:
   m_ObjectHideFlags: 0
@@ -5320,7 +5366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.000061035156, y: 30}
+  m_AnchoredPosition: {x: -0.00012207031, y: 30}
   m_SizeDelta: {x: 0, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &5919561122682376212
@@ -5347,6 +5393,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
+      propertyPath: playerCapHP
+      value: 4500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: playerMinHP
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
       propertyPath: slashEffect
       value: 
       objectReference: {fileID: 7640395013230572804, guid: f66393b2a7fb5d94e9994d3bd97c97b5,
@@ -5366,6 +5422,21 @@ PrefabInstance:
       propertyPath: cardTakenSystem
       value: 
       objectReference: {fileID: 201959768}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: maxDefenseStack
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: minDefenseStack
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: minPlayerDamage
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: meleeAttackPoint
@@ -5399,6 +5470,11 @@ PrefabInstance:
     - target: {fileID: 5782591533679000513, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: attackColdownRanged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919561121392281261, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5919561122757471330, guid: 73b6e082fe08542499c88fb7be72bda2,
@@ -5466,10 +5542,15 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5919561122757471341, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 17
+      objectReference: {fileID: 0}
     - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: speed
-      value: 55
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
@@ -5478,8 +5559,23 @@ PrefabInstance:
       objectReference: {fileID: 2006081830}
     - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
+      propertyPath: dodgeForce
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: recoverDodge
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: playerMinSpeed
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
       propertyPath: playerSpeedCap
-      value: 125
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
@@ -5490,6 +5586,11 @@ PrefabInstance:
         type: 3}
       propertyPath: decreaseSpeedAttack
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919561122757471342, guid: 73b6e082fe08542499c88fb7be72bda2,
+        type: 3}
+      propertyPath: distanceBetweenImages
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5919561122757471343, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}

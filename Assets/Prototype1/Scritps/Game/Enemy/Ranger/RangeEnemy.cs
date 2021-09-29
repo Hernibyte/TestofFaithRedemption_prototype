@@ -25,7 +25,6 @@ namespace Proto1
         [SerializeField] Transform firePoint;
         [SerializeField] float deleayPerShoot;
         [SerializeField] float speedBullet;
-        [SerializeField] Light pointLightSpell;
         float timerPerShoot;
         public Vector2 directionAttack;
         public Vector2 newPosWhereMove;
@@ -93,6 +92,11 @@ namespace Proto1
 
                     directionAttack = new Vector2(target.transform.position.x, target.transform.position.y) - rig.position;
 
+                    if (target.transform.position.x > rig.position.x)
+                        spriteEnemy.flipX = false;
+                    else
+                        spriteEnemy.flipX = true;
+
                     Ray2D rayoInterdimensionalePuro = new Ray2D(rig.position, directionAttack.normalized);
                     Debug.DrawRay(rayoInterdimensionalePuro.origin, rayoInterdimensionalePuro.direction * distanceAttack, Color.red);
 
@@ -106,7 +110,6 @@ namespace Proto1
                     if (timerPerShoot > 0)
                     {
                         enemyAnimator.SetBool("attack", false);
-                        pointLightSpell.gameObject.SetActive(false);
                         return;
                     }
 
@@ -114,8 +117,6 @@ namespace Proto1
                     enemyAnimator.SetBool("attack", true);
                     if(bullet != null)
                     {
-                        pointLightSpell.gameObject.SetActive(true);
-
                         bullet.FixRotation(directionAttack);
                         bullet.SetBulletParams(enemyDamage, enemyKnockBackForce);
 

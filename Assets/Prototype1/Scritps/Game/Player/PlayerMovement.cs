@@ -11,7 +11,6 @@ namespace Proto1
         PlayerAttack playerAttack;
         public Rigidbody2D rig;
         [HideInInspector] public RoomID actualRoom;
-        [SerializeField] public GameObject dodgeTrails;
         [SerializeField] StatsMenu stats;
         [SerializeField] CardTaked  cardTakenSystem;
 
@@ -19,15 +18,20 @@ namespace Proto1
         [Header("PLAYER MOVE STATS")]
         [Space(10)]
         [SerializeField] bool canDodge;
+        [SerializeField] bool isDoging;
         [SerializeField] bool canMove;
         [SerializeField] public float speed;
         [SerializeField] public int playerOnRoom;
         [SerializeField] public float decreaseSpeedAttack;
         [SerializeField] public float dodgeOnRecover;
+        [SerializeField] public float dodgeForce;
 
         [SerializeField] public float playerSpeedCap;
         [SerializeField] public float playerMinSpeed;
         [SerializeField][Range(0.5f,2)] public float recoverDodge;
+        [SerializeField] public float distanceBetweenImages;
+        private float lastImagePosX;
+        private float lastImagePosY;
 
         void Awake()
         {
@@ -38,6 +42,7 @@ namespace Proto1
         void Start()
         {
             canDodge = true;
+            isDoging = false;
             canMove = true;
             playerOnRoom = 0;
         }
@@ -45,7 +50,20 @@ namespace Proto1
         void Update()
         {
             if (dodgeOnRecover <= recoverDodge)
+            {
                 dodgeOnRecover += Time.deltaTime;
+            }
+
+            if(isDoging)
+            {
+                if (Mathf.Abs(transform.position.x - lastImagePosX) > distanceBetweenImages ||
+                    Mathf.Abs(transform.position.y - lastImagePosY) > distanceBetweenImages)
+                {
+                    PlayerAfterImagePool.Instance.GetFromPool();
+                    lastImagePosX = transform.position.x;
+                    lastImagePosY = transform.position.y;
+                }
+            }
 
             if(dodgeOnRecover > recoverDodge)
             {
@@ -53,15 +71,12 @@ namespace Proto1
             }
 
             if(dodgeOnRecover >= recoverDodge / 2)
-            {
-                dodgeTrails.gameObject.SetActive(false);
                 canMove = true;
-            }
             if (dodgeOnRecover == recoverDodge)
             {
                 canDodge = true;
+                isDoging = false;
             }
-
         }
 
         private void FixedUpdate()
@@ -90,13 +105,17 @@ namespace Proto1
 
             if (Input.GetKey(KeyCode.Space) && rig.velocity != Vector2.zero)
             {
-                rig.AddForce(direction / 1.2f, ForceMode2D.Impulse);
+                rig.AddForce(direction.normalized * dodgeForce, ForceMode2D.Impulse);
                 playerAnimator.SetTrigger("dodge");
-                dodgeTrails.gameObject.SetActive(true);
 
                 dodgeOnRecover = 0;
                 canDodge = false;
                 canMove = false;
+                isDoging = true;
+
+                PlayerAfterImagePool.Instance.GetFromPool();
+                lastImagePosX = transform.position.x;
+                lastImagePosY = transform.position.y;
             }
         }
 
