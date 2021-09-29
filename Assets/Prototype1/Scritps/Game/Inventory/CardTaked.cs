@@ -16,6 +16,7 @@ public class CardTaked : MonoBehaviour
     {
         stats = FindObjectOfType<StatsMenu>();
         panel.alpha = .0f;
+        panel.interactable = false;
     }
 
     private void Update()

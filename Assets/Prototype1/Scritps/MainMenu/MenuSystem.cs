@@ -11,6 +11,10 @@ public class MenuSystem : MonoBehaviour
 
     private void Start() 
     {
+        Resolution[] resolutions = Screen.resolutions;
+        //Setetar la mejor resolucion para ese monitor
+        Screen.SetResolution(resolutions[resolutions.Length-1].width, resolutions[resolutions.Length-1].height, true);
+
         credits.SetActive(false);
         options.SetActive(false);
     }

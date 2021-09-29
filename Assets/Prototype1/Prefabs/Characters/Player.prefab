@@ -255,7 +255,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5919561121392281250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.1061, z: 0}
   m_LocalScale: {x: 0.06, y: 0.06, z: 2.59}
   m_Children: []
   m_Father: {fileID: 5919561122757471331}
@@ -448,15 +448,16 @@ MonoBehaviour:
   attackPoint: {fileID: 8262492798884378014}
   rig: {fileID: 5919561122757471341}
   actualRoom: {fileID: 0}
-  dodgeTrails: {fileID: 8450586103697065273}
   stats: {fileID: 0}
   cardTakenSystem: {fileID: 0}
   canDodge: 0
+  isDoging: 0
   canMove: 0
   speed: 55
   playerOnRoom: 0
   decreaseSpeedAttack: 0.5
   dodgeOnRecover: 0
+  dodgeForce: 0
   playerSpeedCap: 0
   playerMinSpeed: 0
   recoverDodge: 1

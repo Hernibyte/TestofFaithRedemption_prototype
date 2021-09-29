@@ -29,6 +29,7 @@ public class AfterImagePlayer : MonoBehaviour
 
         transform.localScale = playerSr.transform.localScale;
         transform.position = player.position;
+        transform.position = new Vector2(player.position.x, playerSr.transform.position.y);
         transform.rotation = player.rotation;
         timeActivated = Time.time;
     }

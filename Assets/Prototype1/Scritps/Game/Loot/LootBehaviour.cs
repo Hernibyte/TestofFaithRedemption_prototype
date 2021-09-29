@@ -20,6 +20,7 @@ public class LootBehaviour : MonoBehaviour
             if (Input.GetKey(KeyCode.E))
             {
                 taked.panel.alpha = 1f;
+                taked.panel.interactable = true;
 
                 taked.isOpen = true;
                 taked.card = slotsElection[Random.Range(0, (slotsElection.Count - 1))];
