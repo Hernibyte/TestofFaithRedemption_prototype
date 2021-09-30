@@ -421,7 +421,8 @@ namespace Proto1
         }
         public void Die()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name); // worked
+            UI_PlayerDeath myEvent = FindObjectOfType<UI_PlayerDeath>();
+            myEvent.Activate();
         }
     }
 }
