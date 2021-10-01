@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Proto1
 {
@@ -12,6 +11,7 @@ namespace Proto1
         [SerializeField] public GameObject target;
         [SerializeField] public Rigidbody2D rb;
         [SerializeField] Animator bossAnimator;
+        [SerializeField] GameObject portal;
 
         [Header("BOSS STATS")]
         [Space(20)]
@@ -127,7 +127,8 @@ namespace Proto1
         }
         public void Die()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name); // worked
+            Instantiate(portal, transform.position, Quaternion.identity);
+            Destroy(gameObject);
         }
     }
 }

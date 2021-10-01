@@ -142,7 +142,7 @@ BoxCollider2D:
   m_Offset: {x: -0.04449021, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.2916541, y: 0.0017576922}
     oldSize: {x: 0.23877555, y: 0.25375}
     newSize: {x: 0.23877555, y: 0.25375}
     adaptiveTilingThreshold: 0.5
@@ -171,6 +171,7 @@ MonoBehaviour:
   target: {fileID: 0}
   rb: {fileID: 5983875104354420810}
   bossAnimator: {fileID: 5983875104354420811}
+  portal: {fileID: 2845745773230326315, guid: 33a1541c917683c42a6096b049717d9c, type: 3}
   bossSpeed: 2.5
   attackRange: 2
   bossDamage: 20
