@@ -348,7 +348,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4531488692236904564}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.438, y: -0.271, z: 0}
+  m_LocalPosition: {x: 0.309, y: -0.248, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7893240279421859632}
@@ -424,7 +424,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -5
-  m_Sprite: {fileID: 21300000, guid: 1c769c7985af35d4cb152f39a2532c8f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92e9accbc4f950c4ebd106ef768f4b1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -552,7 +552,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6668111347874054268}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.013, y: -0.378, z: 0}
+  m_LocalPosition: {x: -0.001, y: -0.215, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7893240279421859632}
@@ -631,7 +631,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7443735259138970033}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 4.59, z: 0}
+  m_LocalPosition: {x: 0, y: 4.665, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1698318320603590259}
@@ -799,7 +799,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9004954781844036013}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.345, y: 0.26799998, z: 0}
+  m_LocalPosition: {x: 0.312, y: 0.132, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7893240279421859632}
@@ -929,6 +929,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8402747957115559590, guid: 223a01c2fb0babd4585a01da3092b72b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.04
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 223a01c2fb0babd4585a01da3092b72b, type: 3}
 --- !u!1 &9165099365125362209 stripped
@@ -967,6 +972,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TopGate
       objectReference: {fileID: 0}
+    - target: {fileID: 5709472904791502029, guid: 98640725c672e4847a8fac76052dc6bc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.04
+      objectReference: {fileID: 0}
     - target: {fileID: 7322653841465196213, guid: 98640725c672e4847a8fac76052dc6bc,
         type: 3}
       propertyPath: m_RootOrder
@@ -985,12 +995,12 @@ PrefabInstance:
     - target: {fileID: 7322653841465196213, guid: 98640725c672e4847a8fac76052dc6bc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.02
+      value: 0.047
       objectReference: {fileID: 0}
     - target: {fileID: 7322653841465196213, guid: 98640725c672e4847a8fac76052dc6bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.43
+      value: -0.392
       objectReference: {fileID: 0}
     - target: {fileID: 7322653841465196213, guid: 98640725c672e4847a8fac76052dc6bc,
         type: 3}

@@ -202,7 +202,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -5
-  m_Sprite: {fileID: 21300000, guid: 1c769c7985af35d4cb152f39a2532c8f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92e9accbc4f950c4ebd106ef768f4b1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -325,7 +325,6 @@ MonoBehaviour:
   - {fileID: 5453702676298510832}
   - {fileID: 7029147527936508740}
   - {fileID: 8108132333820574560}
-  checkEmptyRooms: {fileID: 2788478049584130973}
   allDoorsOpen: 0
   allDoorsClosed: 0
 --- !u!1 &3071495324032028109
@@ -354,7 +353,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3071495324032028109}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -8.69, y: 0, z: 0}
+  m_LocalPosition: {x: -8.59, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4375855790115058116}
@@ -439,7 +438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3556534762942788267}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0, y: -4.67, z: 0}
+  m_LocalPosition: {x: 0, y: -4.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4959474489835626672}
@@ -741,6 +740,7 @@ MonoBehaviour:
   spawnPoints: []
   imSpawnBoss: 0
   uiBoss: {fileID: 0}
+  checkEmptyRooms: {fileID: 0}
 --- !u!1 &8396115280717647154
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,6 +1120,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7214664772114584324, guid: b30e8cfdc781d694ca07073bf061f7a7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.77
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b30e8cfdc781d694ca07073bf061f7a7, type: 3}
 --- !u!4 &4959474489835626672 stripped
@@ -1147,6 +1152,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8220998616543615951}
     m_Modifications:
+    - target: {fileID: 1477557402634605911, guid: 37d63b3a620a6ce49a1927cbfe4b9366,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 1769104130485095181, guid: 37d63b3a620a6ce49a1927cbfe4b9366,
         type: 3}
       propertyPath: m_RootOrder

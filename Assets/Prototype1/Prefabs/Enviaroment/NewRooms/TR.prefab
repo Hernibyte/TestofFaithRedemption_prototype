@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245728583472446600}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.384, y: 0.26799998, z: 0}
+  m_LocalPosition: {x: -0.358, y: 0.177, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 795087776676071354}
@@ -271,7 +271,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2998335620143651587}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.423, y: -0.271, z: 0}
+  m_LocalPosition: {x: -0.325, y: -0.242, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 795087776676071354}
@@ -301,7 +301,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3611657507972844841}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.092, y: -0.37799996, z: 0}
+  m_LocalPosition: {x: -0.078, y: -0.226, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 795087776676071354}
@@ -527,7 +527,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -5
-  m_Sprite: {fileID: 21300000, guid: 1c769c7985af35d4cb152f39a2532c8f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 92e9accbc4f950c4ebd106ef768f4b1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -704,7 +704,6 @@ MonoBehaviour:
   doors:
   - {fileID: 8235604331778034546}
   - {fileID: 451767392789771811}
-  checkEmptyRooms: {fileID: 7152144642949735001}
   allDoorsOpen: 0
   allDoorsClosed: 0
 --- !u!1 &6993352661642373977
@@ -875,6 +874,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TopGate
       objectReference: {fileID: 0}
+    - target: {fileID: 5709472904791502029, guid: 98640725c672e4847a8fac76052dc6bc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.06
+      objectReference: {fileID: 0}
     - target: {fileID: 7322653841465196213, guid: 98640725c672e4847a8fac76052dc6bc,
         type: 3}
       propertyPath: m_RootOrder
@@ -963,6 +967,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3984612996769371731}
     m_Modifications:
+    - target: {fileID: 1477557402634605911, guid: 37d63b3a620a6ce49a1927cbfe4b9366,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.06
+      objectReference: {fileID: 0}
     - target: {fileID: 1769104130485095181, guid: 37d63b3a620a6ce49a1927cbfe4b9366,
         type: 3}
       propertyPath: m_RootOrder
