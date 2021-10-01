@@ -211,6 +211,7 @@ namespace Proto1
             {
                 enemyHP -= amountDamage;
                 attackDelay = 0;
+
                 enemyAnimator.SetFloat("prepareAttack", attackDelay);
                 enemyAnimator.SetFloat("Knockback", knockBackForce);
                 attackColdown = 1;

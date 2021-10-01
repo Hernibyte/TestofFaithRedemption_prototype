@@ -12,7 +12,8 @@ namespace Proto1
             Warrior
         }
         public TYPENEMY enemyType;
-        [SerializeField] MeleeEnemy enemyReference;
+        [SerializeField] MeleeEnemy enemyReference;// Obsolet xd
+        //[SerializeField] WarriorEnemy enemyReference;
         [SerializeField] RangeEnemy enemyReference2;
         [SerializeField] Image enemyHealthBar; 
         [SerializeField] Image enemyDamageEntry;

@@ -11,7 +11,7 @@ namespace Proto1
         [SerializeField] Image healtbarBoss;
         [SerializeField] Image damageEntryBoss;
         [SerializeField] GameObject uiHealthBarBoss;
-        [SerializeField] BossEnemy boss;
+        [SerializeField] public BossEnemy boss;
 
         float amountHPLose;
         float auxFillAmount;
