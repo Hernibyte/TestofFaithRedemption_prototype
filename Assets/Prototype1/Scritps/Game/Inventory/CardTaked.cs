@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CardTaked : MonoBehaviour
 {
+    [SerializeField] Text cardName;
     [SerializeField] DeckOfCards deck;
     public CanvasGroup panel;
     public Slot card;
@@ -29,6 +30,7 @@ public class CardTaked : MonoBehaviour
             {
                 if(cardImageType != null)
                     cardImageType.SetCardUtility((CardType.CardUtility)theCardOnself.sCard.myUtility);
+                    cardName.text = card.card.sCard.name;
             }
         }
     }
