@@ -41,7 +41,9 @@ namespace Proto1
         public float attackSpeedRanged;
         public float meleeImpulseForce1;
 
-        public delegate void UpdateUIData(int hitOnHP);
+
+        public enum TypeUpdateUI { Damage, Healing}
+        public delegate void UpdateUIData(int hitOnHP, TypeUpdateUI type);
         public UpdateUIData updateUI;
 
         public delegate void PlayerHasAttack();
@@ -129,7 +131,7 @@ namespace Proto1
         {
             actual_HP = max_HP;
             int heal = (int)max_HP;
-            updateUI?.Invoke(heal);
+            updateUI?.Invoke(heal, TypeUpdateUI.Healing);
         }
 
         public void HealPlayer(float amount)
@@ -141,7 +143,7 @@ namespace Proto1
                 actual_HP = max_HP;
 
             int heal = (int)amount;
-            updateUI?.Invoke(heal);
+            updateUI?.Invoke(heal, TypeUpdateUI.Healing);
         }
 
         public void CalcBasicStats(NewSCard cardTaked)
@@ -430,7 +432,7 @@ namespace Proto1
 
                 VFXManager.Get()?.ShakeScreen(.15f, .15f);
 
-                updateUI?.Invoke((int)damageEntry);
+                updateUI?.Invoke((int)damageEntry, TypeUpdateUI.Damage);
             }
             else
             {

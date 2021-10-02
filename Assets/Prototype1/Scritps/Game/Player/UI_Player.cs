@@ -12,49 +12,91 @@ namespace Proto1
         [SerializeField] public Text playerHPPorcent;
         [SerializeField] public Text playerStats;
 
-        public bool needUpdateData = false;
-        float auxFillAmount;
+        public bool needUpdate = false;
+        float auxFillAmountDamage;
+        float auxFillAmountHealing;
         int flagHealth;
         int amountHPGone;
+
+        int amountHPHealed;
+
         float amountHPFillImage;
+        PlayerAttack.TypeUpdateUI typeUpdate;
         
         void Start()
         {
             flagHealth = 0;
             amountHPFillImage = 0;
             amountHPGone = 0;
-            auxFillAmount = healthBar.fillAmount;
+            amountHPHealed = 0;
+            auxFillAmountDamage = healthBar.fillAmount;
+            auxFillAmountHealing = healthBar.fillAmount;
 
-            playerBasicStats.updateUI += AskForUpdate;
+            playerBasicStats.updateUI += HasRecivedDamage;
+            playerBasicStats.updateUI += HasRecivedHealing;
         }
 
         void Update()
         {
-            if(needUpdateData)
+            if(needUpdate)
             {
-                UpdatePlayerHP();
+                float porcentHPPlayer = (playerBasicStats.actual_HP * 100) / playerBasicStats.max_HP;
+                playerHPPorcent.text = porcentHPPlayer.ToString("00") + "%";
+
+                switch (typeUpdate)
+                {
+                    case PlayerAttack.TypeUpdateUI.Damage:      UpdatePlayerHPDamage();
+                        break;
+                    case PlayerAttack.TypeUpdateUI.Healing:     UpdatePlayerHPHealing();
+                        break;
+                }
             }
 
             UpdatePlayerStats();
         }
         private void OnDisable()
         {
-            playerBasicStats.updateUI -= AskForUpdate;
+            playerBasicStats.updateUI -= HasRecivedDamage;
+            playerBasicStats.updateUI -= HasRecivedHealing;
         }
 
-        public void AskForUpdate(int amountDamageDealt)
+        public void HasRecivedDamage(int amountDamageDealt, PlayerAttack.TypeUpdateUI type)
         {
-            needUpdateData = true;
+            needUpdate = true;
             amountHPGone = amountDamageDealt;
             flagHealth = 1;
+            typeUpdate = type;
         }
 
-        void UpdatePlayerHP()
+        public void HasRecivedHealing(int amountHeal, PlayerAttack.TypeUpdateUI type)
+        {
+            needUpdate = true;
+            amountHPHealed = amountHeal;
+            typeUpdate = type;
+        }
+
+        void UpdatePlayerHPHealing()
+        {
+            amountHPFillImage = (amountHPHealed * 1) / playerBasicStats.max_HP;
+
+            float amountFilling = (auxFillAmountHealing + amountHPFillImage);
+            amountFilling = Mathf.Clamp(amountFilling, 0, 1);
+
+            if (healthBar.fillAmount < amountFilling)
+                healthBar.fillAmount += Time.deltaTime;
+
+            if(healthBar.fillAmount >= amountFilling)
+            {
+                healthBar.fillAmount = amountFilling;
+                auxFillAmountHealing = healthBar.fillAmount;
+                damageEntry.fillAmount = healthBar.fillAmount;
+                needUpdate = false;
+            }
+        }
+
+        void UpdatePlayerHPDamage()
         {
             amountHPFillImage = (amountHPGone * 1) / playerBasicStats.max_HP;
-
-            float porcentHPPlayer = (playerBasicStats.actual_HP * 100) / playerBasicStats.max_HP;
-            playerHPPorcent.text = porcentHPPlayer.ToString("00") + "%";
 
             if (flagHealth == 1)
             {
@@ -62,14 +104,15 @@ namespace Proto1
                 flagHealth = 0;
             }
 
-            if (damageEntry.fillAmount > (auxFillAmount - amountHPFillImage))
+            if (damageEntry.fillAmount > (auxFillAmountDamage - amountHPFillImage))
                 damageEntry.fillAmount -= Time.deltaTime;
 
-            if (damageEntry.fillAmount <= (auxFillAmount - amountHPFillImage))
+            if (damageEntry.fillAmount <= (auxFillAmountDamage - amountHPFillImage))
             {
-                damageEntry.fillAmount = (auxFillAmount - amountHPFillImage);
-                auxFillAmount = damageEntry.fillAmount;
-                needUpdateData = false;
+                damageEntry.fillAmount = (auxFillAmountDamage - amountHPFillImage);
+                auxFillAmountDamage = damageEntry.fillAmount;
+                auxFillAmountHealing = healthBar.fillAmount;
+                needUpdate = false;
             }
         }
 
