@@ -733,7 +733,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19ab4390d6468ed4f99f0b1c95066bbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabEnemyWarrior: {fileID: 3398405092786312210, guid: ae85e6fedfdc8374fbcba1d61edf3ecc,
+  prefabEnemyWarrior: {fileID: 5529837054824397749, guid: 4bb5ae7d2f2225248b1a55504a14428e,
     type: 3}
   prefabEnemyRanger: {fileID: 7229216304297253020, guid: d2f24ba679972444ca45e3b94c32f81a,
     type: 3}

@@ -421,6 +421,7 @@ namespace Proto1
         }
         public void Die()
         {
+            VFXManager.Get()?.StopShaking();
             UI_PlayerDeath myEvent = FindObjectOfType<UI_PlayerDeath>();
             myEvent.Activate();
         }

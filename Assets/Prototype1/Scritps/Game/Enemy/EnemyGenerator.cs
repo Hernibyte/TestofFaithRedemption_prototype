@@ -4,7 +4,7 @@ using Proto1;
 
 public class EnemyGenerator : MonoBehaviour
 {
-    [SerializeField] MeleeEnemy prefabEnemyWarrior;
+    [SerializeField] WarriorEnemy prefabEnemyWarrior;
     [SerializeField] RangeEnemy prefabEnemyRanger;
     [SerializeField] GameObject spawnArea;
     [SerializeField] bool enemyCreated;
@@ -65,7 +65,7 @@ public class EnemyGenerator : MonoBehaviour
             for(int i = 0; i < meleeEnemiesInRoom; i++)
             {
                 randomSpawner = Random.Range(0, spawnPoints.Count);
-                MeleeEnemy obj = Instantiate(prefabEnemyWarrior, spawnPoints[randomSpawner].transform.position, Quaternion.identity);
+                WarriorEnemy obj = Instantiate(prefabEnemyWarrior, spawnPoints[randomSpawner].transform.position, Quaternion.identity);
                 obj.deathEvent.AddListener(DecreaseEnemiesAliveRoom);
                 enemiesAlive++;
             }

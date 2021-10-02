@@ -26,4 +26,9 @@ public class VFXManager : MonoBehaviour
     {
         StartCoroutine(cameraShakeHandler.Shake(duration, amplitud));
     }
+
+    public void StopShaking()
+    {
+        StopAllCoroutines();
+    }
 }
