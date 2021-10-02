@@ -72,6 +72,9 @@ public class CheatSystem : MonoBehaviour
                     Debug.Log("NULO BOSSS");
                 }
                 break;
+            case "heal!":
+                pj.FullHealPlayer();
+                break;
         }
     }
 }
