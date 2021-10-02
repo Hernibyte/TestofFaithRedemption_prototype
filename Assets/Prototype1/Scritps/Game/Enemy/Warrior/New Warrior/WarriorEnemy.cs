@@ -11,10 +11,11 @@ namespace Proto1
 
         [Space(10)]
         [Header("MELEE ENEMY NEEDS")]
-        [SerializeField] Rigidbody2D rb;
+        [SerializeField] public Rigidbody2D rb;
         [SerializeField] LayerMask playerLayer;
         [SerializeField] SpriteRenderer spriteEnemy;
         [SerializeField] GameObject slashEffect;
+        [SerializeField] Animator enemyAnim;
         [HideInInspector]public GameObject target;
 
         [Space(10)]
@@ -54,9 +55,12 @@ namespace Proto1
                 {
                     rb.velocity = Vector2.zero;
                     stunned = false;
+                    enemyAnim.SetBool("stunned", stunned);
                     t = 0;
                 }
             }
+
+            FixSpriteSide();
         }
 
         private void OnDrawGizmos()
@@ -64,12 +68,17 @@ namespace Proto1
             Gizmos.DrawWireSphere(new Vector3(transform.position.x, transform.position.y, 0f), range);
         }
 
-        public float GetDistanceToTarget()
+        void FixSpriteSide()
         {
-            if (target == null)
-                return 0f;
+            if (rb.position.x < target.transform.position.x)
+                spriteEnemy.flipX = false;
+            else
+                spriteEnemy.flipX = true;
+        }
 
-            return Vector2.Distance(transform.position, target.transform.position);
+        public float GetDistanceToTarget(Vector2 position)
+        {
+            return Vector2.Distance(transform.position, position);
         }
 
         public void Attack()
@@ -109,6 +118,7 @@ namespace Proto1
                 SlashEffect();
 
                 stunned = true;
+                enemyAnim.SetBool("stunned", stunned);
 
                 Vector2 directionKnockback = rb.position - posAttacker;
                 directionKnockback.Normalize();
