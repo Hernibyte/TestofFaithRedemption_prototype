@@ -12,6 +12,7 @@ namespace Proto1
         [SerializeField] public Rigidbody2D rb;
         [SerializeField] Animator bossAnimator;
         [SerializeField] GameObject portal;
+        [SerializeField] EnemyGenerator myGenerator;
 
         [Header("BOSS STATS")]
         [Space(20)]
@@ -58,6 +59,13 @@ namespace Proto1
                 bossCollider.offset = new Vector2(colliderOffsetXLeft, 0);
                 bossSprite.flipX = true;
             }
+        }
+        public void SetEnemyGenerator(EnemyGenerator generator)
+        {
+            if (generator == null)
+                return;
+
+            myGenerator = generator;
         }
         public float DistanceToTarget(Vector2 target)
         {
@@ -127,6 +135,7 @@ namespace Proto1
         }
         public void Die()
         {
+            myGenerator.enemiesAlive -= 1;
             Instantiate(portal, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }

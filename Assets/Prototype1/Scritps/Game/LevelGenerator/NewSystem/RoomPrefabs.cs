@@ -49,7 +49,15 @@ public class RoomPrefabs : MonoBehaviour
                 if (roomList[index].GetComponentInChildren<EnemyGenerator>())
                     roomList[index].GetComponentInChildren<EnemyGenerator>().imSpawnBoss = true;
 
-                Instantiate(bossObject, bossPosition, Quaternion.identity);
+                EnemyGenerator roomEnemyGenRef = roomList[index].GetComponentInChildren<EnemyGenerator>();
+                GameObject bossGo = Instantiate(bossObject, bossPosition, Quaternion.identity);
+
+                Proto1.BossEnemy bossEnemy= bossGo.GetComponent<Proto1.BossEnemy>();
+                if (bossEnemy != null)
+                {
+                    if(roomEnemyGenRef != null)
+                        bossEnemy.SetEnemyGenerator(roomEnemyGenRef);
+                }
 
                 UIType_Boss.SetActive(true);
 

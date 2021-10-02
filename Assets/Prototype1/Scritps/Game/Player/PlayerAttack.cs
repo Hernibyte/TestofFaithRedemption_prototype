@@ -124,6 +124,26 @@ namespace Proto1
                 gmRef.deck.updateDeck = false;
             }
         }
+
+        public void FullHealPlayer()
+        {
+            actual_HP = max_HP;
+            int heal = (int)max_HP;
+            updateUI?.Invoke(heal);
+        }
+
+        public void HealPlayer(float amount)
+        {
+            if (actual_HP < max_HP)
+                actual_HP += amount;
+
+            if (actual_HP > max_HP)
+                actual_HP = max_HP;
+
+            int heal = (int)amount;
+            updateUI?.Invoke(heal);
+        }
+
         public void CalcBasicStats(NewSCard cardTaked)
         {
             for (int i = 0; i < cardTaked.typeStats.Count; i++)
@@ -153,6 +173,9 @@ namespace Proto1
                             max_HP = playerMinHP;
                         else if (max_HP > playerCapHP)
                             max_HP = playerCapHP;
+
+
+                        FullHealPlayer();
 
                         break;
                     case NewSCard.CardType.HP_Porcent:
@@ -187,6 +210,7 @@ namespace Proto1
                         else if (max_HP > playerCapHP)
                             max_HP = playerCapHP;
 
+                        FullHealPlayer();
                         break;
                     case NewSCard.CardType.ATK_Plane:
 
