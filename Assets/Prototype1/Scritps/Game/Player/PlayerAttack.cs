@@ -68,6 +68,12 @@ namespace Proto1
         }
         void Update()
         {
+
+            if(Input.GetKeyDown(KeyCode.H)) //TEST HEAL
+            {
+                HealPlayer(150);
+            }
+
             if (!movementPlayer.activateGameplay)
                 return;
 

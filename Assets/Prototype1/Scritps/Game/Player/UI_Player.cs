@@ -14,11 +14,8 @@ namespace Proto1
 
         public bool needUpdate = false;
         float auxFillAmountDamage;
-        float auxFillAmountHealing;
         int flagHealth;
         int amountHPGone;
-
-        int amountHPHealed;
 
         float amountHPFillImage;
         PlayerAttack.TypeUpdateUI typeUpdate;
@@ -28,9 +25,7 @@ namespace Proto1
             flagHealth = 0;
             amountHPFillImage = 0;
             amountHPGone = 0;
-            amountHPHealed = 0;
             auxFillAmountDamage = healthBar.fillAmount;
-            auxFillAmountHealing = healthBar.fillAmount;
 
             playerBasicStats.updateUI += HasRecivedDamage;
             playerBasicStats.updateUI += HasRecivedHealing;
@@ -71,32 +66,29 @@ namespace Proto1
         public void HasRecivedHealing(int amountHeal, PlayerAttack.TypeUpdateUI type)
         {
             needUpdate = true;
-            amountHPHealed = amountHeal;
             typeUpdate = type;
         }
 
         void UpdatePlayerHPHealing()
         {
-            amountHPFillImage = (amountHPHealed * 1) / playerBasicStats.max_HP;
-
-            float amountFilling = (auxFillAmountHealing + amountHPFillImage);
-            amountFilling = Mathf.Clamp(amountFilling, 0, 1);
-
-            if (healthBar.fillAmount < amountFilling)
-                healthBar.fillAmount += Time.deltaTime;
-
-            if(healthBar.fillAmount >= amountFilling)
+            if(healthBar.fillAmount < playerBasicStats.actual_HP / playerBasicStats.max_HP)
             {
-                healthBar.fillAmount = amountFilling;
-                auxFillAmountHealing = healthBar.fillAmount;
-                damageEntry.fillAmount = healthBar.fillAmount;
+                healthBar.fillAmount = Mathf.MoveTowards(healthBar.fillAmount, playerBasicStats.actual_HP / playerBasicStats.max_HP, Time.deltaTime);
+                damageEntry.fillAmount = Mathf.MoveTowards(damageEntry.fillAmount, playerBasicStats.actual_HP / playerBasicStats.max_HP, Time.deltaTime);
+            }
+
+            if(healthBar.fillAmount >= playerBasicStats.actual_HP / playerBasicStats.max_HP)
+            {
+                healthBar.fillAmount = playerBasicStats.actual_HP / playerBasicStats.max_HP;
+                damageEntry.fillAmount = playerBasicStats.actual_HP / playerBasicStats.max_HP;
+                auxFillAmountDamage = damageEntry.fillAmount;
                 needUpdate = false;
             }
         }
 
         void UpdatePlayerHPDamage()
         {
-            amountHPFillImage = (amountHPGone * 1) / playerBasicStats.max_HP;
+            amountHPFillImage = amountHPGone / playerBasicStats.max_HP;
 
             if (flagHealth == 1)
             {
@@ -111,7 +103,6 @@ namespace Proto1
             {
                 damageEntry.fillAmount = (auxFillAmountDamage - amountHPFillImage);
                 auxFillAmountDamage = damageEntry.fillAmount;
-                auxFillAmountHealing = healthBar.fillAmount;
                 needUpdate = false;
             }
         }
