@@ -6,7 +6,7 @@ namespace Proto1
     {
         [Header("PLAYER NEEDS")]
         [SerializeField] Animator playerAnimator;
-        [SerializeField] SpriteRenderer mySprite;
+        [SerializeField] public SpriteRenderer mySprite;
         [SerializeField] Transform attackPoint;
         PlayerAttack playerAttack;
         public Rigidbody2D rig;
@@ -181,13 +181,13 @@ namespace Proto1
             if (playerAttack.attackColdownRanged > playerAttack.attackSpeedRanged - decreaseSpeedAttack * 0.5f)
                 rig.velocity = Vector3.zero;
 
+            if(attackPoint.position.x > transform.position.x)
+                mySprite.flipX = false;
+            else
+                mySprite.flipX = true;
+            
             if (playerAnimator != null)
             {
-                if(attackPoint.position.x > transform.position.x)
-                    mySprite.flipX = false;
-                else
-                    mySprite.flipX = true;
-
                 if (position != Vector2.zero)
                 {
                     playerAnimator.SetFloat("speed", position.magnitude);

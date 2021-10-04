@@ -32,10 +32,13 @@ namespace Proto1
         [SerializeField] public AnimationCurve knockBackCurve;
         [SerializeField] public float t;
 
+        PlayerMovement player;
+
         private void Start()
         {
             target = GameObject.FindGameObjectWithTag("Player");
             actualHP = maxHP;
+            player = target.GetComponent<PlayerMovement>();
         }
 
         private void Update()
@@ -44,7 +47,7 @@ namespace Proto1
             {
                 t += Time.fixedDeltaTime;
 
-                if(knockBackCurve.Evaluate(t) < 1)
+                if(knockBackCurve.Evaluate(t) < knockBackCurve.keys[knockBackCurve.keys.Length-1].value)
                 {
                     if (rb.velocity.magnitude > Vector2.zero.magnitude)
                         rb.velocity -= new Vector2(2f * Time.fixedDeltaTime, 1.5f * Time.fixedDeltaTime);
@@ -60,7 +63,7 @@ namespace Proto1
                 }
             }
 
-            FixSpriteSide();
+            FixSpriteSideAndSort();
         }
 
         private void OnDrawGizmos()
@@ -68,12 +71,26 @@ namespace Proto1
             Gizmos.DrawWireSphere(new Vector3(transform.position.x, transform.position.y, 0f), range);
         }
 
-        void FixSpriteSide()
+        void FixSpriteSideAndSort()
         {
             if (rb.position.x < target.transform.position.x)
                 spriteEnemy.flipX = false;
             else
                 spriteEnemy.flipX = true;
+
+            if (player == null)
+                return;
+
+            if (rb.position.y < player.rig.position.y)
+            {
+                spriteEnemy.sortingOrder = 0;
+                player.mySprite.sortingOrder = -1;
+            }
+            else
+            {
+                spriteEnemy.sortingOrder = -1;
+                player.mySprite.sortingOrder = 0;
+            }
         }
 
         public float GetDistanceToTarget(Vector2 position)

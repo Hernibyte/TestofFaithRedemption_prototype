@@ -32,10 +32,13 @@ public class EnemyGenerator : MonoBehaviour
     [Space(20)]
     [SerializeField] public RoomID checkEmptyRooms;
 
+    PlayerMovement player;
+
     private void Start()
     {
 
         enemyCreated = false;
+        player = FindObjectOfType<PlayerMovement>();
         //rangedEnemies = new RangeEnemy[rangersInRoom]; // Porque!!
     }
 
@@ -88,13 +91,18 @@ public class EnemyGenerator : MonoBehaviour
         switch(rand)
         {
             case 1:
-                Instantiate(lootChest, spawnArea.transform.position, Quaternion.identity);
+                Instantiate(lootChest, spawnArea.transform.position, Quaternion.identity);          
                 break;
             default:
                 //nada jaja salu2 
                 //JAJAJAJA dios mio este piB
                 break;
         }
+
+        if (player != null) //Para acomodar el layer del player y hacer que quede sobre el cofre
+            player.mySprite.sortingOrder = 0;
+        else
+            Debug.LogWarning("Player nullo en " + gameObject.name);
     }
 
     public void FindUI_Boss()

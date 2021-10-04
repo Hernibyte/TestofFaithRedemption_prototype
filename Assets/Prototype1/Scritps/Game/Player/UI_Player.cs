@@ -112,7 +112,7 @@ namespace Proto1
             if (playerBasicStats == null || playerMoveStats == null || playerStats == null)
                 return;
 
-            playerStats.text = "-STATS-" + "\n" + "\n"
+            playerStats.text = "-STATS-" + "\n"
                 + "HP: " + playerBasicStats.max_HP + "\n"
                 + "DEF: " + playerBasicStats.defensePlayer + "\n"
                 + "VEL: " + playerMoveStats.speed + "\n"

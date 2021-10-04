@@ -64,7 +64,7 @@ namespace Proto1
                 gmRef.deck.updateSlotOfCard += UpdateSlotOfCard;
             }
 
-            Cursor.SetCursor(cursorTex, Vector2.zero, CursorMode.Auto);
+            Cursor.SetCursor(cursorTex, new Vector2(cursorTex.width * 0.5f, cursorTex.height * 0.5f), CursorMode.Auto);
         }
         void Update()
         {

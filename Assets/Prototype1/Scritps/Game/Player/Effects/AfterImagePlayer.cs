@@ -26,6 +26,7 @@ public class AfterImagePlayer : MonoBehaviour
         alpha = alphaSet;
         sr.sprite = playerSr.sprite;
         sr.flipX = playerSr.flipX;
+        sr.sortingOrder = playerSr.sortingOrder;
 
         transform.localScale = playerSr.transform.localScale;
         transform.position = player.position;
