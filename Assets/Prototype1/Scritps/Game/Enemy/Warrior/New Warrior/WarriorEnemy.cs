@@ -28,14 +28,22 @@ namespace Proto1
         [SerializeField] public float range;
         [Space(10)]
         [Header("MELEE ENEMY [ OTHER STATS ]")]
+        [SerializeField] public float distanceToTargeting;
         [SerializeField] public bool stunned;
-        [SerializeField] public AnimationCurve knockBackCurve;
-        [SerializeField] public float t;
+        [SerializeField] public float timeStunned;
+        [SerializeField] public float tStunn;
+
+        [SerializeField] int impactsToStunn;
+        int impacts;
+        bool startKnockBack;
+        [SerializeField] AnimationCurve knockBackCurve;
+        [SerializeField] float tKnock;
 
         PlayerMovement player;
 
         private void Start()
         {
+            startKnockBack = false;
             target = GameObject.FindGameObjectWithTag("Player");
             actualHP = maxHP;
             player = target.GetComponent<PlayerMovement>();
@@ -43,23 +51,30 @@ namespace Proto1
 
         private void Update()
         {
-            if(stunned)
+            if(startKnockBack)
             {
-                t += Time.fixedDeltaTime;
+                tKnock += Time.fixedDeltaTime;
 
-                if(knockBackCurve.Evaluate(t) < knockBackCurve.keys[knockBackCurve.keys.Length-1].value)
+                if (knockBackCurve.Evaluate(tKnock) >= knockBackCurve.keys[knockBackCurve.length - 1].value)
                 {
-                    if (rb.velocity.magnitude > Vector2.zero.magnitude)
-                        rb.velocity -= new Vector2(2f * Time.fixedDeltaTime, 1.5f * Time.fixedDeltaTime);
-                    else
-                        rb.velocity = Vector2.zero;
-                }
-                else
-                {
+                    tKnock = 0;
+                    startKnockBack = false;
                     rb.velocity = Vector2.zero;
+                    enemyAnim.SetBool("hit", false);
+                }
+            }
+
+            if (stunned)
+            {
+                tStunn += Time.fixedDeltaTime;
+
+                if(tStunn >= timeStunned)
+                {
+                    tStunn = 0;
                     stunned = false;
+                    rb.velocity = Vector2.zero;
+                    impacts = 0;
                     enemyAnim.SetBool("stunned", stunned);
-                    t = 0;
                 }
             }
 
@@ -130,16 +145,25 @@ namespace Proto1
             if(actualHP > 0)
             {
                 actualHP -= amountDamage;
+                
+                impacts++;
+
                 updateUIData?.Invoke(amountDamage);
                 VFXManager.Get()?.ShakeScreen(.15f, .15f);
                 SlashEffect();
 
-                stunned = true;
-                enemyAnim.SetBool("stunned", stunned);
+                if(impacts >= impactsToStunn)
+                {
+                    stunned = true;
+                    enemyAnim.SetBool("stunned", stunned);
+                }
+                enemyAnim.SetBool("hit", true);
+
 
                 Vector2 directionKnockback = rb.position - posAttacker;
                 directionKnockback.Normalize();
                 rb.velocity = directionKnockback * knockBackForce;
+                startKnockBack = true;
             }
 
             if(actualHP <= 0)

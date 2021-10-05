@@ -29,7 +29,7 @@ namespace Proto1
     
         override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
         {
-            if (target == null)
+            if (target == null && animator.GetBool("stunned"))
                 return;
 
             Vector2 targetPosition = new Vector2(target.transform.position.x, target.transform.position.y);

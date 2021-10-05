@@ -14,6 +14,11 @@ namespace Proto1
                 enemy = gameObject.GetComponentInParent<WarriorEnemy>();
         }
 
+        public float ValueToTarget()
+        {
+            return enemy.distanceToTargeting;
+        }
+
         public float GetDistanceToTarget(Vector2 position)
         {
             return enemy.GetDistanceToTarget(position);

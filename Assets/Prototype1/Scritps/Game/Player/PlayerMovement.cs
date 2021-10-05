@@ -8,7 +8,7 @@ namespace Proto1
         [SerializeField] Animator playerAnimator;
         [SerializeField] public SpriteRenderer mySprite;
         [SerializeField] Transform attackPoint;
-        PlayerAttack playerAttack;
+        public PlayerAttack playerAttack;
         public Rigidbody2D rig;
         [HideInInspector] public RoomID actualRoom;
         [SerializeField] StatsMenu stats;

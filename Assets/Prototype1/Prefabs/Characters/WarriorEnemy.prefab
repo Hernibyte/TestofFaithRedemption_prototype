@@ -384,7 +384,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 55
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -419,11 +419,15 @@ MonoBehaviour:
   target: {fileID: 0}
   actualHP: 0
   maxHP: 150
-  speed: 4
-  damage: 25
-  knockBack: 5
+  speed: 3.5
+  damage: 45
+  knockBack: 15
   range: 1.5
+  distanceToTargeting: 10
   stunned: 0
+  timeStunned: 3.5
+  tStunn: 0
+  impactsToStunn: 3
   knockBackCurve:
     serializedVersion: 2
     m_Curve:
@@ -439,8 +443,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -448,7 +452,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  t: 0
+  tKnock: 0
 --- !u!1 &5529837055587886039
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,6 +538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5529837055646558353}
   - component: {fileID: 5529837055646558352}
+  - component: {fileID: 4780077329841639686}
   m_Layer: 14
   m_Name: PlayerCollision
   m_TagString: Untagged
@@ -549,7 +554,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5529837055646558358}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0116, z: 0}
+  m_LocalPosition: {x: -0.007, y: 0.013, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5529837054824397750}
@@ -562,7 +567,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5529837055646558358}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -581,6 +586,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14660576, y: 0.10685304}
   m_EdgeRadius: 0
+--- !u!58 &4780077329841639686
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5529837055646558358}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.08}
+  serializedVersion: 2
+  m_Radius: 0.05
 --- !u!1 &5529837055668162439
 GameObject:
   m_ObjectHideFlags: 0
