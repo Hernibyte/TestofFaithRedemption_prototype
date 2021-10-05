@@ -13,6 +13,7 @@ namespace Proto1
         [SerializeField] Animator bossAnimator;
         [SerializeField] GameObject portal;
         [SerializeField] EnemyGenerator myGenerator;
+        [SerializeField] Light bossAura;
 
         [Header("BOSS STATS")]
         [Space(20)]
@@ -124,6 +125,7 @@ namespace Proto1
                 bossAnimator.SetBool("IsEnraged", true);
                 bossSpeed += 1.5f;
                 isEnraged = true;
+                bossAura.color = Color.red;
             }
 
             if (bossActualHP <= 0)
