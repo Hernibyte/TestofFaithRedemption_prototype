@@ -25,7 +25,7 @@ TagManager:
   - RoomSpace
   - EnemyCollision
   - PlayerCollision
-  - 
+  - PostProcessing
   - 
   - 
   - 

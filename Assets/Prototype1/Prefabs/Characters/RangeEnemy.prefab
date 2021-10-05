@@ -661,7 +661,7 @@ MonoBehaviour:
   enemyAnimator: {fileID: 3229781396740024426}
   spriteEnemy: {fileID: 571362664818123363}
   rig: {fileID: 7386923031441470148}
-  enemySpeed: 20
+  enemySpeed: 105
   target: {fileID: 0}
   enemyHP: 35
   enemyMaxHP: 35

@@ -653,7 +653,7 @@ MonoBehaviour:
   playerDamage: 15
   minPlayerDamage: 15
   distanceMelee: 0.9
-  knockBackMelee: 6
+  knockBackMelee: 2
   attackColdownMelee: 0
   attackSpeedMelee: 0.8
   attackColdownRanged: 0
