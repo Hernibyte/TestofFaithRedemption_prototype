@@ -47,6 +47,7 @@ public class CheatSystem : MonoBehaviour
                 pj.attackSpeedMelee = 0.01f;
                 pj.movementPlayer.godMode = true;
                 pj.movementPlayer.speed = pj.movementPlayer.playerSpeedCap + 30;//Es dios dejalo romper el cap pa
+                pj.SetGodLight();
                 break;
             case "max damage":
                 pj.playerDamage = 100000;

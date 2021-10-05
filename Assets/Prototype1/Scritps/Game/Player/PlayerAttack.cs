@@ -16,6 +16,7 @@ namespace Proto1
         [SerializeField] CardTaked cardTakenSystem;
         public PlayerMovement movementPlayer;
         [SerializeField] Texture2D cursorTex;
+        [SerializeField] Light crossLight;
 
         [Header("NORMAL STATS")]
         [Space(15)]
@@ -144,6 +145,16 @@ namespace Proto1
 
             int heal = (int)amount;
             updateUI?.Invoke(heal, TypeUpdateUI.Healing);
+        }
+
+        public void SetNormalLight()
+        {
+            crossLight.intensity = 3;
+        }
+
+        public void SetGodLight()
+        {
+            crossLight.intensity = 10;
         }
 
         public void CalcBasicStats(NewSCard cardTaked)
