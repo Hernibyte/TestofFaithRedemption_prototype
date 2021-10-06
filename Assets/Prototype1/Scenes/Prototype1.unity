@@ -1528,26 +1528,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2290227614393594055, guid: 73b6e082fe08542499c88fb7be72bda2,
-        type: 3}
-      propertyPath: damage
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 2290227614393594055, guid: 73b6e082fe08542499c88fb7be72bda2,
-        type: 3}
-      propertyPath: atkSpeed
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2290227614393594055, guid: 73b6e082fe08542499c88fb7be72bda2,
-        type: 3}
-      propertyPath: knockBack
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2290227614393594055, guid: 73b6e082fe08542499c88fb7be72bda2,
-        type: 3}
-      propertyPath: impulseAttack
-      value: 26
-      objectReference: {fileID: 0}
     - target: {fileID: 2944776316410330256, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: m_IsActive
@@ -1578,31 +1558,6 @@ PrefabInstance:
       propertyPath: followPlayer
       value: 
       objectReference: {fileID: 194641018}
-    - target: {fileID: 4675268584858402115, guid: 73b6e082fe08542499c88fb7be72bda2,
-        type: 3}
-      propertyPath: resetCombSystem
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705648235454521284, guid: 73b6e082fe08542499c88fb7be72bda2,
-        type: 3}
-      propertyPath: damage
-      value: 45
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705648235454521284, guid: 73b6e082fe08542499c88fb7be72bda2,
-        type: 3}
-      propertyPath: atkSpeed
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705648235454521284, guid: 73b6e082fe08542499c88fb7be72bda2,
-        type: 3}
-      propertyPath: knockBack
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4705648235454521284, guid: 73b6e082fe08542499c88fb7be72bda2,
-        type: 3}
-      propertyPath: impulseAttack
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 4829890793479982778, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}
       propertyPath: stats
@@ -1889,16 +1844,6 @@ PrefabInstance:
         type: 3}
       propertyPath: enemyLayer.m_Bits
       value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 6452493722137759971, guid: 73b6e082fe08542499c88fb7be72bda2,
-        type: 3}
-      propertyPath: damage
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6452493722137759971, guid: 73b6e082fe08542499c88fb7be72bda2,
-        type: 3}
-      propertyPath: atkSpeed
-      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6701485358697642017, guid: 73b6e082fe08542499c88fb7be72bda2,
         type: 3}

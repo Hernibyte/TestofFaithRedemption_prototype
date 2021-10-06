@@ -138,7 +138,7 @@ MonoBehaviour:
   - {fileID: 2290227614393594055}
   - {fileID: 4705648235454521284}
   attackIteration: 0
-  resetCombSystem: 1
+  resetCombSystem: 1.5
   timePerIteration: 0
 --- !u!1 &2043437633758402133
 GameObject:
@@ -478,11 +478,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   meleeAttackPoint: {fileID: 8262492798884378014}
-  damage: 8
+  damage: 5
   knockBack: 2
   range: 0.9
   impulseAttack: 6
-  atkSpeed: 0.8
+  atkSpeed: 0.2
   durationAtk: 0
   triggered: 0
 --- !u!1 &5919561121392281250
@@ -761,13 +761,9 @@ MonoBehaviour:
   minDefenseStack: 5
   playerDamage: 15
   minPlayerDamage: 15
-  distanceMelee: 0.9
   knockBackMelee: 2
-  attackColdownMelee: 0
-  attackSpeedMelee: 0.8
   attackColdownRanged: 0
   attackSpeedRanged: 0.4
-  meleeImpulseForce1: 5
   comboSystem: {fileID: 4675268584858402115}
   actualAttack: {fileID: 0}
   gmRef: {fileID: 0}
@@ -819,11 +815,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   meleeAttackPoint: {fileID: 8262492798884378014}
-  damage: 25
-  knockBack: 5
+  damage: 45
+  knockBack: 6
   range: 1.2
-  impulseAttack: 26
-  atkSpeed: 0.8
+  impulseAttack: 50
+  atkSpeed: 0.6
   durationAtk: 0
   triggered: 0
 --- !u!1 &7334773875059960518
@@ -1011,11 +1007,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   meleeAttackPoint: {fileID: 8262492798884378014}
-  damage: 20
-  knockBack: 2
+  damage: 15
+  knockBack: 4
   range: 1
-  impulseAttack: 14
-  atkSpeed: 0.8
+  impulseAttack: 26
+  atkSpeed: 0.3
   durationAtk: 0
   triggered: 0
 --- !u!1 &8019819473217587597
