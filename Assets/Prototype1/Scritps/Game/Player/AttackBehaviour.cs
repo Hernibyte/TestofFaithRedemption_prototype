@@ -6,9 +6,13 @@ namespace Proto1
     {
         [SerializeField] PlayerAttack playerAttack;
 
-        public void MeleeDamage()
+        //public void MeleeDamage()
+        //{
+        //    playerAttack.MeleeAttack();
+        //}
+        public void ComboDamage()
         {
-            playerAttack.MeleeAttack();
+            playerAttack.MakeAttack();
         }
     }
 }

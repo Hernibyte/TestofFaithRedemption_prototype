@@ -116,7 +116,7 @@ namespace Proto1
                 + "HP: " + playerBasicStats.max_HP + "\n"
                 + "DEF: " + playerBasicStats.defensePlayer + "\n"
                 + "VEL: " + playerMoveStats.speed + "\n"
-                + "A.SPD: "+ playerBasicStats.attackSpeedMelee + "\n"
+                + "A.SPD: "+ playerBasicStats.attackSpeedRanged + "\n"
                 + "DPS: " + playerBasicStats.playerDamage + "\n";
         }
     }

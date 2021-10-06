@@ -46,6 +46,7 @@ public class CardTaked : MonoBehaviour
         isOpen = false;
         card = null;
         panel.alpha = .0f;
+        panel.interactable = false;
     }
 
     public void Discard()
@@ -53,5 +54,6 @@ public class CardTaked : MonoBehaviour
         isOpen = false;
         card = null;
         panel.alpha = .0f;
+        panel.interactable = false;
     }
 }

@@ -34,13 +34,12 @@ namespace Proto1
         [Header("ATTACK STATS")]
         public int playerDamage;
         [Range(5, 15)] public int minPlayerDamage;
-        public float distanceMelee;
         public float knockBackMelee;
-        public float attackColdownMelee;
-        public float attackSpeedMelee;
         public float attackColdownRanged;
         public float attackSpeedRanged;
-        public float meleeImpulseForce1;
+        [Space(30)]
+        public Comb_System comboSystem;
+        public AttackState actualAttack;
 
 
         public enum TypeUpdateUI { Damage, Healing}
@@ -54,7 +53,6 @@ namespace Proto1
 
         void Start()
         {
-            attackColdownMelee = 0;
             actual_HP = max_HP;
             movementPlayer = GetComponent<PlayerMovement>();
 
@@ -72,11 +70,6 @@ namespace Proto1
             if (!movementPlayer.activateGameplay)
                 return;
 
-            if (attackColdownMelee > 0)
-                attackColdownMelee -= Time.deltaTime;
-            else
-                attackColdownMelee = 0;
-
             if (attackColdownRanged > 0)
                 attackColdownRanged -= Time.deltaTime;
             else
@@ -86,12 +79,9 @@ namespace Proto1
             {
                 if(!cardTakenSystem.isOpen)
                 {
-                    if (Input.GetKeyDown(KeyCode.Mouse0) && attackColdownMelee == 0)
-                    {
-                        attackColdownMelee = attackSpeedMelee;
-                        playerAnimator.SetTrigger("attack");
-                    }
-                    //
+                    comboSystem.CombSystem(playerAnimator, movementPlayer);
+                    actualAttack = comboSystem.MakeAttack();    //Pasa a referencia actual del ataque iterado en el combo
+
                     RangeAttack();
                 }
             }
@@ -354,7 +344,6 @@ namespace Proto1
         {
             if (cardTaked.attackSpeed > 0)
             {
-                attackSpeedMelee += cardTaked.attackSpeed;
                 attackSpeedRanged += cardTaked.attackSpeed;
             }
             else
@@ -363,36 +352,34 @@ namespace Proto1
                     attackSpeedRanged -= cardTaked.attackSpeed;
                 else
                     attackSpeedRanged = 0.1f;
-
-                if (attackSpeedMelee > cardTaked.attackSpeed)
-                    attackSpeedMelee -= cardTaked.attackSpeed;
-                else
-                    attackSpeedMelee = 0.1f;
             }
         }
 
-        public void MeleeAttack()
+        public void MakeAttack()
         {
-            Vector2 directionImpulse = transform.position - meleeAttackPoint.position;
-            directionImpulse.Normalize();
-            rig.AddForce(-directionImpulse * meleeImpulseForce1, ForceMode2D.Impulse);
+            if (actualAttack == null)
+                return;
 
-            Vector2 attackPosition = new Vector2(meleeAttackPoint.position.x, meleeAttackPoint.position.y);
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, distanceMelee, enemyLayer);
+            Vector2 directionImpulse = transform.position - actualAttack.meleeAttackPoint.position;
+            directionImpulse.Normalize();
+            rig.AddForce(-directionImpulse * actualAttack.impulseAttack, ForceMode2D.Impulse);
+
+            Vector2 attackPosition = new Vector2(actualAttack.meleeAttackPoint.position.x, actualAttack.meleeAttackPoint.position.y);
+            Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, actualAttack.range, actualAttack.enemyLayer);
             foreach (Collider2D collider in colliders)
             {
                 IHittable hittable = collider.GetComponent<IHittable>();
                 if (hittable != null)
                 {
-                    hittable.Hit(playerDamage, knockBackMelee, transform.position);
+                    hittable.Hit(actualAttack.damage + playerDamage, actualAttack.knockBack + knockBackMelee, transform.position);
 
-                    GameObject go = Instantiate(slashEffect, meleeAttackPoint.transform.position, Quaternion.identity);
-                    if(go != null)
+                    GameObject go = Instantiate(slashEffect, actualAttack.meleeAttackPoint.transform.position, Quaternion.identity);
+                    if (go != null)
                     {
                         Animator animSlash = go.GetComponent<Animator>();
-                        if(animSlash != null)
+                        if (animSlash != null)
                         {
-                            animSlash.Play("SlashAttack"); 
+                            animSlash.Play("SlashAttack");
                         }
                     }
 
@@ -400,6 +387,36 @@ namespace Proto1
                 }
             }
         }
+
+        //public void MeleeAttack()
+        //{
+        //    Vector2 directionImpulse = transform.position - meleeAttackPoint.position;
+        //    directionImpulse.Normalize();
+        //    rig.AddForce(-directionImpulse * meleeImpulseForce1, ForceMode2D.Impulse);
+
+        //    Vector2 attackPosition = new Vector2(meleeAttackPoint.position.x, meleeAttackPoint.position.y);
+        //    Collider2D[] colliders = Physics2D.OverlapCircleAll(attackPosition, distanceMelee, enemyLayer);
+        //    foreach (Collider2D collider in colliders)
+        //    {
+        //        IHittable hittable = collider.GetComponent<IHittable>();
+        //        if (hittable != null)
+        //        {
+        //            hittable.Hit(playerDamage, knockBackMelee, transform.position);
+
+        //            GameObject go = Instantiate(slashEffect, meleeAttackPoint.transform.position, Quaternion.identity);
+        //            if(go != null)
+        //            {
+        //                Animator animSlash = go.GetComponent<Animator>();
+        //                if(animSlash != null)
+        //                {
+        //                    animSlash.Play("SlashAttack"); 
+        //                }
+        //            }
+
+        //            VFXManager.Get()?.ShakeScreen(.15f, .16f);
+        //        }
+        //    }
+        //}
 
         public void RangeAttack()
         {
@@ -417,7 +434,10 @@ namespace Proto1
 
         private void OnDrawGizmos()
         {
-            Gizmos.DrawWireSphere(new Vector3(meleeAttackPoint.position.x, meleeAttackPoint.position.y, 0f), distanceMelee);
+            if (actualAttack == null)
+                return;
+
+            Gizmos.DrawWireSphere(new Vector3(meleeAttackPoint.position.x, meleeAttackPoint.position.y, 0f), actualAttack.range);
         }
         public void Hit(int damageAmount, float knockBackForce, Vector2 posAttacker)
         {
